@@ -1,0 +1,22 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+
+The most ideal way to comply with the requirements is (C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+
+Option A, setting up DynamoDB Accelerator is not an option as it is not applicable to the use case at hand.
+
+Option B, enabling DynamoDB Point-in-Time Recovery might be a solution but it has its limitations such as it only works for tables that have been enabled with this feature prior to any changes being made, and it requires additional configuration and setup.
+
+Option D, enabling DynamoDB Streams is also not ideal as it would require additional configuration and setup, and it may introduce overhead and additional costs if the stream size becomes too large.
+
+Option C, creating an Amazon EventBridge rule that tracks table-level events in DynamoDB is a good solution as it allows for real-time monitoring of changes made to the tables, and it provides flexibility in terms of how the changes are processed and stored in the other table. Additionally, it does not require any additional configuration or setup beyond what is already in place for the Lambda function.

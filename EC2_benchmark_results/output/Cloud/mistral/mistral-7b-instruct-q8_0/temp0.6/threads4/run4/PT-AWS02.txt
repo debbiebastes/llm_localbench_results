@@ -1,0 +1,22 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+
+The most suitable solution in this scenario would be (B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+
+AWS Systems Manager Patch Manager is a fully-managed service that automates the process of applying system patches and updates to on-premises and cloud-based applications. It provides a centralized management console for managing patch compliance across different operating systems, including Windows, Linux, and macOS. In this scenario, AWS Systems Manager Patch Manager can be used to easily deploy the OS patches for the outdated EC2 instances.
+
+Amazon Elasticsearch Service (ES) is a managed search service that provides full-text search capabilities for applications. It can be used to record and track any configuration changes made to the EC2 instances after applying the patches. This will help to ensure compliance with regulatory requirements and provide a complete audit trail of all changes made to the system.
+
+Option (A) is not suitable as it does not provide a centralized management console for managing patch compliance across different operating systems. It also requires additional configuration and setup to integrate Amazon QuickSight with Kibana, which may not be necessary in this scenario.
+
+Option (C) only provides a centralized management console for managing patch compliance but does not record or track any configuration changes made to the system.
+
+Option (D) is suitable but it only automates the process of applying patches on a weekly basis and may not provide comprehensive monitoring and reporting capabilities.

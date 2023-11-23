@@ -1,0 +1,16 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The correct answer is (C): Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+Explanation:
+The tech company's users are complaining that the application is slow during the start of the day, indicating that there might be an insufficient number of instances running during this time. To address this issue, a Scheduled scaling policy can be configured to launch new instances before office hours begin. This will ensure that there are enough instances running during the busy morning hours, reducing the likelihood of slow performance for users.
+Option (A) is incorrect because a Predictive scaling policy would not take into account the specific schedule of the application's usage and might cause unnecessary adjustments to the number of instances based on historical data.
+Option (B) is incorrect because Dynamic scaling policies are designed to adjust instance sizes based on real-time metrics, such as CPU or Memory utilization. This would not address the issue of slow performance during the start of the day.
+Option (D) is also incorrect because Dynamic scaling policies are designed to adjust instance sizes based on real-time metrics, such as CPU or Memory utilization, and would not take into account the specific schedule of the application's usage.

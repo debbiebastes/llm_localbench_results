@@ -1,0 +1,16 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The best answer is (B) Enable throttling limits and result caching in API Gateway.
+API Gateway can handle sudden traffic spikes by enabling throttling limits, which limit the number of requests that can be made to the backend API within a given time period. This helps prevent the backend system from being overwhelmed with requests and reduces the risk of downtime or errors due to excessive load.
+Additionally, result caching in API Gateway can help reduce the load on the backend system by storing frequently accessed data in memory, which reduces the number of requests made to the backend API. This feature is especially useful when dealing with large amounts of data that are frequently accessed in a short period of time.
+Option (A) is incorrect because while EC2 instances, ELB, and Auto Scaling can provide more scalability and availability, they may not be necessary for this scenario since the traffic spike is expected to be temporary.
+Option (C) is incorrect because CloudFront can act as a cache in front of the API Gateway, but it cannot handle throttling limits or result caching.
+Option (D) is incorrect because moving the Lambda function to a VPC does not provide any traffic management benefits and may actually introduce additional complexity and cost.

@@ -1,0 +1,18 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The best answer is (B): Enable throttling limits and result caching in API Gateway.
+API Gateway can automatically scale up or down based on traffic demands, which means it will be able to handle unexpected traffic spikes without breaking down. To ensure that the platform's backend systems remain available and responsive during the spike, you can set throttling limits in API Gateway to limit the number of requests that can be made within a certain time frame. Additionally, you can cache results from the Lambda function in API Gateway to reduce the load on the backend systems.
+
+Option (A) is not the best answer because while EC2 instances, ELB, and Auto Scaling are highly scalable and available architectures, they may not be necessary for this scenario. The traffic spike is expected to be short-lived, and API Gateway can handle it without needing to switch to a different architecture.
+
+Option (C) is also not the best answer because CloudFront is primarily used as a content delivery network (CDN) for static assets such as images, videos, and stylesheets. It may not be suitable for handling the load of a high-traffic API Gateway.
+
+Option (D) is not a viable answer because moving the Lambda function to a VPC would not provide any additional protection against traffic spikes.

@@ -1,0 +1,25 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+B. Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation:
+
+* An EBS (Elastic Block Store) volume is a block-level storage volume that is attached to an EC2 instance and provides persistent storage for the instance.
+* Amazon S3 is an object storage service that stores data in a flat, hierarchical structure called a bucket.
+* A lifecycle policy can be configured on an S3 bucket to transition objects to Glacier after 30 days.
+
+Therefore, option B is the correct answer as it meets all the requirements:
+
+* Provides persistent storage for the instance in the form of an EBS volume.
+* Uses Amazon S3 for storing backup data and configures a lifecycle policy to transition objects to Glacier after 30 days.
+
+Note that option A is incorrect because instance store volumes are not suitable for mission-critical workloads and do not provide persistent storage. Option C is also incorrect because Amazon S3 One Zone-IA is not designed for long-term archival storage, unlike Amazon S3 Glacier. Option D is incorrect because it does not use an EBS volume for persistent storage.

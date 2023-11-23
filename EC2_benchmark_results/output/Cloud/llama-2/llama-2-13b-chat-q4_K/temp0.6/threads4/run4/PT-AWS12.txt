@@ -1,0 +1,41 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+
+B. No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation:
+The most cost-effective option would be to use the No Upfront, Convertible Reserved Instance pricing for a 3-year term, since this option offers the lowest total cost of ownership over the 3-year period.
+
+Here's a breakdown of the costs for each option:
+
+Option A (All Upfront Convertible Reserved Instance pricing for a 1-year term):
+
+* Upfront cost: $12,000 (based on the example provided)
+* Monthly cost: $1,000 (based on the example provided)
+* Total cost over 3 years: $36,000 ($12,000 upfront + $1,000 x 36 months)
+
+Option B (No Upfront Convertible Reserved Instance pricing for a 3-year term):
+
+* No upfront cost
+* Monthly cost: $750 (based on the example provided)
+* Total cost over 3 years: $24,000 ($750 x 36 months)
+
+Option C (All Upfront, Standard Reserved Instance pricing for a 3-year term):
+
+* Upfront cost: $18,000 (based on the example provided)
+* Monthly cost: $1,200 (based on the example provided)
+* Total cost over 3 years: $43,200 ($18,000 upfront + $1,200 x 36 months)
+
+Option D (No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year):
+
+* No upfront cost
+* Monthly cost: $1,000 (based on the example provided)
+* Total cost over 3 years: $36,000 ($1,000 x 36 months)
+
+As you can see, Option B (No Upfront Convertible Reserved Instance pricing for a 3-year term) offers the lowest total cost of ownership over the 3-year period, which is the most cost-effective option.

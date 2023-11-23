@@ -1,0 +1,20 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B) Attach an EBS volume in your EC2 instance.
+Explanation:
+
+To meet the requirement of having a persistent block storage volume for mission-critical workloads, you should use an Elastic Block Store (EBS) volume in your Amazon EC2 instance. EBS volumes are designed to provide high-performance, durable storage for EC2 instances and offer several advantages over instance store volumes, including:
+* Persistent storage: EBS volumes are persistent, meaning that they will be preserved even if the underlying EC2 instance is terminated or deleted.
+* Durability: EBS volumes are durable, meaning that data will not be lost due to hardware failures or other unforeseen events.
+* Scalability: EBS volumes can be easily scaled up or down as needed, making it easy to accommodate changes in workload requirements.
+
+To store your backup data, you should use Amazon Simple Storage Service (S3). S3 provides a highly durable and scalable storage solution that is ideal for storing large amounts of data, including backups. You can configure a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days, which will provide long-term archiving and preservation of your backup data.
+In summary, the correct answer is (B) Attach an EBS volume in your EC2 instance, and use Amazon S3 to store your backup data, with a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days.

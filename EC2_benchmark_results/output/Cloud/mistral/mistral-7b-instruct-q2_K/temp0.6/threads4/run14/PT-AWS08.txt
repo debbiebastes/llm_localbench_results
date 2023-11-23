@@ -1,0 +1,20 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+Option (A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation: 
+
+For mission-critical workloads, it is recommended to use block storage volumes that are persistent and can be attached to your EC2 instance. Option (A) provides an instance store volume that meets this requirement. Option (B) provides an EBS volume that meets the same requirement but with additional features and costs.
+
+For backup data storage, Amazon S3 is a suitable option as it provides scalable and durable object storage. It also allows for lifecycle policies to be configured that can transition objects to different storage tiers based on their access frequency. Option (A) uses Amazon S3 to store the backup data and provides a 30-day retention period.
+
+Option (D) is not a valid option as it does not specify an object storage service to store the backup data. Option (C) is similar to Option (A) but with a different storage tier for the backup data. However, Amazon S3 Glacier is not suitable for mission-critical workloads due to its slower retrieval time compared to other storage tiers. Therefore, it is recommended to use Amazon S3 One Zone-IA or Amazon S3 Infrequent Access (IA) instead of Amazon S3 Glacier for backup data storage.

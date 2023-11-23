@@ -1,0 +1,26 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation:
+In order to determine the most cost-effective option, we need to compare the total cost of each option over a period of three years. We will assume that the On-Demand EC2 instance costs $0.15 per hour and runs for an average of 8 hours per day, resulting in daily costs of $12 and monthly costs of $360.
+
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term:
+The upfront cost of this option would be $720 ($12 x 60 days), and the monthly cost after the first year would be $840 ($0.15 x 10 hours per day x 365 days per year). This totals to $2,580 for a three-year period.
+
+Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term:
+The monthly cost of this option would be $0.15 x 10 hours per day x 365 days per year, which totals to $549 for a three-year period.
+
+Option (C) All Upfront, Standard Reserved Instance pricing for a 3-year term:
+The upfront cost of this option would be $2,880 ($72 x 40 hours per day x 365 days per year), and the monthly cost after the first year would be $840 ($0.15 x 10 hours per day x 365 days per year). This totals to $2,720 for a three-year period.
+
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year:
+The monthly cost of this option would be $0.15 x 10 hours per day x 365 days per year, which totals to $549 for a three-year period.
+
+Therefore, the most cost-effective option if the application being hosted would be used for more than three years is Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term, with a total cost of $549 over the three-year period.

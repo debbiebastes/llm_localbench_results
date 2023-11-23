@@ -1,0 +1,19 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+
+Option C is the most ideal way to comply with the requirements because it allows for real-time replication of new changes made to items in DynamoDB, without requiring manual intervention or additional infrastructure such as DynamoDB Accelerator or Point-in-Time Recovery.
+
+Using Amazon EventBridge (formerly known as Amazon CloudWatch Events) and a Lambda function allows for the real-time processing of table-level events in DynamoDB, such as inserts, updates, and deletes. The Lambda function can then save the new changes to the other DynamoDB table in another region.
+
+Option A, setting up DynamoDB Accelerator, is not necessary for this use case as it only improves performance for read-heavy workloads and does not provide real-time replication. Option B, enabling Point-in-Time Recovery, would require manual intervention to trigger the recovery process and may not be suitable for real-time replication. Option D, using DynamoDB Streams, would also require manual intervention to set up and maintain the streams and Lambda function.

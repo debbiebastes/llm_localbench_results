@@ -1,0 +1,17 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The MOST suitable solution in this scenario would be option (B): Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+
+AWS Systems Manager Patch Manager is a service that automates the patching of applications running on Amazon Elastic Container Service (ECS), Amazon Elastic Kubernetes Service (EKS), and Amazon EC2 instances. It helps you to easily manage patches for your operating systems, applications, and containers. With AWS Systems Manager Patch Manager, you can create and manage patch baselines that include the latest security patches, system updates, and application-specific patches.
+
+Amazon ES (Elasticsearch Service) is a managed search and analytics service that makes it easy to set up, operate, and scale Elasticsearch clusters. You can use Amazon ES to store and analyze log data, monitor IT operations, and manage compliance. With Amazon ES, you can easily track any configuration changes made to your AWS resources using audit logs.
+
+Option (A) is also a suitable solution as it integrates AWS Systems Manager Sessions Manager with QuickSight to record and track any configuration changes. However, this solution does not provide the same level of automation and centralized management as AWS Systems Manager Patch Manager. Option (C) provides some level of automation and centralized management but lacks the integration with Amazon ES for tracking configuration changes. Finally, option (D) is a manual approach that may not be suitable in this scenario where there is a need to mitigate security risks quickly and efficiently.

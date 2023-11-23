@@ -1,0 +1,20 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation: 
+If the application being hosted would be used for more than 3 years, the most cost-effective option would be (B) No Upfront Convertible Reserved Instance pricing for a 3-year term. This option offers the lowest total cost of ownership (TCO) as it eliminates upfront costs and provides discounts on hourly usage rates compared to other options.
+
+Here's a breakdown of the TCO for each option:
+
+* Option A (All Upfront Convertible Reserved Instance pricing for a 1-year term): This option has the highest TCO as it requires a full upfront payment, which would be expensive for long-term usage. The hourly usage rates are lower compared to other options, but the total cost over 3 years is still higher due to the upfront payment.
+* Option C (All Upfront, Standard Reserved Instance pricing for a 3-year term): This option has a higher TCO than Option B as it requires a full upfront payment and offers lower hourly usage rates compared to Option B.
+* Option D (No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year): This option has the highest TCO of all as it requires annual payments for 3 years, which would be more expensive than Option B's upfront payment.
+
+Therefore, Option B (No Upfront Convertible Reserved Instance pricing for a 3-year term) is the most cost-effective option for hosting an application for more than 3 years.

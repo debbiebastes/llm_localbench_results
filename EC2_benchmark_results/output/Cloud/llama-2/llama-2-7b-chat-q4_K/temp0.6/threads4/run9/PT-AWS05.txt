@@ -1,0 +1,24 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The MOST ideal way to comply with the requirements is option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+
+In this scenario, the best approach is to use Amazon EventBridge to track events in the original DynamoDB table and trigger a Lambda function to save the changes to the secondary table in another region. This approach provides several benefits:
+1. Scalability: EventBridge can handle a large volume of events without any performance issues, making it ideal for high-traffic applications.
+2. Cost-effective: EventBridge is a fully managed service, which means that AWS handles the underlying infrastructure, reducing operational costs and overhead.
+3. Flexibility: EventBridge supports a wide range of event sources, including DynamoDB, allowing you to integrate it with other AWS services and third-party applications.
+4. Ease of use: EventBridge provides an intuitive interface for defining rules and triggers, making it easy to set up and manage.
+5. Security: EventBridge has built-in security features, such as access controls and encryption, ensuring that sensitive data is protected throughout the event processing flow.
+6. Monitoring and Logging: EventBridge provides detailed logging and monitoring capabilities, allowing you to track events and identify potential issues in real-time.
+7. Integration with other AWS services: EventBridge can be easily integrated with other AWS services, such as Lambda, S3, and CloudWatch, allowing you to create a comprehensive event-driven architecture.
+8. Compliance: By using EventBridge to track events in DynamoDB, you can ensure that all changes are recorded and stored in another table in another region, meeting the compliance requirements.
+In summary, option (C) is the most ideal way to comply with the requirements as it provides a scalable, cost-effective, flexible, easy-to-use, secure, and integrated solution for tracking events in DynamoDB and saving new changes to another table in another region.

@@ -1,0 +1,20 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The MOST suitable solution in this scenario is (C): Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+Explanation:
+Option (C) provides a comprehensive solution that addresses both the immediate security risk and the auditing requirements. Here's why:
+1. Deploying patches using Patch Manager: AWS Systems Manager Patch Manager can automatically detect and deploy patches to EC2 instances with outdated operating systems. This will immediately mitigate the security risk and prevent any further exploitation of the vulnerability.
+2. Integrating with Config: AWS Config allows you to record and track changes made to your infrastructure, including patch management configurations. By integrating Patch Manager with Config, you can easily monitor and audit all patch-related changes, ensuring compliance with security policies and regulatory requirements.
+In contrast, options (A) and (B) do not offer the same level of integration with AWS Config for auditing purposes:
+Option (A) uses Amazon QuickSight with Kibana to record and track configuration changes, but this solution does not provide automatic patch deployment or monitoring. It relies on manual processes and tools that may not be scalable or efficient for large-scale environments.
+Option (B) sets up AWS Systems Manager Patch Manager to deploy patches, but it does not integrate with AWS Config for auditing purposes. While this solution addresses the immediate security risk, it may require additional effort to track and monitor changes over time.
+Option (D) configures EC2 instances to automatically install patches on a weekly basis, but this approach does not provide real-time patch management or monitoring. It also does not address the auditing requirements for compliance purposes.
+In summary, option (C) offers the most comprehensive solution by combining Patch Manager with Config for both immediate security mitigation and long-term auditing and compliance monitoring.

@@ -1,0 +1,46 @@
+Your application is processing one Kinesis data stream which has four shards, and each instance has one KCL worker. To scale up processing in your application, you reshard your stream to increase the number of open shards to six.
+
+What is the MAXIMUM number of EC2 instances that you should launch to achieve optimum performance?
+
+(A) 5
+(B) 12
+(C) 3
+(D) 6
+
+Answer: 
+
+To calculate the maximum number of EC2 instances required for optimal performance, we need to consider the following factors:
+
+1. Number of Shards: With six shards, you can process more data in parallel, reducing the processing time.
+2. Worker Count: Each instance has one KCL worker, so we need to ensure that each instance is utilized fully.
+3. Instance Type: Choose an instance type that provides sufficient CPU, memory, and network resources for your application.
+4. Resource Utilization: Monitor resource utilization to avoid overloading instances and maintain optimal performance.
+
+Based on these factors, let's analyze the maximum number of EC2 instances you can launch:
+
+1. With six shards, each instance needs to process 1/6 of the total data.
+2. Each instance has one KCL worker, so the total worker count is 6 (number of shards).
+3. Let's assume you choose a moderately-priced instance type like the t2.micro (2 vCPUs, 1 GB RAM, and 50 GB storage).
+4. To utilize each instance fully, aim for an average CPU Utilization of 50% and a memory Utilization of 20% or less.
+
+Now, let's calculate the maximum number of instances:
+
+Maximum Instances = (Total Data Processing Requirement / (Worker Count x Instance Resources))
+
+Where:
+
+* Total Data Processing Requirement = Total data volume processed by all shards
+* Worker Count = 6 (number of KCL workers per instance)
+* Instance Resources = t2.micro instance resources (2 vCPUs, 1 GB RAM, and 50 GB storage)
+
+Calculate the total data processing requirement:
+
+Total Data Processing Requirement = 4 shards x 1/4 of the total data = 1/4 of the total data
+
+Let's assume the total data volume is 100 GB. Then, the total data processing requirement is:
+
+Total Data Processing Requirement = 100 GB / 4 shards = 25 GB per shard
+
+Now, calculate the maximum number of instances:
+
+Maximum Instances = (25 GB per shard x 6 shards) / (

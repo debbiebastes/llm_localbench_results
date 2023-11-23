@@ -1,0 +1,20 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+The MOST operationally efficient solution would be to implement option A - Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances.
+
+Predictive scaling allows the application to automatically adjust the number of instances based on historical usage patterns and forecasted demand, ensuring that the application has sufficient resources to handle the increased traffic at the start of the day. This approach is more operationally efficient than other options because it leverages AWS's machine learning algorithms to predict future usage patterns and adjust the scaling accordingly, without requiring manual intervention or complex rules.
+
+Option B - Configuring a Dynamic scaling policy based on Memory utilization is not optimal as the application may experience spikes in memory usage during the start of the day but may not necessarily require additional instances.
+
+Option C - Configuring a Scheduled scaling policy to launch new instances before the start of the day may not be the most efficient approach as it does not take into account the actual usage patterns and may result in over-provisioning or under-provisioning of resources.
+
+Option D - Configuring a Dynamic scaling policy based on CPU utilization may also not be the most efficient approach as the application may experience spikes in CPU usage during the start of the day but may not necessarily require additional instances.

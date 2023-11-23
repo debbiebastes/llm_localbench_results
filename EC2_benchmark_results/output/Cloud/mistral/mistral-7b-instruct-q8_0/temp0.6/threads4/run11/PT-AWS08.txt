@@ -1,0 +1,25 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+Option (B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier. 
+
+Explanation: 
+For mission-critical workloads, it is recommended to use persistent block storage volumes such as Amazon EBS (Elastic Block Store) instead of instance-store volumes. An EBS volume provides better performance and durability than an instance store volume.
+
+To meet the backup requirement, you can attach an EBS volume to your EC2 instance and use it as the primary storage for your mission-critical workloads. You can also configure Amazon S3 (Simple Storage Service) to store your backup data. Amazon S3 provides highly available and durable object storage that is ideal for storing backups.
+
+To ensure that your backup data is stored securely and cost-effectively, you can configure a lifecycle policy in Amazon S3. A lifecycle policy allows you to specify how long objects should be stored in different storage classes based on their age or content type. For example, you can store your backup data in Amazon S3 Glacier after 30 days, which provides low-cost, long-term storage for infrequently accessed data.
+
+Option (A) is incorrect because EBS volumes provide better performance and durability than instance store volumes, making them a better choice for mission-critical workloads.
+
+Option (C) is incorrect because Amazon S3 One Zone-IA is designed for storing data that needs to be accessed less frequently than data stored in Amazon S3 Glacier, which is intended for long-term storage of infrequently accessed data.
+
+Option (D) is incorrect because Amazon S3 One Zone-IA is designed for storing data that needs to be accessed less frequently than data stored in Amazon S3 Glacier, which is intended for long-term storage of infrequently accessed data.

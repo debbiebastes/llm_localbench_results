@@ -1,0 +1,16 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+The MOST operationally efficient solution to implement would be option (C) - Scheduled scaling policy. This approach ensures that additional instances are launched before the start of the day, when the application is likely to experience increased demand, but not during normal usage hours when the existing instances can handle the load.
+
+Option A, Predictive scaling, may not be effective in this scenario as it relies on predicting future usage patterns, which may not always be accurate. Option B, Dynamic scaling based on Memory utilization, may not be appropriate as the application's performance issues are related to CPU usage, not memory usage. Option D, Dynamic scaling based on CPU utilization, would likely result in instances being launched during normal usage hours when they are not needed, leading to unnecessary costs and potential underutilization of resources.
+
+In contrast, a Scheduled scaling policy would allow for the addition of new instances only at the beginning of the day, when the application is experiencing increased demand, ensuring that the application is properly provisioned to handle the load without overprovisioning during normal usage hours.

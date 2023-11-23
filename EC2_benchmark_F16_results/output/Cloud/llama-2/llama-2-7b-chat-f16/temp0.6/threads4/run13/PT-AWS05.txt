@@ -1,0 +1,14 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The MOST ideal way to comply with the requirements would be option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+Reason:
+EventBridge is a fully managed service that makes it easy to set up and manage event-driven workflows across multiple services, including DynamoDB. By setting up an EventBridge rule that tracks table-level events in DynamoDB, you can automatically capture and process new changes made to the items in the main table and save them to a separate table in another region. This approach provides a scalable and reliable solution for recording and storing all of the new changes made to the items in DynamoDB.
+Option (A) Set up DynamoDB Accelerator is not ideal as it only accelerates read and write operations on a single DynamoDB table, which may not meet the requirements of capturing all changes made to multiple tables. Option (B) Enable DynamoDB Point-in-Time Recovery is not ideal as it only provides point-in-time recovery for a specific DynamoDB table and does not provide real-time capture of new changes made to the items in the table. Option (D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table is also not ideal as it requires manual configuration and monitoring of the DynamoDB streams, which may be time-consuming and error-prone.

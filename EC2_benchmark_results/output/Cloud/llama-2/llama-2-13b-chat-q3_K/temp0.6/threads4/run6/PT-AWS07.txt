@@ -1,0 +1,22 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances.
+
+Rationale:
+
+The best solution is to configure a predictive scaling policy, which can predict the expected load based on historical data and adjust the instance count accordingly. This will ensure that the application works properly at the beginning of the day when the users are logging in. The other options do not address the issue of predicting the expected load or adjusting the instance count accordingly.
+
+Option (B) uses memory utilization to launch new instances, which may not be the best metric for predicting the expected load, especially if the application is CPU-bound.
+
+Option (C) schedules scaling based on a fixed schedule, which may not align with the actual demand during the start of the day.
+
+Option (D) uses CPU utilization to launch new instances, which may not be the best metric for predicting the expected load if the application is I/O-bound or has variable workload patterns."

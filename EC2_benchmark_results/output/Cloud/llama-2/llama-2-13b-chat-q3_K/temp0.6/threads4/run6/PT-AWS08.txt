@@ -1,0 +1,24 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation:
+
+To meet the requirement of persistent block storage volume for mission-critical workloads, option B is the best choice. EBS (Elastic Block Store) volumes are designed to provide persistent storage for EC2 instances and can be used for both operational and backup data.
+
+Option A would not meet the requirement because instance store volumes are temporary storage that is deleted when the EC2 instance is terminated.
+
+Option C would not meet the requirement because One Zone-IA is a storage class that provides infrequently accessed data in a single Availability Zone, and it may not be suitable for mission-critical workloads that require high availability and durability.
+
+Lifecycle policies can be used to transition backup data to Amazon S3 Glacier after 30 days, which is the required storage class for long-term backup data.
+
+Therefore, option B is the best choice to meet the requirements of persistent block storage volume with long-term backup data stored in Amazon S3 Glacier.

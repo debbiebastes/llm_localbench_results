@@ -1,0 +1,21 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation:
+
+Option (A) is incorrect because instance store volumes are not suitable for mission-critical workloads, as they are not designed for high availability or durability. Additionally, using an instance store volume for backup data would require manual effort to restore the data in case of a failure, which is not practical for mission-critical workloads.
+
+Option (C) is incorrect because Amazon S3 One Zone-IA is not designed for long-term storage and may not meet the requirement for storing backup data for 30 days.
+
+Option (D) is incorrect because instance store volumes are not suitable for mission-critical workloads, as they are not designed for high availability or durability. Additionally, using an instance store volume for backup data would require manual effort to restore the data in case of a failure, which is not practical for mission-critical workloads.
+
+Option (B) is correct because EBS volumes provide persistent storage that can be used for mission-critical workloads. Amazon S3 provides a highly durable and scalable storage solution for backup data, and configuring a lifecycle policy to transition objects to Amazon S3 Glacier after 30 days ensures that the data is stored long-term at a low cost.

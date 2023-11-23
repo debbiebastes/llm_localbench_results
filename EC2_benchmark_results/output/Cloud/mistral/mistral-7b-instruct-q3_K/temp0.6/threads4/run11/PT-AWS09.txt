@@ -1,0 +1,20 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+All of the options (A, B, C, D) can help protect the backend systems from traffic spikes. However, it is recommended to implement multiple strategies and configurations in order to provide better performance and scalability. Here's how each option can be used to protect the backend systems: 
+
+(A) AWS Lambda and API Gateway are built for high availability and can handle traffic spikes but they may have issues with handling sudden surge of traffic. Using EC2 instances, ELB, and Auto Scaling can provide more control over the resources allocated to the platform and also help distribute the load across multiple servers. This ensures better performance and scalability.
+
+(B) Enabling throttling limits and result caching in API Gateway can reduce the amount of requests sent to the backend systems and improve response times. It also helps prevent DDoS attacks by limiting the number of requests that can be made within a given time period.
+
+(C) CloudFront acts as a cache for frequently accessed resources and reduces the load on the backend systems. By using CloudFront in front of API Gateway, the platform can handle large amounts of traffic and reduce latency. It also helps protect against DDoS attacks by distributing traffic across multiple servers.
+
+(D) Moving the Lambda function in a VPC provides better control over network security and reduces the risk of unauthorized access to the backend systems. It also allows for better resource allocation and performance tuning.

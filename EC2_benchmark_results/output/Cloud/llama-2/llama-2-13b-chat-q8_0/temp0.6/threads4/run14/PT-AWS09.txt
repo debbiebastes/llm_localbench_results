@@ -1,0 +1,28 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+(B) Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+
+To protect the backend systems of the platform from traffic spikes, we need to implement measures that can handle the increased load without compromising the performance and availability of the system.
+
+Option (A) is not the best choice as it would require significant changes to the existing architecture, and might not be able to handle sudden spikes in traffic effectively.
+
+Option (C) would also not be the best choice as CloudFront is a CDN and would not provide any additional scalability or caching capabilities.
+
+Option (D) would not have a direct impact on handling traffic spikes.
+
+Therefore, the best option is to enable throttling limits and result caching in API Gateway. This will allow us to control the number of requests that are sent to the backend systems, and also cache the results of frequently accessed data, reducing the load on the backend systems.
+
+API Gateway provides built-in throttling capabilities that can be enabled at the stage level or for specific methods. By enabling throttling limits, we can control the number of requests that are sent to the backend systems within a certain time frame, preventing overload and ensuring that the system remains available and responsive.
+
+Additionally, API Gateway also provides result caching capabilities that can be used to cache the results of frequently accessed data. By caching the results of frequent queries, we can reduce the load on the backend systems, improving their performance and availability.

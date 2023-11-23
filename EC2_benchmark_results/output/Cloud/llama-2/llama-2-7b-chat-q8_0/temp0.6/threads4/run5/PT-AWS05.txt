@@ -1,0 +1,20 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The MOST ideal way to comply with the requirements is (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table. This approach provides the following benefits:
+
+1. Decoupling: The Lambda function is decoupled from the DynamoDB table, allowing for more flexible and efficient data processing.
+2. Scalability: EventBridge can handle a large volume of events without impacting the performance of your application.
+3. Auditing: EventBridge provides detailed event logs that can be used for auditing purposes.
+4. Security: The Lambda function can be configured with appropriate security measures, such as IAM roles and network ACLs, to ensure that only authorized users can access the data.
+
+Compared to the other options, setting up DynamoDB Accelerator (A) is not ideal because it requires additional hardware and configuration for acceleration, which may increase costs and complexity. Enabling DynamoDB Point-in-Time Recovery (B) does not provide real-time event processing and may require additional setup and maintenance. Using DynamoDB Streams (D) also requires additional configuration and management of the stream, which can be complex and time-consuming.
+
+Therefore, option (C) is the most ideal way to comply with the requirements.

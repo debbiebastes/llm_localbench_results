@@ -1,0 +1,18 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+
+The best solution in this scenario is option (A). Here's why:
+
+1. Immediate mitigation of security risk: The IT Security team needs to act quickly to mitigate the security risk caused by the outdated operating systems on EC2 instances. By using AWS Systems Manager Sessions Manager, they can deploy patches to these instances in a timely and efficient manner, reducing the likelihood of an attack occurring before the patches are applied.
+2. Integration with Amazon QuickSight and Kibana: Once the patches have been deployed, the IT Security team needs to monitor and track any configuration changes made to the EC2 instances. By integrating Amazon QuickSight with Kibana, they can record and track any changes to the instances' configurations in real-time, providing a centralized view of their security posture.
+3. Compliance recording: For audit purposes, it is essential to record all patches applied to the EC2 instances and their associated compliance statuses. AWS Systems Manager Sessions Manager allows for this by providing a detailed history of all patch deployments, including the date and time they were applied, who applied them, and any other relevant information.
+In summary, option (A) provides the quickest and most effective way to mitigate the security risk caused by outdated operating systems on EC2 instances while also meeting audit requirements for compliance recording.

@@ -1,0 +1,15 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option would be (C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+
+Explanation:
+The cost of running an EC2 instance on AWS can vary based on the type of instance and the duration of use. The cost savings associated with using a Reserved Instance (RI) are significant when compared to On-Demand instances. RIs provide a discount of up to 75% compared to On-Demand prices, depending on the instance type and duration of usage.
+In this scenario, using a Standard RI for a 3-year term would result in the most cost savings. A Standard RI requires an upfront payment of the first year's usage, which can be paid upfront or spread across multiple years. This upfront payment provides a significant discount on the total cost over the 3-year period compared to using On-Demand instances.
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term is not the most cost-effective option because it requires an upfront payment for the entire 1-year term, which may be more than what is needed for a 3-year period. Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term is also not the most cost-effective option as it does not provide any upfront discount or payment flexibility.
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year is also not the most cost-effective option as it does not provide any upfront payment discount or flexibility and would result in higher costs over time due to the repeated renewal payments.

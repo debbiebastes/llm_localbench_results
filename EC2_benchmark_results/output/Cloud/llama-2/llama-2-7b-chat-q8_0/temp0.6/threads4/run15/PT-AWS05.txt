@@ -1,0 +1,18 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The best answer is (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+This approach provides the following benefits:
+1. Leverages existing infrastructure: You can use your existing EventBridge and Lambda resources, which may have already been provisioned for other purposes.
+2. Decouples DynamoDB changes from the application: By using EventBridge to track table-level events, you can separate the change tracking logic from the application code, making it easier to maintain and scale.
+3. Achieves compliance: You can configure your Lambda function to save new changes to the other table in another region, ensuring that all changes are recorded and stored as required by IT compliance.
+4. Scalable and fault-tolerant: By using a serverless architecture, you can easily scale your change tracking logic horizontally without worrying about capacity planning or maintenance.
+5. Reduces operational overhead: With EventBridge handling the event tracking, you can reduce the operational overhead of maintaining and updating your application code to track changes in DynamoDB.
+Therefore, option (C) is the most ideal way to comply with the requirements in this scenario.

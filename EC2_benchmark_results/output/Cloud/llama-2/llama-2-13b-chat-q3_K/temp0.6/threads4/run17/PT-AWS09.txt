@@ -1,0 +1,23 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+(B) Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+
+When dealing with sudden traffic spikes, it's essential to control the flow of incoming requests to avoid overwhelming the backend systems. API Gateway offers throttling limits and result caching as features to help manage these situations.
+
+Throttling limits allow you to set a maximum number of requests that can be made within a specific time frame, preventing the system from being flooded with too many requests at once. This feature is particularly useful when dealing with unexpected traffic spikes or DDoS attacks.
+
+Result caching allows you to cache the results of API Gateway's processing, which reduces the load on the backend systems by avoiding redundant computations and data retrieval. With result caching, frequently requested data can be stored in memory, making it available faster and reducing the need for backend system calls.
+
+Option (A) is not a good choice because EC2 instances, ELB, and Auto Scaling are not specifically designed to handle sudden traffic spikes. These architectural components are better suited for handling long-term, sustained workloads.
+
+Option (C) using CloudFront in front of API Gateway would not be effective in this scenario because CloudFront is a content delivery network (CDN) and does not provide the same level of control over request throttling as API Gateway.

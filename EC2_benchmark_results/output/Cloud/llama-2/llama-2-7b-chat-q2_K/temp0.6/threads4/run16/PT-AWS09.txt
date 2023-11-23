@@ -1,0 +1,14 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The best option for protecting the backend systems of the platform from traffic spikes is (B) Enable throttling limits and result caching in API Gateway.
+API Gateway is built on AWS Lambda, which provides a scalable architecture that can handle high levels of traffic. However, even with Lambda, there may be situations where the traffic is so high that the backend systems cannot handle it. In such cases, enabling throttling limits in API Gateway can help in slowing down the traffic and preventing the backend systems from getting overwhelmed.
+Result caching in API Gateway can also help in reducing the load on the backend systems by storing frequently accessed data in a cache. This can significantly reduce the number of requests made to the backend systems, allowing them to handle a higher volume of traffic without any issues.
+Option (A) switching to EC2 instances, ELB, and Auto Scaling is not the best option as it may introduce additional complexity and cost to the system. Option (C) using CloudFront in front of the API Gateway can help in caching frequently accessed content, but it may not be able to handle high levels of traffic that are beyond the capacity of CloudFront. Option (D) moving the Lambda function in a VPC is also not a feasible solution as it would require significant changes to the system and may not provide any significant improvements in terms of performance or scalability.

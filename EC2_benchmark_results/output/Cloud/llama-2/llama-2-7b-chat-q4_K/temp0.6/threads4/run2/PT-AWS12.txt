@@ -1,0 +1,14 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option for a company migrating from an On-Demand EC2 instance to a Reserved EC2 instance would be (C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+Explanation:
+Standard Reserved Instances provide the most cost savings compared to On-Demand instances over a long period of time, such as 3 years. By paying an upfront fee and committing to a 3-year term, the company can save up to 64% compared to using On-Demand instances for the same duration.
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term provides the least cost savings and is therefore not the most cost-effective option. While this option does offer some flexibility in terms of being able to convert to a different pricing model later, it does not provide the same level of cost savings as Standard Reserved Instances over a longer period of time.
+Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term is also not the most cost-effective option, as it does not offer any upfront discount compared to On-Demand instances and would result in higher costs over the long term.
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year is also not the most cost-effective option, as it does not provide any upfront discount and would result in higher costs compared to Standard Reserved Instances over a longer period of time.

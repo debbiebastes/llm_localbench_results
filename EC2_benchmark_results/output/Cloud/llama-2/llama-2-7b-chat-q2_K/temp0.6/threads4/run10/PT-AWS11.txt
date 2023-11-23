@@ -1,0 +1,17 @@
+Which AWS service enables you to build event-driven applications and decouple the components of your application architecture?
+
+(A) Amazon SQS
+(B) Amazon EventBridge (Amazon CloudWatch Events)
+(C) Amazon SNS
+(D) Amazon Kinesis
+
+Answer: 
+(B) Amazon EventBridge (Amazon CloudWatch Events).
+
+Explanation:
+Event-driven programming is a design pattern that allows you to build applications as a collection of small, modular components called "services" or "functions," each of which performs a specific task. Each service or function triggers an event when it completes its work, and these events can be routed to other services or functions through various channels, such as email, messaging systems, or cloud-based message queues.
+AWS provides several services that enable you to build event-driven applications and decouple the components of your application architecture. Amazon EventBridge (formerly known as Amazon CloudWatch Events) is one such service that enables you to create events based on various sources like Lambda functions, S3 buckets, or CloudWatch alarms, and route those events to other services or functions in your application architecture.
+Amazon Simple Queue Service (SQS) is another AWS service that provides a fully managed message queue that enables you to decouple the components of your application architecture by passing messages between different services. However, Amazon SQS doesn't support event-driven programming as efficiently as Amazon EventBridge does.
+Amazon Simple Notification Service (SNS) is yet another AWS service that provides a fully managed messaging service that enables you to decouple the components of your application architecture by passing messages between different services. However, Amazon SNS primarily focuses on point-to-point or publish-subscribe messaging patterns and doesn't support event-driven programming as efficiently as Amazon EventBridge does.
+Amazon Kinesis is a streaming data analytics service that enables you to collect, process, and analyze real-time, streaming, and historical data from applications and IoT devices. While it can be used for event-driven programming in certain scenarios, it's not the best choice for this purpose compared to Amazon EventBridge.
+In summary, Amazon EventBridge is the AWS service that enables you to build event-driven applications and decouple the components of your application architecture by creating events based on various sources and routing them to other services or functions in your application architecture.

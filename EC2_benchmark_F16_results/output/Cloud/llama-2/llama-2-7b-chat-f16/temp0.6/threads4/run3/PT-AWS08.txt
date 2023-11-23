@@ -1,0 +1,17 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B): Attach an EBS volume in your EC2 instance. Using Amazon S3 to store your backup data and configuring a lifecycle policy to transition your objects to Amazon S3 Glacier is the best approach to meet this requirement.
+Explanation:
+An EBS volume provides persistent block storage that can be used for mission-critical workloads, as it is designed to provide high availability and durability. It is also a good choice for storing backup data because it can be easily attached and detached from an EC2 instance, allowing you to manage the lifecycle of the data.
+Amazon S3 provides a scalable and durable object storage service that can store large amounts of data and scale as your needs grow. By using Amazon S3 to store your backup data, you can ensure that the data is available even if the EBS volume fails or is detached from the EC2 instance.
+Amazon S3 Glacier is a long-term archival storage service that provides low-cost storage for data that doesn't require frequent access. By configuring a lifecycle policy to transition your backup data to Amazon S3 Glacier after 30 days, you can ensure that the data is stored in a cost-effective manner while still maintaining its availability.
+Option (A) is not the best choice because instance store volumes are not designed for mission-critical workloads and do not provide the same level of durability as EBS volumes. Option (C) is also not the best choice because Amazon S3 One Zone-IA is a regional storage service that provides lower latency but does not offer the same scalability and durability as Amazon S3 Standard.
+Therefore, option (B) is the best answer.

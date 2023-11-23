@@ -1,0 +1,18 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The best answer is (B): Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+API Gateway provides several features that can help protect backend systems from traffic spikes, such as throttling limits and result caching. Throttling limits allow you to set a maximum number of requests that can be made within a certain time period, which can help prevent the backend system from being overwhelmed with too many requests. Result caching allows API Gateway to cache frequently accessed data, reducing the number of requests made to the backend system and helping to distribute the traffic more evenly.
+Using AWS Lambda and API Gateway in combination provides a scalable and highly available architecture that can handle sudden spikes in traffic. However, in this scenario, it is better to use throttling limits and result caching in API Gateway to manage the traffic and protect the backend systems from overload.
+Option (A) is not the best choice because while EC2 instances, ELB, and Auto Scaling provide a more scalable architecture, they may not be able to handle sudden spikes in traffic as effectively as throttling limits and result caching. Additionally, using EC2 instances and Auto Scaling can add complexity and cost to the system.
+Option (C) is also not the best choice because while CloudFront can act as a cache in front of the API Gateway, it does not provide throttling limits or result caching features.
+Option (D) is not relevant to this scenario because moving a Lambda function to a VPC does not provide any protection against traffic spikes.

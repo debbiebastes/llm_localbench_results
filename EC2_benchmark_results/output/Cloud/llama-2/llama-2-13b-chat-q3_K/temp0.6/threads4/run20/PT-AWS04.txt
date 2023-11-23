@@ -1,0 +1,28 @@
+Your application is processing one Kinesis data stream which has four shards, and each instance has one KCL worker. To scale up processing in your application, you reshard your stream to increase the number of open shards to six.
+
+What is the MAXIMUM number of EC2 instances that you should launch to achieve optimum performance?
+
+(A) 5
+(B) 12
+(C) 3
+(D) 6
+
+Answer: 
+
+Please note that increasing the number of shards does not necessarily lead to better performance. Optimal performance depends on various factors, such as data volume, throughput, and instance types. Therefore, it is recommended to test different configurations to find the optimal combination for your use case.
+
+That being said, if you resharded your stream to six open shards and each instance has one KCL worker, the maximum number of EC2 instances you should launch can be calculated as follows:
+
+1. First, determine the total throughput required to process the increased volume of data. This can be calculated by multiplying the previous throughput by 6/4 (previous shards x 4).
+2. Next, select an appropriate instance type that can handle the required throughput. For example, if the previous instance type was a t2.micro, you may consider upgrading to a t2.medium or t2.large instance type.
+3. Once you have selected the desired instance type, you can calculate the maximum number of instances that can be launched based on the available instances and the required throughput.
+
+Assuming that the previous instance type was a t2.micro with a throughput of 1000 MT/s (million transactions per second) and you want to launch six shards, the maximum number of instances you can launch would be:
+
+Maximum instances = (6 x 1000 MT/s) / (instance type throughput)
+
+Based on the above calculations, if the instance type remains a t2.micro, the maximum number of instances that can be launched is:
+
+Maximum instances = (6 x 1000 MT/s) / (1000 MT/s) = 6
+
+Therefore, the answer is (D) 6. However, please note that this calculation is based on a simple example and does not take into account other factors such as instance availability, network bandwidth, and application performance requirements. It is recommended to test different configurations and monitor performance to find the optimal combination for your use case.

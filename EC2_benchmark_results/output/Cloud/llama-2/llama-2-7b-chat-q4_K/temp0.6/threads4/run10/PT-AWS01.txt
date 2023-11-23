@@ -1,0 +1,15 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+The correct answer is (B): Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+Explanation:
+To comply with the strict compliance and regulatory requirements of the company, it is important to ensure that sensitive PII data is encrypted at rest in Amazon S3. While server-side encryption can provide additional security benefits, it may not be feasible or efficient to implement in this scenario due to the web application hosting the data. Therefore, option (B) provides the best solution:
+Implementing client-side encryption with a KMS-managed customer master key allows the Security Engineer to maintain control over the encryption keys while still leveraging AWS's Key Management Service (KMS) for key management. This approach ensures that only authorized users can access and decrypt the data, as the encryption keys are not stored in AWS or transmitted to AWS.
+Option (A) is incorrect because client-side encryption with a client-side master key does not provide adequate security since the master key would be stored on the client side and could potentially be compromised. Option (C) is also incorrect because server-side encryption requires that the data be transmitted to AWS, which may not be feasible or efficient in this scenario. Finally, option (D) is incorrect because customer provided keys are not secure enough for sensitive PII data.

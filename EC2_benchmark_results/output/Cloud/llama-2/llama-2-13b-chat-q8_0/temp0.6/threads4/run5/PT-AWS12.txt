@@ -1,0 +1,19 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation: The cost-effective option would be (B) No Upfront Convertible Reserved Instance pricing for a 3-year term, as it provides the lowest total cost of ownership. With this option, there is no upfront payment required, and the customer pays only for the usage of the instance. This option is more cost-effective than the other options, especially since the application will be used for more than three years.
+
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term requires an upfront payment and provides a discount compared to On-Demand pricing but is not the most cost-effective option for a 3-year commitment.
+
+Option (C) All Upfront, Standard Reserved Instance pricing for a 3-year term also requires an upfront payment and provides a fixed price for the entire three years, which may not be the best option if usage patterns change over time.
+
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year provides the lowest total cost of ownership after the first year, but requires more frequent upfront payments and may not be as cost-effective for a long-term commitment like a 3-year period.
+
+Therefore, based on the given information, the most cost-effective option for the company would be to choose (B) No Upfront Convertible Reserved Instance pricing for a 3-year term.

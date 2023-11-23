@@ -1,0 +1,14 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option for a company migrating an application from On-Demand EC2 instances to Reserved EC2 Instances would be option (C): All Upfront, Standard Reserved Instance pricing for a 3-year term.
+Here's why:
+Option (A) - All Upfront Convertible Reserved Instance pricing for a 1-year term - This option provides the best value for short-term usage, but it may not be the most cost-effective choice for a 3-year period. The upfront payment is lower than options (C) and (D), but the prices per hour increase over time, making it less cost-effective in the long run.
+Option (B) - No Upfront Convertible Reserved Instance pricing for a 3-year term - This option provides no upfront payment and offers the lowest hourly prices, but it may not be the best choice for long-term usage. The lack of an upfront payment means that you won't have access to any discounts or savings from paying upfront, which could result in higher overall costs over 3 years.
+Option (D) - No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year - This option offers the lowest hourly prices for the first year, but the prices increase with each subsequent year's renewal. While this may be a good option for short-term usage, it may not provide the best long-term cost savings due to the increasing prices over time.
+Option (C) - All Upfront, Standard Reserved Instance pricing for a 3-year term - This option provides the most cost-effective choice for long-term usage. By paying an upfront fee, you'll have access to lower hourly prices for the entire 3-year period, resulting in significant cost savings compared to options (A), (B), and (D). Additionally, you won't need to worry about price increases over time, as the upfront payment locks in the pricing for the duration of the term.

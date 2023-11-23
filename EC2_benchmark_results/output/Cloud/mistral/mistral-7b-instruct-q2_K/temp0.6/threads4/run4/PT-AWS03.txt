@@ -1,0 +1,20 @@
+A Security Engineer has found out that there are some developers who have been adding rules to security groups without any approval. The developers configured the security groups to allow RDS, SMTP, and SSH traffic from the 0.0.0.0/0 CIDR range in order to do their code testing. The company has an existing firewall hosted in an EC2 instance where all of the traffic should pass through.
+
+Which of the following is the MOST efficient way to automatically remediate this security risk?
+
+(A) Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+(B) Set up a Transit VPC to connect the corporate firewall and the EC2 instances.
+(C) Block the source IP addresses coming from the 0.0.0.0/0 CIDR range using Network ACL.
+(D) Use AWS Shield to automatically monitor and detect all the security groups that allow traffic directly from the 0.0.0.0/0 CIDR range.
+
+Answer: 
+(A) Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+
+Explanation:
+Option A is the most efficient way to automatically remediate this security risk because it uses AWS Config to detect any changes made to security groups and automatically applies an automation document that updates the security group rules with the corporate firewall's IP address. This ensures that all traffic passes through the corporate firewall before reaching the EC2 instances, preventing unauthorized access.
+
+Option B is not the most efficient option because it requires setting up a new VPC and configuring additional network resources, which can be time-consuming and complex. Additionally, this option may introduce additional security risks if not properly configured.
+
+Option C is another option that could be effective in blocking traffic from the 0.0.0.0/0 CIDR range, but it does not address the underlying issue of developers adding security group rules without approval. This option could also create false positives and introduce additional security risks if not properly configured.
+
+Option D is a more advanced solution that uses AWS Shield to monitor and detect all security groups that allow traffic directly from the 0.0.0.0/0 CIDR range. However, this option is more complex and requires additional configuration and management overhead. It may also introduce additional security risks if not properly configured.

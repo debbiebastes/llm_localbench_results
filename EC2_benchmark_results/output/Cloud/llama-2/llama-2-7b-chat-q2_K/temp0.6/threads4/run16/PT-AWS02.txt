@@ -1,0 +1,13 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The MOST suitable solution in this scenario is (A): Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+This solution is the most suitable because it provides a centralized and automated way to manage and deploy security patches across multiple EC2 instances. By leveraging AWS Systems Manager Sessions Manager, the IT Security team can easily identify and address any vulnerabilities in their EC2 instances, reducing the risk of cyber attacks. Additionally, by integrating Amazon QuickSight with Kibana, the team can effectively monitor and track any configuration changes, providing a complete audit trail for compliance purposes.
+Option (B) may provide some level of automation through AWS Systems Manager Patch Manager, but it does not offer the same level of centralized management as AWS Systems Manager Sessions Manager. Option (C) is not the most suitable solution as it requires manual intervention and lacks the automated patch management capabilities offered by AWS Systems Manager. Option (D) may provide some degree of automation, but it is limited to a weekly basis and does not offer the same level of centralized management as the other options.

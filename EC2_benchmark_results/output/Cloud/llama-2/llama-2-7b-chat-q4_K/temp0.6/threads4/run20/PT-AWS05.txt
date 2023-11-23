@@ -1,0 +1,17 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements is option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+Here's why:
+EventBridge is a serverless event bus service that allows you to connect different AWS services and third-party applications through events. It can be used to track changes in DynamoDB tables and trigger Lambda functions to process those changes. By setting up an EventBridge rule that triggers a Lambda function whenever there are changes in the original DynamoDB table, you can ensure that new changes are recorded and stored in the other DynamoDB table in another region.
+Option (A), DynamoDB Accelerator, is not relevant to this scenario as it is designed to improve the performance of existing DynamoDB tables, but it does not provide the necessary functionality for tracking changes.
+Option (B) Enable DynamoDB Point-in-Time Recovery, while a useful feature for backup and restore purposes, is not the best solution for tracking changes in real-time. It only provides point-in-time recovery of data, but it does not offer real-time change tracking.
+Option (D), Enable DynamoDB Streams, is also not the best solution for this scenario as it requires additional configuration and management to set up and maintain. While DynamoDB Streams can be used to track changes in a table, it may require more effort to implement and maintain compared to using EventBridge with Lambda functions.
+In summary, option (C) is the most ideal way to comply with the requirements as it provides a simple and efficient solution for tracking changes in DynamoDB tables and processing those changes in another table in another region.

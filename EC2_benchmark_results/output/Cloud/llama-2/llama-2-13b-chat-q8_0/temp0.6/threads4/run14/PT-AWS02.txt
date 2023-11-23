@@ -1,0 +1,18 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+
+Explanation:
+Option C is the most suitable solution in this scenario because it allows for easy deployment of OS patches using AWS Systems Manager Patch Manager, while also providing a way to record and track any configuration changes using AWS Config.
+
+AWS Systems Manager Patch Manager provides a centralized solution for patch management, allowing you to easily deploy patches to your EC2 instances. By integrating with AWS Config, you can track and record all configuration changes, providing auditability and compliance reports. This approach is the most efficient and secure way to mitigate the security risk and ensure compliance.
+
+Option A is not suitable because it does not provide a centralized solution for patch management and does not integrate with AWS Config. Option B is also not suitable because it uses Amazon ES, which is not designed for recording and tracking configuration changes. Option D is not suitable because it does not address the need for immediate mitigation of the security risk and does not provide a way to record and track any configuration changes.

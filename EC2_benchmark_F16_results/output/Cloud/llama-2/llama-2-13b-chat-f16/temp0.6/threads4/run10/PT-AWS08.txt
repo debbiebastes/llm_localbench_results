@@ -1,0 +1,15 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation: An Elastic Block Store (EBS) volume is a persistent block storage volume that can be attached to an EC2 instance. It is well suited for mission-critical workloads and provides a more cost-effective solution than instance store volumes. Amazon S3 is an object storage service that provides scalable and durable storage for backup data. By attaching an EBS volume and using Amazon S3, the organization can meet their requirement of storing backup data for 30 days before transitioning it to a data archiving storage service.
+
+Option A is not a good choice because instance store volumes are not designed for persistent block storage and may not be suitable for mission-critical workloads. Option C is also not a good choice because Amazon S3 One Zone-IA is not designed for long-term storage and may not meet the organization's requirement of storing backup data for 30 days before transitioning it to a data archiving storage service. Option D is not a valid option as it does not provide a solution that meets the organization's requirements.

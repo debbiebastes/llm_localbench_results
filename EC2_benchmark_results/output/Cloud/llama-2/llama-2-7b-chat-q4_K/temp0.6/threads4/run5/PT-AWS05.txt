@@ -1,0 +1,19 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements is option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+Here's why:
+EventBridge is a serverless event bus service that allows you to connect different services, including DynamoDB, and trigger Lambda functions based on specific events. In this case, you can configure an EventBridge rule to track every new item added, updated, or deleted in the original DynamoDB table. Whenever an event occurs, the rule will trigger a Lambda function that saves the new changes to another DynamoDB table in another region.
+This approach has several advantages:
+1. Scalability: EventBridge can handle a high volume of events without any performance degradation, making it a scalable solution for your use case.
+2. Cost-effective: Since EventBridge is a serverless service, you don't have to worry about provisioning or managing servers, which can help reduce your costs.
+3. Flexibility: With EventBridge, you can connect different services and trigger Lambda functions based on various events, giving you more flexibility in designing your system.
+4. Easy to set up: Setting up an EventBridge rule is relatively easy, especially if you're already familiar with AWS services. You can configure the rule using a simple JSON format, and EventBridge will automatically take care of the underlying infrastructure for you.
+In summary, option (C) is the most ideal way to comply with the requirements because it provides a scalable, cost-effective, flexible, and easy-to-set-up solution for tracking and recording new changes in DynamoDB.

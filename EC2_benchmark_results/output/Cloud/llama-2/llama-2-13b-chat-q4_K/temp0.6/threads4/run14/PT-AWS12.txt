@@ -1,0 +1,30 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation:
+The cost-effective option would be to go with the No Upfront, Convertible Reserved Instance pricing for a 3-year term. This option offers the lowest total cost of ownership over the 3-year period, as there is no upfront payment required and the instance can be converted to a different type or size if needed.
+
+Here's a breakdown of the costs:
+
+* All Upfront Convertible Reserved Instance pricing for a 1-year term (Option A):
+	+ Upfront cost: $3,000 (1 year x $250 per month)
+	+ Monthly fees: $250 per month (for the next 12 months)
+	Total cost: $3,750 (upfront cost + 12 months of monthly fees)
+* No Upfront Convertible Reserved Instance pricing for a 3-year term (Option B):
+	+ Monthly fees: $250 per month (for the next 36 months)
+	Total cost: $9,000 (3 years x $250 per month)
+* All Upfront, Standard Reserved Instance pricing for a 3-year term (Option C):
+	+ Upfront cost: $3,000 (3 years x $1,000 per year)
+	Total cost: $3,000 (upfront cost + 3 years of monthly fees)
+* No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year (Option D):
+	+ Monthly fees: $250 per month (for the next 12 months)
+	Total cost: $3,000 (upfront cost + 12 months of monthly fees)
+
+As you can see, Option B offers the lowest total cost of ownership over the 3-year period, as there is no upfront payment required and the instance can be converted to a different type or size if needed.

@@ -1,0 +1,16 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+Explanation:
+An EBS volume provides persistent block storage that is ideal for mission-critical workloads, and it can be used for both on-premises data storage and archiving purposes. By attaching an EBS volume in your EC2 instance, you can store your backup data in a secure and durable manner.
+To meet the requirement of storing your backup data in Amazon S3 after 30 days, you can configure a lifecycle policy to transition your objects from the EBS volume to Amazon S3 One Zone-IA. This will ensure that your data is stored in a highly available and redundant storage system that is designed for long-term archiving purposes.
+Option (A) is not the best choice because instance store volumes are ephemeral and do not provide persistent storage. Option (B) is also not the best choice because EBS volumes provide more flexible and scalable storage than S3, and they offer better performance and throughput for mission-critical workloads.
+Option (D) is incorrect because instance store volumes are only available in EC2 instances and do not provide persistent storage.

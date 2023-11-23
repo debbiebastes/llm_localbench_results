@@ -1,0 +1,17 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+The Security Engineer should implement (B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key to meet the compliance requirements of the company.
+
+Explanation:
+In this scenario, the sensitive PII data stored in the Amazon S3 bucket must not be sent to AWS for any reason, including encryption. Therefore, option (A) client-side encryption with a client-side master key should be avoided as the master key would still need to be sent to AWS.
+Option (C) server-side encryption with a customer provided key is also not suitable because it requires sending the unencrypted data to AWS for encryption, which goes against the compliance requirements.
+Option (D) server-side encryption with a KMS managed key is also not suitable as it would still require the master key to be sent to AWS, which is a violation of the compliance requirements.
+Therefore, option (B) client-side encryption with a KMS-managed customer master key is the most appropriate solution to meet the compliance requirements of the company.

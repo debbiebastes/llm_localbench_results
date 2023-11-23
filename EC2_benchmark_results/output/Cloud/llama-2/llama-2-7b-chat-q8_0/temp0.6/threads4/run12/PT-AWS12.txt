@@ -1,0 +1,15 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The correct answer is (A): All Upfront Convertible Reserved Instance pricing for a 1-year term.
+Explanation:
+Reserved Instances provide cost savings compared to On-Demand instances by allowing you to pay a fixed amount upfront or over time in exchange for guaranteed instance usage. The cost savings increase as the length of the Reservation increases.
+For long-term usage (more than 3 years), the most cost-effective option is to use All Upfront Convertible Reserved Instance pricing for a 1-year term, which provides the largest cost savings compared to On-Demand instances. This is because the upfront payment provides the most significant discount and can be renewed annually without incurring additional upfront costs.
+Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term does not provide enough cost savings to justify the longer Reservation period, making it less cost-effective than option (A).
+Option (C) All Upfront, Standard Reserved Instance pricing for a 3-year term provides less cost savings compared to option (A) and may result in higher costs over the long term due to the lack of flexibility in changing instance sizes or availability zones.
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year does not provide any cost savings compared to On-Demand instances and may result in higher costs over time due to the lack of predictable instance usage.

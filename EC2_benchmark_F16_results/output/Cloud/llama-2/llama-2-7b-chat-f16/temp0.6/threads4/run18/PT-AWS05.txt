@@ -1,0 +1,20 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements would be option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table. This approach provides the following benefits:
+1. Monitoring and recording of all changes made to items in DynamoDB, including insert, update, and delete operations.
+2. Automated processing of new changes, ensuring that they are saved in the other DynamoDB table in another region without manual intervention.
+3. Scalability and reliability, as EventBridge can handle a large volume of events and trigger Lambda functions with minimal latency.
+4. Flexibility to customize the processing logic of the Lambda function according to specific business requirements.
+5. Built-in durability and persistence of data through EventBridge, ensuring that changes are not lost in case of a failure or outage.
+In contrast, options (A), (B), and (D) have limitations or drawbacks:
+1. DynamoDB Accelerator is a feature that can accelerate read queries for DynamoDB tables but does not provide change logging or processing capabilities.
+2. Enabling Point-in-Time Recovery (PITR) in DynamoDB can backup and restore data, but it does not track changes made to items. It also requires manual configuration and periodic backups.
+3. Configuring DynamoDB Streams and a Lambda function can provide real-time change tracking and processing, but it may require more complex setup and ongoing maintenance compared to EventBridge. Additionally, it relies on the Lambda function to process and save changes to the other table manually.

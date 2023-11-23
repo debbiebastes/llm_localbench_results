@@ -1,0 +1,18 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+
+Explanation: The issue of slow performance at the start of the day is likely due to the instance types and sizes being used, which are not able to handle the increased workload during peak hours. To address this, we need to increase the number of instances during the start of the day.
+
+Using a Dynamic scaling policy based on Memory utilization will allow us to launch new instances when memory usage is high, ensuring that the application has sufficient resources to handle the increased workload during peak hours. This approach is more operationally efficient than other options because it does not require predictive analytics or scheduled scaling, which can be less accurate and more complex to implement.
+
+Configuring a Predictive scaling policy (Option A) would require historical data and sophisticated algorithms to predict the future workload, which may not be feasible or accurate for this use case. Configuring a Scheduled scaling policy (Option C) would not address the issue of insufficient resources during peak hours and would only lead to additional costs for unused instances. Configuring a Dynamic scaling policy based on CPU utilization (Option D) would not be effective in this case as memory usage is the primary factor driving the performance issues.

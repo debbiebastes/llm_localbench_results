@@ -1,0 +1,15 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The MOST operationally efficient solution is option (C): Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+Explanation:
+The issue at hand is that the application starts slow in the mornings but performs normally after some time. This can be due to several reasons such as cold starts, low instance count, or high memory usage. To address this issue, we need to ensure that there are enough instances running during the early hours of the day to handle the load.
+Option (C) provides a solution by configuring a Scheduled scaling policy that launches new instances before the start of the day. This will ensure that there are sufficient instances running at 9 am when users start accessing the application, reducing the likelihood of slow performance due to cold starts or low instance count.
+Options (A), (B), and (D) do not address the root cause of the issue. Option (A) would require predicting usage patterns, which can be challenging, especially during non-peak hours. Option (B) would launch instances based on memory utilization, which may lead to overprovisioning or underprovisioning of instances. Option (D) would launch instances based on CPU utilization, which may not address the issue at hand as application performance is affected by other factors such as network latency and database queries.

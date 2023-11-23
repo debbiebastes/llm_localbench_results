@@ -1,0 +1,15 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The BEST answer is (A): Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+Explanation:
+In this scenario, the IT Security team needs to immediately mitigate the security risk by deploying the necessary OS patches to the old operating systems of several EC2 instances. The ideal solution is to use AWS Systems Manager Sessions Manager to deploy these patches. This tool provides a simple and efficient way to manage and automate the deployment of patches across multiple instances at once.
+Additionally, it is important to record any changes made to patch and associated compliance statuses for audit purposes. To do this, Integrating Amazon QuickSight with Kibana can be used to create a dashboard that provides real-time visibility into the configuration changes made to EC2 instances. This solution allows for easy tracking and monitoring of any updates or changes to the patch management process.
+Option (B) is not the best answer because it involves setting up AWS Systems Manager Patch Manager, which may not be as efficient or effective as using AWS Systems Manager Sessions Manager. Option (C) is also not the best answer because while it uses AWS Systems Manager Patch Manager, it does not provide the real-time tracking and monitoring capabilities offered by integrating Amazon QuickSight with Kibana. Option (D) is not a feasible solution as it may take too long to install the necessary patches on a weekly basis.

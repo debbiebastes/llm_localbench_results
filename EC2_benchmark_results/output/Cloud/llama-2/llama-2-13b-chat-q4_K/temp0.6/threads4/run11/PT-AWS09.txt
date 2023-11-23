@@ -1,0 +1,23 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+(B) Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+
+When there is a sudden increase in traffic, it can overwhelm the backend systems, leading to performance issues or even downtime. To protect the backend systems of the platform from traffic spikes, we should enable throttling limits and result caching in API Gateway.
+
+Throttling limits help regulate the number of requests that can be made to the backend system within a certain time frame, preventing overloading and ensuring that the system can handle the increased traffic.
+
+Result caching allows API Gateway to store the results of previous requests, so that they can be served directly from the cache instead of making a new request to the backend system. This reduces the load on the backend systems and improves responsiveness.
+
+Using EC2 instances, ELB, and Auto Scaling (Option A) would provide more scalability and availability, but it may not address the issue of throttling limits and result caching. Moving the Lambda function to a VPC (Option D) would not have any direct impact on traffic management.
+
+Using CloudFront in front of API Gateway (Option C) could help cache the content, but it would not address the throttling limits and result caching issues. Therefore, option B is the best answer.

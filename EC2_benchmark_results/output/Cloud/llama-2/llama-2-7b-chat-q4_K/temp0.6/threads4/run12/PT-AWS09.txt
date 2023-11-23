@@ -1,0 +1,19 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The correct answer is (B): Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+API Gateway is built on top of AWS Lambda, which means it can take advantage of the scalability and high availability features provided by AWS Lambda. However, there are times when even a highly available API Gateway may not be able to handle an unexpected surge in traffic. In such cases, throttling limits and result caching can help protect the backend systems from being overwhelmed with requests.
+Throttling limits enable you to set quotas on the number of requests that can be made to the API within a given time period. This can help prevent the backend systems from being flooded with too many requests, which can cause them to become unavailable or slow.
+Result caching allows you to cache the results of API calls, so that frequently requested data does not need to be re-queried every time. This can help reduce the load on the backend systems and improve response times.
+Option (A) is incorrect because while EC2 instances, ELB, and Auto Scaling can provide more scalability and high availability for the platform, they are not necessary in this scenario as API Gateway already has these features built-in.
+Option (C) is also incorrect because CloudFront is primarily designed to act as a content delivery network (CDN), which can help reduce latency for users by caching static assets closer to them. While it can provide some protection against traffic spikes, it is not the best solution for protecting backend systems from being overwhelmed with requests.
+Option (D) is incorrect because moving the Lambda function into a VPC does not provide any direct protection against traffic spikes. While it may provide some additional security and isolation benefits, it is not a necessary step in this scenario.

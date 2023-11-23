@@ -1,0 +1,18 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B) Attach an EBS volume in your EC2 instance.
+Explanation:
+You should use an EBS (Elastic Block Store) volume instead of an instance store volume for mission-critical workloads that require persistent storage. An EBS volume provides block-level storage persistence, which ensures that data is preserved even during instance terminations or reboots. Moreover, Amazon S3 can be used to store backup data and configure a lifecycle policy to transition objects to Amazon S3 Glacier after 30 days, ensuring long-term archiving of the data.
+Option (A) - Attach an instance store volume: While instance store volumes provide fast storage for the instance, they do not offer persistent storage. This means that if an instance is terminated or rebooted, any data stored on the instance store volume will be lost. Therefore, it is not suitable for mission-critical workloads that require persistent storage.
+Option (C) - Attach an EBS volume in your EC2 instance: While this option is correct, it may not provide the desired level of data archiving and retrieval capabilities as explained below:
+Amazon S3 provides a scalable object store with high durability and availability, making it suitable for long-term archiving. However, Amazon S3 does not provide a built-in solution for data retrieval after a certain period (e.g., 30 days). While you can use lifecycle policies to transition objects to Amazon S3 Glacier after 30 days, you may need additional solutions or services to retrieve the archived data.
+Option (D) - Attach an instance store volume: As mentioned earlier, instance store volumes do not provide persistent storage and are not suitable for mission-critical workloads that require long-term persistence of data.
+In summary, option (B) provides a more appropriate solution by utilizing EBS volumes for mission-critical workloads while still leveraging the scalability and durability of Amazon S3 for data archiving and retrieval.

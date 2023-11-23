@@ -1,0 +1,20 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+The correct answer is B: Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation:
+
+EBS (Elastic Block Store) volumes provide persistent block storage for EC2 instances, which is suitable for mission-critical workloads. Attaching an EBS volume in the existing EC2 instance will provide a persistent storage solution that can be used for backup data.
+
+Using Amazon S3 to store the backup data provides a highly available and durable storage solution. Configuring a lifecycle policy to transition objects to Amazon S3 Glacier after 30 days will help reduce storage costs by moving infrequently accessed data to a lower-cost storage class.
+
+Option A is incorrect because instance store volumes are temporary storage that is specific to the instance and are not suitable for mission-critical workloads. Option C is also incorrect because Amazon S3 One Zone-IA is a storage class that provides Infrequent Access (IA) storage, which is not suitable for backup data that needs to be accessed frequently. Option D is incorrect because instance store volumes are temporary storage that is specific to the instance and are not suitable for mission-critical workloads.

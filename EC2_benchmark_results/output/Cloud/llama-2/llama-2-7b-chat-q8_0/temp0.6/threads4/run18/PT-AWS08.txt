@@ -1,0 +1,15 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B) Attach an EBS volume in your EC2 instance.
+Explanation:
+For a persistent block storage volume that will be used for mission-critical workloads, it's recommended to use an EBS volume rather than an instance store volume. An EBS volume provides durable and persistent storage that can be attached to multiple EC2 instances.
+Storing the backup data in Amazon S3 is also a good choice as it provides a highly scalable and durable storage solution with features like redundant storage, automatic backups, and data encryption. Using a lifecycle policy to transition objects to Amazon S3 Glacier or Amazon S3 One Zone-IA after 30 days can help reduce storage costs and improve data management.
+Option (A) is incorrect because instance store volumes are ephemeral and not suitable for mission-critical workloads. Option (C) is also incorrect because Amazon S3 One Zone-IA is a storage service that provides a single Availability Zone for storing data, which may not meet the requirement of storing backup data across multiple availability zones for disaster recovery purposes.

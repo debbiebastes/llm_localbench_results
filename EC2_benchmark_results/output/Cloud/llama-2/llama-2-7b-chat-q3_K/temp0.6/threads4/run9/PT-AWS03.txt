@@ -1,0 +1,15 @@
+A Security Engineer has found out that there are some developers who have been adding rules to security groups without any approval. The developers configured the security groups to allow RDS, SMTP, and SSH traffic from the 0.0.0.0/0 CIDR range in order to do their code testing. The company has an existing firewall hosted in an EC2 instance where all of the traffic should pass through.
+
+Which of the following is the MOST efficient way to automatically remediate this security risk?
+
+(A) Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+(B) Set up a Transit VPC to connect the corporate firewall and the EC2 instances.
+(C) Block the source IP addresses coming from the 0.0.0.0/0 CIDR range using Network ACL.
+(D) Use AWS Shield to automatically monitor and detect all the security groups that allow traffic directly from the 0.0.0.0/0 CIDR range.
+
+Answer: 
+The MOST efficient way to remediate this security risk is (A): Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from the 0.0.0.0/0 CIDR range, and then associate an AWS Lambda function with the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+Here's why:
+
+AWS Config allows you to define rules that check for specific configurations in your AWS environment. By setting up a rule that checks for security groups allowing traffic from the 0.0.0.0/0 CIDR range, you can automatically detect when a developer has added rules to allow unauthorized traffic. Once the rule is triggered, you can use an associated Lambda function to update the security group with the corporate firewall IP address, effectively blocking the unauthorized traffic and remediating the security risk.
+Option (B) does not address the root cause of the issue as it only connects the corporate firewall and EC2 instances using a Transit VPC. Option (C) is not efficient as it involves creating a Network ACL to block the source IP addresses coming from the 0.0.0.0/0 CIDR range, which may not be able to detect changes in real-time. Option (D) does not provide an automated remediation solution and requires manual intervention to monitor and detect security groups that allow traffic directly from the 0.0.0.0/0 CIDR range.

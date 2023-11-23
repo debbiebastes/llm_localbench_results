@@ -1,0 +1,16 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B) Attach an EBS volume in your EC2 instance. Here's why:
+An EBS (Elastic Block Store) volume provides the benefits of persistent storage, which is essential for mission-critical workloads. An EBS volume will be available and mounted to the EC2 instance at all times, providing uninterrupted access to the data. This is particularly important for backup data that needs to be stored long-term.
+While (A) Attach an instance store volume in your existing EC2 instance may provide faster performance, it does not offer the same level of persistence as an EBS volume. Instance store volumes are ephemeral storage that is only available during the lifetime of an EC2 instance, and they do not provide persistence across instances or availability zones.
+Similarly, (C) Attach an EBS volume in your EC2 instance may provide some level of persistence, but it does not offer the same level of durability as an EBS volume. While an EBS volume is available and mounted to the instance at all times, an EBS volume located in a different availability zone or region may be subject to data consistency and durability issues that could impact mission-critical workloads.
+Finally, (D) Attach an instance store volume in your EC2 instance is not recommended as it does not provide the same level of persistence or durability as an EBS volume. Instance store volumes are ephemeral storage that is only available during the lifetime of an EC2 instance, and they do not provide persistence across instances or availability zones.
+In summary, the best answer for storing backup data that needs to be stored long-term in a mission-critical workload is to attach an EBS volume in your EC2 instance. This provides the benefits of persistent storage while ensuring durability and durability for long-term data retention.

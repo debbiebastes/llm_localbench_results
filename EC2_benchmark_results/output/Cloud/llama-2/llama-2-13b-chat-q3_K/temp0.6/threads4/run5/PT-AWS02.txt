@@ -1,0 +1,16 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+
+C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+
+Rationale: In this scenario, the company needs to immediately mitigate security risks and ensure compliance with various cybersecurity attacks. Therefore, option (C) is the most suitable solution as it provides a centralized management tool for deploying patches and recording changes. AWS Systems Manager Patch Manager can easily deploy OS patches for the outdated EC2 instances, while AWS Config can record and track any configuration changes for audit purposes.
+
+Note: Option (A) is not suitable as it does not provide a centralized management tool for patch deployment and configuration changes. Option (B) is not suitable as it requires more technical setup and does not provide recording and tracking features. Option (D) is not suitable as it does not address the immediate need to mitigate security risks and ensure compliance.

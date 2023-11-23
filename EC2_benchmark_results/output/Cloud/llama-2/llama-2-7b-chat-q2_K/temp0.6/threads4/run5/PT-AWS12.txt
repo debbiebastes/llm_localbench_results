@@ -1,0 +1,13 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option would be (C) All Upfront, Standard Reserved Instance pricing for a 3-year term. This is because the application will likely be in use for more than 3 years, and using a Standard Reserved Instance would provide the lowest cost per year over the life of the agreement. Additionally, choosing a Standard Reserved Instance with an upfront payment would provide the most cost savings compared to other options.
+Explanation:
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term is more expensive than Option (C) All Upfront, Standard Reserved Instance pricing for a 3-year term because the upfront payment for a Convertible Reserved Instance is higher compared to a Standard Reserved Instance. Additionally, the Convertible Reserved Instance would need to be converted to a different type of instance at some point, which could result in additional cost and complexity.
+Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term is not a viable option as it does not provide any cost savings compared to using an On-Demand instance.
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year is more expensive than Option (C) All Upfront, Standard Reserved Instance pricing for a 3-year term because the cost per year would increase over time due to the need for annual renewals. Additionally, there may be instances where the application is not in use for an entire year, which could result in wasted costs.

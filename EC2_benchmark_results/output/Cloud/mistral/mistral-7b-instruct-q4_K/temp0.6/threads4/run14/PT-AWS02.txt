@@ -1,0 +1,17 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The MOST suitable solution in this scenario is (B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+
+AWS Systems Manager Patch Manager is a fully managed service that automates the deployment of software updates, including security patches, to on-premises and AWS-based applications. With AWS Systems Manager Patch Manager, you can centrally manage the patching process across your entire environment, and automatically remediate vulnerabilities in your Amazon EC2 instances, without any manual intervention.
+
+Amazon ElasticSearch (ES) is a cloud-based search service that makes it easy to set up, operate, and scale an open-source search service. With Amazon ES, you can easily record and track any configuration changes made to your AWS environment, providing a comprehensive audit trail for compliance purposes.
+
+Option (A) deploys the OS patches using AWS Systems Manager Sessions Manager, but does not integrate with Kibana to record and track configuration changes. Option (C) uses AWS Config to record and track configuration changes, but does not automate the patching process. Option (D) automatically installs the OS patches on a weekly basis, but does not provide any mechanism for recording and tracking configuration changes.

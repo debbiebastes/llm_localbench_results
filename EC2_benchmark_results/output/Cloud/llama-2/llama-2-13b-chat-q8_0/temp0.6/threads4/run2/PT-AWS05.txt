@@ -1,0 +1,21 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+
+Option C is the most ideal way to comply with the requirements because it allows for real-time replication of new changes made to items in DynamoDB without requiring manual intervention or infrastructure setup. By creating an Amazon EventBridge rule that tracks table-level events in DynamoDB, all new changes will be automatically captured and passed to a Lambda function as a rule target. The Lambda function can then process the new changes and save them to the other DynamoDB table in another region.
+
+Option A is not ideal because it requires setting up DynamoDB Accelerator, which is a feature that accelerates data transfer between AWS services but does not provide real-time replication.
+
+Option B is not ideal because enabling DynamoDB Point-in-Time Recovery would allow for the restoration of a table to a previous state in case of a failure, but it would not provide real-time replication of new changes. Additionally, this option would require manual intervention to restore the table.
+
+Option D is not ideal because enabling DynamoDB Streams would provide a stream of all data modifications made to items in DynamoDB, but it would require setting up a Lambda function to process the stream and save the new changes to the other table. This approach would be more complex and resource-intensive compared to option C.

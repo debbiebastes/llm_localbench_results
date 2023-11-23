@@ -1,0 +1,14 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option for a company using an On-Demand EC2 instance for their application that they plan to migrate to a Reserved EC2 Instance for more than 3 years would be (C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+The reason for this is that the cost savings from using Reserved Instances are greater when the instance is reserved for a longer period of time. The cost savings are:
+* 1 year: 5% to 20% off the On-Demand price
+* 3 years: 15% to 30% off the On-Demand price
+By reserving the instance for 3 years, the company would be able to save more money compared to reserving it for 1 year. Additionally, using Standard Reserved Instances provides a fixed hourly rate for the duration of the term, which can help the company budget and plan their costs more effectively.
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term is not the most cost-effective option as the savings are less compared to reserving it for a longer period of time. Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term is also not the most cost-effective option as there are no cost savings associated with reserving the instance for a shorter period of time. Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year is not a viable option as there are no cost savings associated with reserving the instance for a shorter period of time and the company would have to pay more in the long run.

@@ -1,0 +1,13 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+You should choose option (B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier. 
+
+This is because EBS volumes are persistent block storage that are attached to an EC2 instance, which means they are available for use as long as the instance is running. Additionally, using Amazon S3 to store backup data provides durability and security, while configuring a lifecycle policy ensures that your data is moved to Glacier after 30 days, providing long-term cost optimization. Option A is incorrect because instance store volumes are not persistent and are deleted when the instance is terminated. Option C is incorrect because One Zone-IA storage class provides durability at a lower cost than Glacier, but does not have the same retrieval time as Glacier. Option D is incorrect because One Zone-IA storage class is not a good option for mission-critical workloads because of its retrieval time.

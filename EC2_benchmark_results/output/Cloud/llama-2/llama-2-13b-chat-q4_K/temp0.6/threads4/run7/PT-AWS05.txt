@@ -1,0 +1,20 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+To comply with the requirements of recording all new changes made to items in DynamoDB and storing them in another table in another region, option C is the most ideal way to do it.
+
+Option A (Set up DynamoDB Accelerator) is not relevant to this requirement as it only helps improve the performance of DynamoDB tables but does not provide a solution for recording changes.
+
+Option B (Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables) would not work either, as it only provides a way to recover DynamoDB tables to a specific point in time and does not allow for real-time synchronization of changes between tables.
+
+Option D (Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table) is a valid approach as well, but it may require more setup and configuration compared to option C, which provides a simpler solution using Amazon EventBridge.

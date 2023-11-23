@@ -1,0 +1,21 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements would be option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+Here's why:
+
+EventBridge is a serverless event bus service that allows you to connect your applications, services, and systems to AWS services like Lambda, S3, and SNS. By setting up an EventBridge rule that tracks table-level events in DynamoDB, you can automatically capture new changes made to the items in DynamoDB and save them to another DynamoDB table in another region.
+This approach has several advantages:
+
+1. Automatic syncing: With EventBridge, you don't have to worry about manually synchronizing data between tables. As soon as an event is triggered in one table, it will automatically be sent to the Lambda function, which can then save the new changes to the other table.
+2. Real-time tracking: EventBridge provides real-time visibility into DynamoDB table events, allowing you to track changes as they occur. This ensures that you can quickly identify and address any issues or discrepancies between the two tables.
+3. Scalability: With EventBridge, you don't have to worry about scaling your Lambda function to handle large volumes of data. The service handles the scaling for you, ensuring that your application remains reliable and efficient.
+4. Cost-effective: By using EventBridge, you can avoid the costs associated with setting up and managing a separate Lambda function for data syncing. The service is designed to be cost-effective, allowing you to focus on developing your applications without worrying about infrastructure costs.
+In summary, option (C) is the most ideal way to comply with the requirements because it provides automatic synchronization of new changes made to DynamoDB items, real-time tracking, scalability, and cost-effectiveness.

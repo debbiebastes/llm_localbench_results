@@ -1,0 +1,18 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+The correct answer is (B): Implement an Amazon S3 client-side encryption with a KMS-managed customer master key.
+Explanation:
+In this scenario, the Security Engineer needs to ensure that the sensitive PII data stored in the Amazon S3 bucket is encrypted to comply with regulatory requirements. Implementing client-side encryption using a KMS-managed customer master key provides several benefits:
+1. Encryption at rest: The data is encrypted before it is written to S3, ensuring that even if the data is accessed in transit (e.g., during transmission between the hospital's systems and AWS), it will be unreadable without the appropriate decryption key.
+2. Key management: A KMS-managed customer master key can be securely stored and managed within AWS, ensuring that the key is properly rotated and updated according to the organization's policies. This reduces the risk of unauthorized access to the encryption key.
+3. Compliance: By using a KMS-managed customer master key for client-side encryption, the hospital can demonstrate compliance with regulatory requirements related to data encryption and protection.
+While option (A) involves encrypting the data on the client side with a client-side master key, it may not provide the same level of security as using a KMS-managed customer master key. Option (C) involves using a server-side encryption technique with a customer-provided key, which may also raise security concerns.
+In summary, option (B) provides a more secure and compliant solution for encrypting sensitive data stored in an Amazon S3 bucket.

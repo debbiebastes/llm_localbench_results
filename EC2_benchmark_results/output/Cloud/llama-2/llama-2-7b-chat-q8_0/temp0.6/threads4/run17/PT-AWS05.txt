@@ -1,0 +1,18 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The MOST ideal way to comply with the requirements is (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table. This approach provides several benefits:
+
+1. **Decoupling**: By using EventBridge, you decouple the change data from the original table and pass it to a separate Lambda function for processing, reducing potential bottlenecks or issues in the original table.
+2. **Asynchronous processing**: Using a Lambda function as a rule target allows for asynchronous processing of changes, ensuring that your application remains responsive and available even during the processing of large amounts of data.
+3. **Cost-effective**: EventBridge is a cost-effective way to handle change data from DynamoDB, as you only pay for the resources used when events are processed. Compared to other options like DynamoDB Accelerator or Point-in-Time Recovery, this approach can help reduce costs by avoiding unnecessary capacity provisioning.
+4. **Multi-region support**: By using EventBridge, you can easily set up a rule in one region and have it trigger a Lambda function in another region, ensuring compliance with the company's IT compliance requirements.
+
+Therefore, option (C) is the MOST ideal way to comply with the requirements in this scenario.

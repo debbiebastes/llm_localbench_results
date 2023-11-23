@@ -1,0 +1,17 @@
+A Security Engineer has found out that there are some developers who have been adding rules to security groups without any approval. The developers configured the security groups to allow RDS, SMTP, and SSH traffic from the 0.0.0.0/0 CIDR range in order to do their code testing. The company has an existing firewall hosted in an EC2 instance where all of the traffic should pass through.
+
+Which of the following is the MOST efficient way to automatically remediate this security risk?
+
+(A) Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+(B) Set up a Transit VPC to connect the corporate firewall and the EC2 instances.
+(C) Block the source IP addresses coming from the 0.0.0.0/0 CIDR range using Network ACL.
+(D) Use AWS Shield to automatically monitor and detect all the security groups that allow traffic directly from the 0.0.0.0/0 CIDR range.
+
+Answer: 
+The MOST efficient way to automatically remediate this security risk would be (A) Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+
+Explanation: 
+Option (A) uses AWS Config, which is a service that helps you monitor and track changes to your resources across all your accounts and regions. It can be used to set up alarms and notifications for specific resource configurations or changes. The Systems Manager Automation document can be used to create and manage remediation tasks automatically. This approach will ensure that the security group is updated with the correct IP address of the corporate firewall, preventing any unauthorized access.
+Option (B) requires setting up a new VPC, which may not be necessary in this scenario.
+Option (C) can be used to block specific source IP addresses but it does not address the issue with the security group configuration.
+Option (D) is useful for detecting and blocking DDoS attacks but it doesn't address the issue with unauthorized access through the security groups.

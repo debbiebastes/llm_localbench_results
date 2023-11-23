@@ -1,0 +1,17 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+
+Explanation:
+In this scenario, it is expected that the trading platform will experience a significant increase in site visitors and new users due to the recent news and rumors about the upcoming price surge of Bitcoin and other cryptocurrencies. This would put a lot of pressure on the backend systems of the platform, causing them to become overloaded and unresponsive. To prevent this from happening, it is recommended to switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+By doing so, the platform can handle the increased traffic by scaling up the number of instances as needed, which would help prevent overloading and ensure that the backend systems remain responsive and available. Additionally, using ELB (Elastic Load Balancer) would help distribute the traffic across multiple instances, ensuring that no single instance is overwhelmed with requests.
+Option (B) is incorrect because enabling throttling limits and result caching in API Gateway may help to some extent, but it might not be enough to handle a significant increase in site visitors and new users. Option (C) is also incorrect because CloudFront can only act as a cache for static assets, such as images and videos, and cannot handle the increased traffic on the backend systems of the platform.
+Option (D) is incorrect because moving the Lambda function to a VPC would not help handle the increased traffic on the backend systems of the platform.

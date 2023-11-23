@@ -1,0 +1,20 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C
+
+Explanation:
+Option C is the most ideal way to comply with the requirements. By creating an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB, you can set a Lambda function as a rule target to process and save new changes to the other table. This approach allows you to capture all changes made to the items in DynamoDB, regardless of whether they are made directly or through API Gateway, and store them in another table.
+
+Option A is not ideal because DynamoDB Accelerator is a feature that improves the performance of DynamoDB by caching frequently accessed data, but it does not provide the functionality to capture changes made to items in DynamoDB.
+
+Option B is also not ideal because DynamoDB Point-in-Time Recovery allows you to recover a DynamoDB table to a specific point in time, but it does not provide the functionality to capture changes made to items in DynamoDB.
+
+Option D is not ideal because DynamoDB Streams provides a stream of all modifications made to items in DynamoDB, but it does not provide the functionality to capture changes made to items in DynamoDB and store them in another table.

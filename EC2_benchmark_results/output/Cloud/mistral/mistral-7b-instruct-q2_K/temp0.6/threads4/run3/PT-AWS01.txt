@@ -1,0 +1,20 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key.
+
+Explanation:
+
+AWS offers several encryption options for S3 storage, but it is essential to understand the key management requirements of the company and choose the right option. In this case, the hospital needs to comply with strict regulatory requirements while storing sensitive patient data in an S3 bucket. Therefore, it is important to implement end-to-end encryption that ensures the privacy and integrity of the data both in transit and at rest.
+
+The most appropriate option in this scenario would be Amazon S3 client-side encryption with a KMS-managed customer master key. This approach provides an extra layer of security by encrypting the data on the client-side before sending it to S3, ensuring that even if the data were intercepted during transit, it would not be readable without the decryption key. The KMS managed key will also ensure that only authorized personnel can access and manage the keys used for encryption and decryption.
+
+Option (A) is not appropriate as it does not provide a way to manage the master keys securely. Option (C) provides a way to encrypt data at rest, but it does not address the issue of key management. Option (D) is not recommended since it requires customers to manage their own encryption keys, which can be challenging and increases the risk of key theft or loss.

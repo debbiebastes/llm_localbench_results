@@ -1,0 +1,17 @@
+An e-commerce company wants to migrate its on-premise infrastructure to Amazon Web Services. However, they are worried about ensuring their migration is secure and efficient.
+
+Which of the following AWS Cloud Adoption Framework perspective would be the most essential for the company’s migration?
+
+(A) Security Perspective
+(B) Governance Perspective
+(C) Operations Perspective
+(D) Platform Perspective
+
+Answer: 
+(A) Security Perspective.
+
+Explanation: The security perspective is crucial for ensuring that the migration to AWS is secure and efficient. It involves evaluating the current on-premise infrastructure, identifying sensitive data, and developing a plan to migrate and protect it in the cloud. Additionally, it involves implementing security controls and compliance requirements to meet regulatory obligations. By focusing on security during the migration process, the company can minimize the risk of data breaches or other security incidents that could impact their business operations and reputation.
+Option (B) Governance Perspective is also important as it involves evaluating and optimizing the organization's IT governance structure to support the migration to AWS. This includes developing policies, standards, and procedures for cloud resource management, access control, and incident response. By focusing on governance during the migration process, the company can ensure that their resources are properly managed and allocated to support their business needs.
+Option (C) Operations Perspective is important as it involves evaluating the current infrastructure and operations to determine which workloads can be moved to AWS with minimal disruption. This includes evaluating the complexity of the application, the performance requirements, and the scalability needs. By focusing on operations during the migration process, the company can ensure a smooth transition and minimize downtime or other operational issues that could impact their business.
+Option (D) Platform Perspective is important as it involves evaluating the AWS platform and its services to determine which are most suitable for the company's needs. This includes evaluating the cost, performance, scalability, and security of different AWS services to determine which ones can be used to replace existing on-premise infrastructure. By focusing on platform during the migration process, the company can ensure that they are using the right tools and services to support their business needs.
+Overall, while all perspectives are important, the security perspective is the most essential for a secure and efficient migration to AWS.

@@ -1,0 +1,17 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+To protect the backend systems of the trading platform from traffic spikes, you can consider the following options:
+
+Option (A): Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling. This will allow you to horizontally scale your backend systems to handle increased traffic, rather than relying on the limitations of Lambda's cold start problem and API Gateway's throttling limits.
+Option (B): Enable throttling limits and result caching in API Gateway. You can configure throttling limits to limit the number of requests that can be made to your backend systems within a certain time period, and result caching to cache frequently accessed data in API Gateway, reducing the load on your backend systems.
+Option (C): Use CloudFront in front of the API Gateway to act as a cache. CloudFront can cache responses from your backend systems at edge locations around the world, reducing the latency and load on your backend systems when handling traffic spikes.
+Option (D): Move the Lambda function in a VPC. Moving the Lambda function to a VPC can help to isolate it from external traffic and protect it from denial-of-service attacks. However, this may not necessarily help with traffic spikes caused by increased user activity.
+In summary, options (A) and (B) are more scalable and highly available solutions for handling traffic spikes in a trading platform's backend systems, while options (C) and (D) can provide additional protection against denial-of-service attacks.

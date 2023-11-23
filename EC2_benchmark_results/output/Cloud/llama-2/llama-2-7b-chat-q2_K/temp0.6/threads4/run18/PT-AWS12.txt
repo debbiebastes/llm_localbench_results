@@ -1,0 +1,18 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option would be:
+
+C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+
+Explanation:
+When you choose to use the Standard Reserved Instance (SRI) pricing for a 3-year term, you'll get better pricing compared to using On-Demand pricing or Convertible Reserved Instance (CRI) pricing. The reason is that Amazon Web Services (AWS) offers discounts for committing to a longer term. Additionally, SRI pricing allows you to save on both the upfront cost and the recurring costs over the term of your agreement.
+In summary:
+* If you only need the instance for 1 year, option (D) is the most cost-effective choice.
+* If you need the instance for more than 3 years, option (C) is the most cost-effective choice.
+Note that all options have different pricing models, and it's important to evaluate your needs and choose the option that best fits your budget and usage patterns before making a decision.

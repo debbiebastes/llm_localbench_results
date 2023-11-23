@@ -1,0 +1,16 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements would be option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB, and set a Lambda function as a rule target to process and save new changes to the other table.
+Here's why:
+EventBridge is a fully managed service that allows you to track events from multiple sources, including DynamoDB tables. By setting up an EventBridge rule that triggers when there are changes made to the original DynamoDB table, you can automatically capture and save those changes to another DynamoDB table in another region. This ensures that all new changes are recorded and stored in both tables, which is a key requirement for IT compliance.
+Option (D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table is also a viable solution, but it may not be as efficient or scalable as using EventBridge. With EventBridge, you don't need to set up any additional stream processing infrastructure, as it can automatically detect and handle changes made to your DynamoDB tables.
+Option (A) Set up DynamoDB Accelerator is not a recommended solution for this use case, as it is primarily designed to improve the performance of read-heavy workloads in a single DynamoDB table. While it could potentially help with data consistency across multiple tables, it may not be the best solution for capturing and storing new changes from a single table.
+Option (B) Enable DynamoDB Point-in-Time Recovery is also not ideal for this use case, as it is primarily designed to restore data from a specific point in time in case of a failure or data loss event. While it could potentially help with data consistency across multiple tables, it may not be the best solution for capturing and storing new changes from a single table.

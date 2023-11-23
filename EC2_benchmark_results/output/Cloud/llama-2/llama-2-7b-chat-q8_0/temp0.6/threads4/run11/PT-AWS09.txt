@@ -1,0 +1,20 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+(B) Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+
+As the traffic on the platform is expected to increase significantly, it's important to ensure that the backend systems can handle the increased load without any downtime or performance issues. One way to achieve this is by enabling throttling limits and result caching in API Gateway.
+Throttling limits allow you to control the amount of traffic that can be sent to the backend system at a given time, ensuring that the system doesn't get overwhelmed with requests. This can be especially useful during sudden spikes in traffic, as it allows you to slow down the rate of incoming requests and distribute them more evenly across the backend systems.
+Result caching is another feature of API Gateway that helps to improve performance by storing frequently accessed data in a cache. This reduces the number of requests made to the backend system, reducing the load on the system and improving overall performance. By enabling result caching, you can reduce the load on the backend system during traffic spikes, ensuring that it can handle the increased load without any issues.
+Option (B) provides a more scalable and highly available architecture compared to options (A), (C), and (D). While option (A) using EC2 instances, ELB, and Auto Scaling can provide more computing resources, it may not be as effective in handling traffic spikes as throttling limits and result caching. Option (C) using CloudFront as a cache can help improve performance but may not address the issue of traffic spikes. And option (D) moving the Lambda function to a VPC does not provide any direct benefits for protecting the backend systems from traffic spikes.
+Therefore, option (B) is the best answer.

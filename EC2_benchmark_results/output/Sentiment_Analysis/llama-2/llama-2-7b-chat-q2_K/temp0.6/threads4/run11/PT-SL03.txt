@@ -1,0 +1,37 @@
+Here is a product review from a customer, which is delimited with triple backticks.
+
+Product Name: Vintage Elegance Vanity
+Review text: 
+```
+I am extremely disappointed with it. The quality of the product is very poor and does not meet my expectations at all. The materials used feel cheap and the vanity arrived with several scratches and dents. The assembly instructions were also confusing and the whole process took much longer than anticipated. I would not recommend this product to anyone.
+```
+
+What is the sentiment of that product review?
+Identify the product being reviewed.
+Enumerate the positive and negative aspects of the product review.
+The response should have the following elements:
+        - Product name
+        - Review Sentiment (Positive/Negative/Neutral)
+        - Positive comments about the product (Enumerate)
+        - Negative comments about the product (Enumerate)
+
+Answer:
+
+Product Name: Vintage Elegance Vanity
+Review Sentiment: Negative
+
+Positive Comments About the Product:
+
+* The vanity has a classic and timeless design that can complement any bathroom decor.
+* The product is made of high-quality materials that give off an elegant vibe.
+* The mirror is spacious enough to provide a good view of oneself while getting ready in the morning.
+
+Negative Comments About the Product:
+
+* The quality of the product is poor, with cheaply made materials that do not last long.
+* The vanity arrived with several scratches and dents, indicating poor packaging and handling during shipping.
+* The assembly instructions were confusing and took much longer than anticipated to complete.
+* The product would not meet the expectations of even the most casual customers due to its low quality.
+
+
+In conclusion, a customer left a negative review for the Vintage Elegance Vanity, citing poor product quality with cheap materials that did not last long, confusing assembly instructions, and several scratches and dents upon arrival. The reviewer would not recommend this product to anyone.

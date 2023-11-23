@@ -1,0 +1,13 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements in this scenario is option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+EventBridge is a fully managed service that allows you to automatically capture and react to changes in your AWS resources, such as DynamoDB tables. By setting up an EventBridge rule, you can configure Amazon CloudWatch Events to monitor DynamoDB table-level events, such as insert, update, or delete operations. When one of these events occurs, the EventBridge rule will trigger a Lambda function as a target, which can then process and save the new changes to the other DynamoDB table in another region.
+Option (A) sets up DynamoDB Accelerator, which is not necessary for this scenario. Option (B) enables DynamoDB Point-in-Time Recovery, which is a feature that allows you to recover a DynamoDB table from a specific point in time in the event of a failure or data loss. While this feature can be useful in some cases, it is not relevant for this requirement as there is no need to restore data from a previous point in time. Option (D) enables DynamoDB Streams, which allows you to stream data from a DynamoDB table in real-time. However, this feature may not be ideal for this scenario as it requires additional configuration and management to process the data in the other table.

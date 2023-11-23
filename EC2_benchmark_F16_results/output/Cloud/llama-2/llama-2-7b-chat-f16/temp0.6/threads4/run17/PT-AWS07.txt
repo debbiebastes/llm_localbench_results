@@ -1,0 +1,16 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The correct answer is (C): Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+Explanation:
+During peak hours, the load on the application increases, and as a result, the performance slows down. To address this issue, you can configure a scheduled scaling policy that launches new instances before the start of the day, when the load is low. This will ensure that there are enough instances available to handle the increased traffic during peak hours without any slowdowns.
+Option (C) provides the most operationally efficient solution because it allows you to proactively launch new instances before the start of the day, ensuring that the application has sufficient capacity to handle the expected load. Option (A) may not be effective in addressing this issue as predictive scaling policies rely on historical data and may not accurately forecast future usage patterns.
+Options (B) and (D) are not suitable solutions for this problem because they do not address the root cause of the slow performance during peak hours. Option (B) would launch new instances based on memory utilization, which may lead to over-provisioning of resources during non-peak hours, resulting in increased costs. Option (D) would launch new instances based on CPU utilization, which may not accurately reflect the actual load on the application.
+In summary, configuring a scheduled scaling policy before the start of the day allows you to proactively address the issue of slow performance during peak hours by ensuring that there are enough instances available to handle the expected load without any slowdowns.

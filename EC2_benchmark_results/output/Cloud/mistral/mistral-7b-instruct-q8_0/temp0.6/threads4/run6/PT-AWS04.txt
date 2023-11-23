@@ -1,0 +1,14 @@
+Your application is processing one Kinesis data stream which has four shards, and each instance has one KCL worker. To scale up processing in your application, you reshard your stream to increase the number of open shards to six.
+
+What is the MAXIMUM number of EC2 instances that you should launch to achieve optimum performance?
+
+(A) 5
+(B) 12
+(C) 3
+(D) 6
+
+Answer: 
+
+(B) 12
+
+To achieve optimal performance, you want each instance to handle one shard of data. Since there are six open shards in the stream, you would need a minimum of six instances (one per shard) to handle the data. However, if your workload increases beyond the capacity of the original four shards, you may need more than six instances to handle the increased load. Therefore, the maximum number of EC2 instances that you should launch is dependent on the specific workload requirements of your application.

@@ -1,0 +1,24 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on Memory utilization.
+
+Explanation:
+
+The application performance issues during the start of the day are likely caused by the increased load on the instances due to the sudden surge in user activity. To address this, we need to scale up the resources to handle the increased demand.
+
+Using a Dynamic scaling policy based on Memory utilization would allow the Auto Scaling group to launch new instances when the memory usage of the existing instances exceeds a certain threshold. This would ensure that the application has enough resources to handle the increased load during the start of the day.
+
+Option A is not the best choice as Predictive scaling policies are used to forecast future resource needs based on historical data, and may not be effective in addressing immediate performance issues.
+
+Option C is not the best choice as Scheduled scaling policies are used to scale resources at a specific time, and may not be effective in addressing sudden changes in resource needs.
+
+Option D is not the best choice as CPU utilization may not be the most relevant metric for this use case, as memory usage is likely to be a better indicator of the application's performance needs.

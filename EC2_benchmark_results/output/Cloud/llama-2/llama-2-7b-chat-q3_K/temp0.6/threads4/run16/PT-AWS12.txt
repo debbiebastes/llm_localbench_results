@@ -1,0 +1,16 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+Explanation:
+To determine the most cost-effective option, we need to compare the costs of the different pricing options over the desired time frame (in this case, 3 years).
+Option (C) All Upfront, Standard Reserved Instance pricing for a 3-year term provides the lowest total cost over the entire 3-year period. This is because Reserved Instances offer a discount of 25% to 75% compared to On-Demand Instances, which can save significant money over time, especially for long-term usage.
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term may appear attractive at first since it has no upfront cost. However, the conversion option is only available after the first year, which means that if the application usage extends beyond 1 year, the cost savings from using Reserved Instances will be lost.
+Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term may also seem attractive since it eliminates the upfront cost. However, the lack of any discounts for long-term usage means that the total cost over the 3-year period will be higher compared to option (C).
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year may seem like a good option since it provides no upfront cost. However, the lack of any discounts for long-term usage means that the total cost over the entire 3-year period will be higher compared to options (A) and (C), which offer significant cost savings for long-term usage.
+In summary, the most cost-effective option is to use All Upfront Standard Reserved Instance pricing for a 3-year term, which provides the lowest total cost over the desired time frame.

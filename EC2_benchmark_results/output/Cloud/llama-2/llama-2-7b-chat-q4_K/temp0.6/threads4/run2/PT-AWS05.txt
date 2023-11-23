@@ -1,0 +1,17 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The MOST ideal way to comply with the requirements is option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+Here's why:
+1. EventBridge offers a cost-effective, serverless solution for monitoring and automating processes across multiple AWS services, including DynamoDB.
+2. By creating an EventBridge rule that tracks table-level events in DynamoDB, you can capture changes made to the original table and save them to the other table in another region without manual intervention. This approach ensures that the new changes are automatically recorded and stored in the other table.
+3. Using a Lambda function as a rule target allows you to process the captured events and save the new changes to the other table. This approach provides flexibility in handling the data processing requirements, such as filtering or transforming the data before storing it in the other table.
+4. EventBridge offers a scalable and reliable solution for monitoring and automating DynamoDB changes, ensuring that your application remains available and compliant with IT requirements.
+In summary, option (C) is the most ideal way to comply with the requirements because it offers a serverless, cost-effective, and scalable solution for automatically recording and storing new changes made to the items in DynamoDB in another table in another region.

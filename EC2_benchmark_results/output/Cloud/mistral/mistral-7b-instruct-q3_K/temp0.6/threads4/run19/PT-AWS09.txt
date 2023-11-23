@@ -1,0 +1,20 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+All of the above options (A, B, C, D) can be used to protect the backend systems from traffic spikes. However, the best solution would depend on the specific requirements and constraints of the trading platform.
+
+Option A: This solution involves moving from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling. This option provides greater control over infrastructure resources and enables faster deployment times for new features. It also allows for easier monitoring of system performance, which is important in managing high traffic spikes.
+
+Option B: Enabling throttling limits and result caching in API Gateway can help protect the backend systems from traffic spikes by limiting the number of requests per second and caching frequently accessed data. This can reduce the load on backend servers and improve overall system performance. However, it's important to note that setting these limits correctly may require some experimentation to ensure that they are not too restrictive and don't negatively impact user experience.
+
+Option C: Using CloudFront in front of the API Gateway can act as a cache, reducing the load on backend servers by offloading traffic to a distributed content delivery network (CDN). This option provides global distribution and can improve performance for users located far from the origin server. However, it's important to note that using a CDN can add an extra layer of complexity to system setup and management.
+
+Option D: Moving the Lambda function in a VPC can help protect the backend systems from traffic spikes by isolating the Lambda function in a private network. This option provides greater control over network access and can reduce the risk of security breaches or denial-of-service attacks. However, it's important to note that this solution may require additional configuration and management overhead compared to other options.

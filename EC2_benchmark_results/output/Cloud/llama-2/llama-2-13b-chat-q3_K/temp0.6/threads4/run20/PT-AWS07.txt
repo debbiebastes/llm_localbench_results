@@ -1,0 +1,16 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+
+Rationale:
+The problem described is that the performance of the application is slow during the start of the day, indicating that the demand for resources (CPU and memory) is high during this period. The best solution to address this issue would be to scale up the Auto Scaling group before the start of the day, when the demand for resources is expected to increase. This can be achieved by configuring a Scheduled scaling policy that launches new instances before the start of the day. This will ensure that there are enough resources available to meet the increased demand during the morning hours and prevent slow performance.
+
+Note: The other options do not address the specific issue of slow performance during the start of the day, and may not be operationally efficient solutions. Option (A) would require more advanced predictive analytics capabilities, while option (B) would only scale based on memory utilization, which may not be enough to handle the increased demand during the morning hours. Option (D) would scale based on CPU utilization, but this could lead to overprovisioning and unnecessary costs if the application is not CPU-bound.

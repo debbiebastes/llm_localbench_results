@@ -1,0 +1,19 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The answer is (B): Enable throttling limits and result caching in API Gateway.
+
+Here's why:
+
+API Gateway provides built-in support for traffic management through its throttling feature, which allows you to limit the number of requests that a client can make within a given time period. By enabling throttling limits, you can prevent the backend systems from being overwhelmed with too many requests during the expected price surge.
+Additionally, result caching in API Gateway enables the platform to cache frequently accessed data, reducing the load on the backend systems and improving performance. This can be particularly useful during traffic spikes, as it reduces the number of requests that need to be processed by the backend systems.
+Option (A) is incorrect because while EC2 instances, ELB, and Auto Scaling can provide a more scalable architecture, they may not be necessary for this scenario, as API Gateway already provides built-in traffic management features.
+Option (C) is also incorrect because CloudFront is a content delivery network (CDN) that caches static files, such as images and videos, but it does not provide caching capabilities for API requests.
+Option (D) is incorrect because moving the Lambda function to a VPC may not necessarily improve performance or traffic management in this scenario, as the focus is on managing the traffic to the backend systems.

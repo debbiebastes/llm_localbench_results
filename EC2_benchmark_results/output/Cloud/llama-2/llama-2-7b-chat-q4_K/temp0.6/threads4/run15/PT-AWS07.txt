@@ -1,0 +1,15 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The MOST operationally efficient solution is (C): Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+Explanation:
+The application is experiencing slow performance at the beginning of the day, which suggests that there may not be enough instances available to handle the increased demand. A Scheduled scaling policy allows you to launch new instances in advance of when they will be needed, such as before office hours begin. This ensures that there are enough instances available to handle the increased demand at the start of the day and provides a smoother user experience.
+Configuring a Predictive scaling policy (A) or Dynamic scaling policy (B/D) may also help improve performance during peak hours, but they may not address the issue of slow performance at the beginning of the day. A Scheduled scaling policy is more operationally efficient because it does not require constant monitoring and adjustments to instance sizes based on changing CPU or memory utilization.
+Option (C) is the MOST operationally efficient solution because it provides a straightforward and reliable way to ensure that there are enough instances available to handle increased demand at the start of the day, without requiring continuous adjustments to instance sizes based on changing CPU or memory utilization.

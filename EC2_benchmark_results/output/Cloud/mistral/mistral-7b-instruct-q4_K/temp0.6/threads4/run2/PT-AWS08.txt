@@ -1,0 +1,24 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The best option to meet the above requirement is (A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation:
+An instance store volume provides persistent block-level storage for an EC2 instance, while EBS volumes are network-attached storage (NAS) that provide shared block-level storage for multiple instances. In this case, since you need a persistent block storage volume for mission-critical workloads, it is better to use an instance store volume.
+
+Amazon S3 is a highly scalable and durable object storage service that provides cost-effective storage for your data. By using Amazon S3, you can store your backup data in a reliable and secure manner.
+
+A lifecycle policy is used to automatically transition objects from one storage class to another based on specific criteria. In this case, since you want to archive your data after 30 days, you can configure a lifecycle policy to transition your objects from Amazon S3 Standard to Amazon S3 Glacier, which provides lower-cost storage for infrequently accessed data.
+
+Option (B) is not the best choice because EBS volumes are more expensive than instance store volumes, and you don't need shared block-level storage for a single instance.
+
+Option (C) is not the best choice because Amazon S3 One Zone-IA provides lower cost than Amazon S3 Glacier but it has some limitations like data retrieval latency and limited durability.
+
+Option (D) is also not the best choice because Amazon S3 One Zone-IA is not designed for long-term storage of infrequently accessed data like Amazon S3 Glacier.

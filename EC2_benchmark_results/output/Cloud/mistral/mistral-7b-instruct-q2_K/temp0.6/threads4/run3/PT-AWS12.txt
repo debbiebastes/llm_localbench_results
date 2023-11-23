@@ -1,0 +1,16 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+
+Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation:
+
+A Reserved EC2 instance provides cost savings over an On-Demand instance by providing reserved capacity at a discounted rate. The most cost-effective option depends on the application usage pattern. If the application is used frequently, then a convertible instance may be more cost-effective because it allows for on-demand instances to be launched when needed while still benefiting from the reserved capacity. However, if the application is used infrequently or consistently, then a non-convertible instance may be more cost-effective because it provides a lower upfront cost and no additional charge for unused hours.
+
+In this case, since the application would be used for more than 3 years, option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term is the most cost-effective option as it offers a lower upfront cost and no additional charge for unused hours. Option A has an upfront cost of $0.12 per hour for the first year, which would be higher than the on-demand pricing for an infrequently used application. Option C would have an upfront cost of $0.10 per hour for the first year, but it would require a larger upfront payment and may not provide significant savings compared to option (B). Finally, option D has an upfront cost of $0.12 per hour for the first year, which is higher than option (B) and does not provide the benefit of reserved capacity for more than one year.

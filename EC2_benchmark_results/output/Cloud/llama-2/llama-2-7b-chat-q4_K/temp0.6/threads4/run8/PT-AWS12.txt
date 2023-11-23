@@ -1,0 +1,15 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option for a company looking to host an application for more than 3 years would be (C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+
+Explanation:
+When choosing between reserved instances, it's important to consider the length of time you plan to use the instance, as well as your usage patterns. If you plan to use the instance for more than 1 year, it becomes more cost-effective to choose a longer-term reserved instance option. In this case, using a 3-year term for a Standard Reserved Instance would provide the most cost savings compared to the other options.
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term provides no long-term cost savings and is therefore not the most cost-effective option. Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term also does not provide any long-term cost savings, making it less attractive compared to Option (C).
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year provides some cost savings over the 1-year term, but it does not provide any long-term cost savings. As you plan to use the instance for more than 3 years, this option becomes less attractive compared to Option (C).
+Therefore, the most cost-effective option for a company looking to host an application for more than 3 years would be to choose a Standard Reserved Instance with an upfront payment for a 3-year term.

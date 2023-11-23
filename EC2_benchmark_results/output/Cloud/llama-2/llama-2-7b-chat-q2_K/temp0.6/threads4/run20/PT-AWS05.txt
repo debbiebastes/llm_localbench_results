@@ -1,0 +1,17 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements is (C): Create an Amazon EventBridge rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table. This approach provides the following benefits:
+
+1. **Centralized monitoring and management**: By using EventBridge, you can monitor and manage all of your DynamoDB tables from a single location. You can set up rules to trigger Lambda functions for various events, such as creation, update, or delete operations on your tables.
+2. **Real-time processing**: With EventBridge, you can process new changes to your tables in real time. This ensures that your application remains available and responsive even during the data synchronization process.
+3. **Ease of implementation**: Setting up an EventBridge rule is relatively straightforward. You can configure a Lambda function as a target for your rules, and the Lambda function will automatically be triggered when events occur on your DynamoDB tables.
+4. **Flexibility**: With EventBridge, you can set up multiple rules to trigger different Lambda functions based on different events. This allows you to customize your data synchronization process based on your specific needs.
+In comparison, options (A) and (D) may require additional infrastructure and complexity, making them less ideal for this scenario. Option (B) may also be a viable alternative, but it may require more development effort to enable Point-in-Time Recovery and configure the necessary triggers.

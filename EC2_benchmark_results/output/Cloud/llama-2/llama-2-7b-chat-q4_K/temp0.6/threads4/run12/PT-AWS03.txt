@@ -1,0 +1,16 @@
+A Security Engineer has found out that there are some developers who have been adding rules to security groups without any approval. The developers configured the security groups to allow RDS, SMTP, and SSH traffic from the 0.0.0.0/0 CIDR range in order to do their code testing. The company has an existing firewall hosted in an EC2 instance where all of the traffic should pass through.
+
+Which of the following is the MOST efficient way to automatically remediate this security risk?
+
+(A) Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+(B) Set up a Transit VPC to connect the corporate firewall and the EC2 instances.
+(C) Block the source IP addresses coming from the 0.0.0.0/0 CIDR range using Network ACL.
+(D) Use AWS Shield to automatically monitor and detect all the security groups that allow traffic directly from the 0.0.0.0/0 CIDR range.
+
+Answer: 
+The MOST efficient way to automatically remediate this security risk is (A): Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+Explanation:
+Option (A) is the most efficient way to remediate the security risk because it leverages AWS Config, which provides a powerful and flexible configuration management capability for AWS resources. By using AWS Config, you can automatically detect whether there are any security groups that allow inbound traffic from 0.0.0.0/0 CIDR range, which is the source of the security risk. Then, you can associate an Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address. This approach allows you to automate the remediation process without requiring any manual intervention or additional infrastructure.
+Option (B) is not the most efficient way to remediate the security risk because it would require setting up a Transit VPC, which can be complex and time-consuming. Additionally, this approach does not automatically update the security group with the corporate firewall IP address.
+Option (C) is not the most efficient way to remediate the security risk because blocking source IP addresses coming from 0.0.0.0/0 CIDR range using Network ACL can lead to unnecessary complexity and performance issues, especially if there are many traffic flows to monitor and block.
+Option (D) is not the most efficient way to remediate the security risk because AWS Shield does not provide automated detection or remediation capabilities for security groups. It only provides a monitoring service that can detect and alert on potential security threats, but it cannot automatically update security groups with the corporate firewall IP address.

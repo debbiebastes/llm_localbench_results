@@ -1,0 +1,20 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+The correct answer is (B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation: 
+
+For mission-critical workloads, it is recommended to use block storage volumes such as EBS volumes. An EBS volume provides persistent block storage for EC2 instances and can be attached or detached from running instances at any time. This allows for flexibility in terms of adding or removing storage as needed. 
+
+Additionally, Amazon S3 can be used to store backup data. Amazon S3 is a highly available, durable, and scalable object storage service that provides secure and reliable storage for your data. A lifecycle policy can be configured on your objects in Amazon S3 to automatically transition them from the Standard storage class to the Glacier storage class after 30 days, which provides cost-effective storage for infrequently accessed data.
+
+Therefore, attaching an EBS volume and using Amazon S3 to store backup data is a good solution for meeting the given requirements.

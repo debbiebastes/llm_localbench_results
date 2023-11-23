@@ -1,0 +1,39 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+
+B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation:
+The most cost-effective option would be option B, which offers the lowest total cost of ownership (TCO) over the 3-year period. The TCO is calculated by adding up the costs of the Reserved Instances for each year and comparing them to the On-Demand prices for each year.
+
+Here's how the TCO breaks down:
+
+Year 1:
+
+* On-Demand price: $0.09/hour x 8,760 hours = $8,024
+* Reserved Instance price (No Upfront): $0.05/hour x 8,760 hours = $4,380
+
+Year 2:
+
+* On-Demand price: $0.09/hour x 8,760 hours = $8,024
+* Reserved Instance price (No Upfront): $0.05/hour x 8,760 hours = $4,380
+
+Year 3:
+
+* On-Demand price: $0.09/hour x 8,760 hours = $8,024
+* Reserved Instance price (No Upfront): $0.05/hour x 8,760 hours = $4,380
+
+Total cost over 3 years:
+
+* On-Demand: $24,064
+* Reserved Instance (No Upfront): $12,960
+
+As you can see, the Reserved Instance option (B) results in a total cost savings of $11,104 over the 3-year period compared to the On-Demand option. This is because the Reserved Instance option allows you to lock in a lower hourly price for a longer period of time, which can help you save money in the long run.
+
+So, if the application being hosted will be used for more than 3 years, the most cost-effective option would be to go with the No Upfront Convertible Reserved Instance pricing for a 3-year term (option B).

@@ -1,0 +1,20 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+
+The most cost-effective option would be (B) No Upfront Convertible Reserved Instance pricing for a 3-year term. 
+
+Explanation:
+
+Convertible Reservations allow you to convert your reserved instance into an on-demand instance at any time, and you get charged only for the portion of time that you actually use. This option is ideal if your application usage fluctuates over time.
+
+In this scenario, since the company plans to migrate their application to a Reserved EC2 Instance, it would be best to choose (B) No Upfront Convertible Reserved Instance pricing for a 3-year term as it will provide them with more flexibility in terms of usage and cost savings. With this option, they can convert their reserved instance into an on-demand instance at any time, and only pay for the portion of time that they actually use. This will help reduce overall costs and enable them to optimize their resources better.
+
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term is not the most cost-effective option as it requires a large upfront payment, which may not be feasible for some companies. Option (C) All Upfront Standard Reserved Instance pricing for a 3-year term is also not cost-effective since it requires a significant upfront investment and does not provide any flexibility to adjust usage based on demand.
+
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year can be cost-effective, but it may not be the best option for a company planning to migrate their application to a Reserved EC2 Instance.

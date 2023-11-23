@@ -1,0 +1,22 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+Explanation:
+
+The correct answer is (B). Enable throttling limits and result caching in API Gateway.
+
+When there's a sudden increase in traffic to the platform, it can be challenging for AWS Lambda and API Gateway to handle all the requests efficiently. To address this issue, we can use throttling limits and result caching in API Gateway to mitigate the impact of the traffic spike.
+
+Throttling limits allow us to set a maximum number of requests that can be made to the Lambda function within a certain time frame. This helps prevent overloading the function with too many requests at once, which could cause performance issues or even failures.
+
+Result caching enables API Gateway to cache the results of previous requests, reducing the need for the Lambda function to process the same request multiple times. This can significantly improve the performance and reduce the load on the backend systems.
+
+Option (A) is not the best choice because it would require a more significant overhaul of the existing infrastructure, which could be time-consuming and costly. Option (C) might have some benefits, but it would only act as a cache for incoming requests and would not address the underlying performance issues that arise from sudden traffic spikes. Option (D) is not relevant to the scenario presented.

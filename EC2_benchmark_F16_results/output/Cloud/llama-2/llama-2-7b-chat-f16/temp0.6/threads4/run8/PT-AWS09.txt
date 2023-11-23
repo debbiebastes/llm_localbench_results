@@ -1,0 +1,20 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+The right answer is (B): Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+
+API Gateway can handle traffic spikes by enabling throttling limits, which allow you to control the number of requests that can be made to a resource within a given time period. This can help prevent the backend systems from being overwhelmed with too many requests, reducing the risk of downtime or slow performance.
+Another feature of API Gateway is result caching, which allows you to cache the results of API calls. When a client makes a request to an API, the response can be cached for a certain period of time, so that subsequent requests with the same parameters can be served from the cache instead of having to make a new request to the backend system. This can help reduce the load on the backend systems during traffic spikes and improve performance.
+Option (A) is not the right choice because using EC2 instances, ELB, and Auto Scaling would require more infrastructure deployment and management efforts, which may not be feasible or necessary in this scenario. Additionally, API Gateway can already handle a significant amount of traffic without requiring additional infrastructure.
+Option (C) is also not the right choice because CloudFront is primarily designed for content delivery and caching, rather than handling API requests. While it could potentially be used to cache API responses, it may not be the best solution for this particular scenario.
+Option (D) is not a feasible solution in this scenario because moving the Lambda function to a VPC would require additional infrastructure deployment efforts and may not provide significant performance benefits.

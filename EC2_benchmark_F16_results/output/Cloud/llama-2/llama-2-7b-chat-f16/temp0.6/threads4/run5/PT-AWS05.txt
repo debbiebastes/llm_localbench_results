@@ -1,0 +1,20 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The best answer is (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+To comply with the IT compliance requirement of recording all changes made to items in DynamoDB, you can create an EventBridge rule that triggers a Lambda function every time there is a change in the source DynamoDB table. The Lambda function can then save the new changes to a separate DynamoDB table located in another region.
+Using EventBridge and Lambda provides several benefits:
+1. Automation: Events are automatically detected and processed, reducing the need for manual intervention.
+2. Scalability: As the volume of events increases, you can scale your Lambda function to handle the additional load.
+3. Durability: EventBridge stores events in Amazon S3 for durability and retention periods, ensuring that changes are not lost.
+4. Flexibility: You can configure the rule to trigger a Lambda function based on various event types (e.g., Create, Update, Delete), allowing you to handle different scenarios with custom logic.
+5. Cost-effective: EventBridge and Lambda are priced based on the number of events processed, making it cost-effective compared to other solutions like DynamoDB Accelerator or Point-in-Time Recovery.

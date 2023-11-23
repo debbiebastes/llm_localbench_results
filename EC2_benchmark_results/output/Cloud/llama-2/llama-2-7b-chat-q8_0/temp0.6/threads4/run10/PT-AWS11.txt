@@ -1,0 +1,17 @@
+Which AWS service enables you to build event-driven applications and decouple the components of your application architecture?
+
+(A) Amazon SQS
+(B) Amazon EventBridge (Amazon CloudWatch Events)
+(C) Amazon SNS
+(D) Amazon Kinesis
+
+Answer: 
+The correct answer is (B) Amazon EventBridge (Amazon CloudWatch Events).
+
+Event-driven applications are a common design pattern in modern software architecture. They allow components of an application to communicate with each other through events, rather than through direct calls or messages. This decouples the components of the application, making it easier to build, deploy, and maintain.
+AWS provides several services that enable you to build event-driven applications and decouple the components of your application architecture. Among these services are:
+* Amazon SQS (Simple Queue Service): a message queuing service that allows you to send messages between components of your application.
+* Amazon EventBridge (Amazon CloudWatch Events): an event bus service that allows you to connect different AWS services and applications, and route events between them. EventBridge supports a wide range of event sources, including AWS services like S3, DynamoDB, and SNS, as well as external sources like HTTP requests and log files.
+* Amazon SNS (Simple Notification Service): a messaging service that allows you to send messages or push notifications to multiple subscribers or clients. SNS can be used to decouple components of an application by allowing them to communicate through messages, rather than direct calls.
+* Amazon Kinesis: a streaming data processing service that allows you to collect, process, and analyze real-time, streaming data from thousands of applications and sources. Kinesis can be used to build event-driven applications that process large amounts of streaming data in real time.
+In summary, EventBridge (Amazon CloudWatch Events) is the AWS service that enables you to build event-driven applications and decouple the components of your application architecture.

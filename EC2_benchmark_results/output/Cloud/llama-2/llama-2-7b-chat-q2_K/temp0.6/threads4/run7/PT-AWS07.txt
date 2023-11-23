@@ -1,0 +1,12 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The most operationally efficient solution is (C): Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day. This will ensure that the application has enough resources available during peak hours, reducing the chances of slow performance due to resource constraints. By scheduling the scaling policy in advance, you can also ensure that the instances are launched at a time when the workload is lower, reducing the strain on the infrastructure and improving overall system performance.
+Option (A) may not be effective as it relies on predictive modeling of usage patterns, which may not always be accurate or up-to-date. Option (B) can also be effective, but it may not be the most efficient solution as it relies on dynamic scaling based on memory utilization, which may not accurately reflect the actual resource requirements of the application. Option (D) is not a practical solution as it would require manual intervention to adjust the number of instances based on CPU utilization.

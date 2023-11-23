@@ -1,0 +1,19 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The correct answer is (B) Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+API Gateway is designed to be highly scalable and can handle traffic spikes by simply adding more instances of the backend application. However, in this scenario, it's more likely that the traffic surge will be due to a sudden increase in demand from new users rather than a spike in existing usage. In such cases, API Gateway provides throttling limits and result caching features to help manage traffic.
+Throttling limits control the rate at which requests are allowed into the system, preventing it from becoming overwhelmed by an influx of new users. By setting up throttling limits, you can ensure that no more than a certain number of requests are processed within a given time frame, thus preventing a denial of service attack.
+Result caching involves storing frequently requested data in memory, so it's quickly available for repeated requests instead of having to fetch the same information from the backend every time. This feature reduces latency and helps handle traffic spikes more efficiently.
+Option (A) is incorrect because EC2 instances, ELB, and Auto Scaling are not the best solution for managing traffic spikes in API Gateway. While these tools can help scale a backend application horizontally, they may not be able to handle the sudden increase in demand from new users as efficiently as throttling limits and result caching.
+Option (C) is incorrect because CloudFront is designed to cache static content at edge locations closer to end-users, rather than acting as a cache for API Gateway. While it can help reduce latency by serving static content more quickly, it's not the best solution for handling traffic spikes in an API.
+Option (D) is incorrect because moving the Lambda function into a VPC does not address the issue of managing traffic spikes in API Gateway. A VPC is used to define a virtual network topology and can help secure a backend application, but it doesn't provide any built-in features for handling traffic spikes.

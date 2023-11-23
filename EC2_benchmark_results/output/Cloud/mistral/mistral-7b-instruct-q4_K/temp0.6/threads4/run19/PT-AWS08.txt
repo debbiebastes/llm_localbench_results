@@ -1,0 +1,20 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+
+Explanation:
+For mission-critical workloads, it's recommended to use persistent block storage volumes like EBS (Elastic Block Store) or iSCSI (Internet Small Computer System Interface) attached to your EC2 instance. EBS provides high durability and availability, making it a good choice for mission-critical workloads.
+
+For backup data storage, you can use Amazon S3 (Simple Storage Service), which is an object storage service that provides scalable, durable, and secure storage for your data. You can configure lifecycle policies in S3 to automatically transition objects to lower-cost storage classes like Amazon S3 One Zone-IA or Amazon S3 Glacier after a specified period of time.
+
+Amazon S3 One Zone-IA is a low-cost storage class that provides infrequent access and retrieval of data from one availability zone within the same region, making it ideal for long-term backup storage. Amazon S3 Glacier is another low-cost storage class that provides even lower storage costs, but with longer retrieval times.
+
+Therefore, by attaching an EBS volume to your EC2 instance and using Amazon S3 to store your backup data and configure lifecycle policies, you can meet the requirement of having a persistent block storage volume for mission-critical workloads and a cost-effective backup solution with long-term retention.

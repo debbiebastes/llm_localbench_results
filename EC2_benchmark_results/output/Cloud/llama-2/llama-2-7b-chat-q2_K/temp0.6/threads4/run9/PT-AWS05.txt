@@ -1,0 +1,17 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements is option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table. This approach provides the following benefits:
+
+1. Monitoring: EventBridge can monitor DynamoDB tables for certain events, such as creation, update, or delete operations. By setting up an EventBridge rule, you can easily track all changes made to items in a particular table.
+2. Automation: Once the Lambda function is set up as a rule target, it can automatically process and save new changes to the other table. This eliminates the need for manual intervention and ensures that changes are propagated to the other region in real-time.
+3. Scalability: As your application grows, you can easily add more Lambda functions as targets for the EventBridge rule. This allows you to scale your monitoring and automation capabilities without having to modify your existing infrastructure.
+4. Cost-effective: By using EventBridge and Lambda, you don't need to pay for additional servers or services to monitor and process changes in DynamoDB. This can help reduce costs and improve the overall efficiency of your application.
+Overall, option (C) is the most ideal way to comply with the requirements by providing a centralized monitoring and automation solution that scales easily and cost-effectively.

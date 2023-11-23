@@ -1,0 +1,16 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+You should choose option (C) - Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+
+Option A and B are incorrect because they do not provide the necessary level of persistence and durability for mission-critical workloads. Option D is also incorrect because it does not provide the same level of cost optimization as option C, which is suitable for long-term storage of data that is accessed infrequently.
+
+Amazon S3 One Zone-IA provides a lower cost option than Amazon S3 Glacier and is suitable for storing data that needs to be retrieved within seconds or minutes but less frequently than once a month. This makes it ideal for backup data that needs to be stored for long periods but only accessed occasionally. By using Amazon S3 One Zone-IA, you can achieve cost optimization while still maintaining the durability and availability required for mission-critical workloads.

@@ -1,0 +1,20 @@
+Here is a product review from a customer, which is delimited with triple backticks.
+
+Product Name: Kyushu Calm Lounge Sofa
+Review text: 
+```
+The quality of the fabric on this couch is okay, but it's not the most comfortable seating I've experienced. It looks nice in my living room, though.
+```
+
+Overall sentiment must be one of the following options:
+A) Positive
+B) Negative
+C) Neutral
+
+What is the overall sentiment of that product review? 
+
+Answer:
+C) Neutral.
+
+Explanation:
+The customer has mentioned both positive and negative aspects of the product. The quality of the fabric is described as "okay," which implies a neutral or mixed assessment. Additionally, while the couch looks nice in the customer's living room, the customer has also stated that it is not the most comfortable seating they have experienced. This suggests a balanced and neutral sentiment overall.

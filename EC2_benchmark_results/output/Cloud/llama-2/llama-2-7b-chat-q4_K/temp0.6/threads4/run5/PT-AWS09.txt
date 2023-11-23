@@ -1,0 +1,17 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+To protect the backend systems of the platform from traffic spikes, you can consider implementing one or more of the following measures:
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling. This approach would allow you to horizontally scale your backend systems to handle increased traffic by adding more instances, and also provide a more reliable and fault-tolerant architecture.
+(B) Enable throttling limits and result caching in API Gateway. You can configure throttling limits to control the rate of incoming requests, and cache the results of frequently requested APIs to reduce the load on the backend systems.
+(C) Use CloudFront in front of the API Gateway to act as a cache. CloudFront can accelerate the delivery of static content, such as images and videos, by caching it at edge locations around the world. By using CloudFront in front of the API Gateway, you can reduce the load on your backend systems and improve the performance of your application.
+(D) Move the Lambda function in a VPC. Moving the Lambda function to a VPC can provide additional security and isolation for your backend systems, as well as enable you to use Elastic Network Interfaces (ENIs) to scale your Lambda functions horizontally.
+Of these options, the most appropriate answer is (A), which involves switching from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling. This approach provides the best combination of scalability, reliability, and fault tolerance for handling increased traffic.

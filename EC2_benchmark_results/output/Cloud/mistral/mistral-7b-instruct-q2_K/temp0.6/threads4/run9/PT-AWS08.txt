@@ -1,0 +1,18 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier. 
+
+Explanation: 
+Option (A) is the best choice as it provides high performance for mission-critical workloads, which is necessary for block storage volumes. Attaching an instance store volume in your existing EC2 instance allows you to have direct access to the block storage, providing low latency and high throughput. This makes it ideal for use cases where fast IOPS (Input/Output Operations Per Second) is required. 
+
+Amazon S3 provides a highly available, durable object storage service that can be used as a backup destination. You can configure a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days, which is an infrequent access storage class that provides long-term cost savings. This way, you can store your backup data in a secure and cost-effective manner while still having easy access to it when needed.
+
+Therefore, the best choice would be option (A) as it provides high performance for mission-critical workloads, secure backup and cost-effective storage solution.

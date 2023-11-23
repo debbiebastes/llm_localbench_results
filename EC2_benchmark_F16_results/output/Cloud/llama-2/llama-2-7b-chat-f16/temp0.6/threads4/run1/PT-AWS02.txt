@@ -1,0 +1,17 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The MOST suitable solution in this scenario is (A): Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+Here's why:
+* The AWS Systems Manager Sessions Manager provides a centralized platform for deploying patches across multiple EC2 instances, simplifying the process of mitigating the security risk.
+* Integrating Amazon QuickSight with Kibana allows for real-time monitoring and tracking of configuration changes, ensuring compliance requirements are met for auditing purposes.
+* AWS Systems Manager Patch Manager (option B) does not provide real-time monitoring and tracking capabilities like Amazon QuickSight.
+* Using AWS Config (option C) does not provide patch management capabilities, whereas AWS Systems Manager Sessions Manager is specifically designed for patch management.
+* Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis (option D) may lead to delays in patch deployment and could result in non-compliance with security standards.

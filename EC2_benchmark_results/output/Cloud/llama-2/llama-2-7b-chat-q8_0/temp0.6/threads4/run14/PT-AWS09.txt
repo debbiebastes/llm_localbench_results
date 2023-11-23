@@ -1,0 +1,19 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The correct answer is (B) Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+
+As the traffic to the platform is expected to increase significantly, it's essential to ensure that the backend systems can handle the increased load without any downtime or performance issues. One way to achieve this is by enabling throttling limits and result caching in AWS API Gateway.
+Throttling limits allow you to set limits on the number of requests that can be made to the API within a certain time frame, which helps prevent overloading the backend systems. By enabling throttling limits, you can ensure that even if there is an increase in traffic, the backend systems are not overwhelmed with an excessive number of requests.
+Result caching allows you to cache the results of API calls so that repeated requests for the same data do not hit the backend systems again and again. By caching the results, you can reduce the load on the backend systems and improve response times, even during high traffic periods.
+While options (A) and (C) may provide additional scalability and availability benefits, they are not directly related to protecting the backend systems from traffic spikes. Option (D) is not a feasible solution as it would involve moving the Lambda function to a VPC, which is not necessary in this scenario.
+Therefore, the best answer is (B) Enable throttling limits and result caching in API Gateway.

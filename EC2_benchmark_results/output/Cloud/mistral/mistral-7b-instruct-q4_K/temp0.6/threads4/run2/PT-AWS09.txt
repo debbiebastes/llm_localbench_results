@@ -1,0 +1,20 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+All of the options (A, B, C, D) are good strategies for protecting backend systems from traffic spikes. Here's what each option does:
+
+(A) This is a good option if you expect a very high volume of traffic and you need to ensure that your platform can handle it. By using EC2 instances instead of Lambda functions, you can have more control over the resources allocated to your application. Additionally, using ELB and Auto Scaling will help you automatically scale up or down based on the amount of traffic coming in.
+
+(B) Throttling limits and result caching can help reduce the amount of load on your backend systems by limiting the number of requests that can be made within a specific time period. This is particularly useful if you expect a sudden spike in traffic, as it will help prevent your platform from being overwhelmed.
+
+(C) CloudFront is a content delivery network (CDN) service that can help improve performance and scalability by caching frequently accessed resources in locations closer to users. By using CloudFront in front of your API Gateway, you can distribute traffic across multiple servers and reduce the amount of load on any single server.
+
+(D) Moving your Lambda function into a VPC can also help improve performance and scalability by allowing you to have more control over network resources. This can be particularly useful if you expect a large number of concurrent connections from users in different regions.

@@ -1,0 +1,18 @@
+Here is a product review from a customer, which is delimited with triple backticks.
+
+Product Name: Vintage Elegance Vanity
+Review text: 
+```
+I am extremely disappointed with it. The quality of the product is very poor and does not meet my expectations at all. The materials used feel cheap and the vanity arrived with several scratches and dents. The assembly instructions were also confusing and the whole process took much longer than anticipated. I would not recommend this product to anyone.
+```
+
+Overall sentiment must be one of the following options:
+A) Positive
+B) Negative
+C) Neutral
+
+What is the overall sentiment of that product review? 
+
+Answer:
+
+The overall sentiment of the product review is negative. The reviewer expresses disappointment with the quality of the product and mentions several issues, including scratches and dents. They also mention that the assembly instructions were confusing, which suggests that the experience was frustrating and not satisfactory. Therefore, the sentiment of the review is classified as negative.

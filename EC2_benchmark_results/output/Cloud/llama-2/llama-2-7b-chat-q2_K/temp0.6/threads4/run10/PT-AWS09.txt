@@ -1,0 +1,18 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+(B) Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+API Gateway is designed to handle high traffic loads, but it's not meant for extremely high traffic volumes. When you have a large number of users visiting your platform, API Gateway might not be able to handle the load without some form of throttling or caching. By enabling throttling limits and result caching in API Gateway, you can better manage the traffic load on the backend systems:
+* Throttling limits allow you to control the number of requests that can be made to your API within a certain time frame. This can help prevent the backend systems from being overwhelmed with too many requests at once.
+* Result caching enables API Gateway to store the results of previous requests, so that subsequent requests for the same data don't have to be processed by the backend systems again. This can significantly reduce the load on the backend systems and improve the performance of your platform.
+
+Option (A) is not the best choice as it would require significant changes to the architecture of the platform. Option (C) may provide some benefits in terms of caching, but it's not a substitute for properly configuring API Gateway with throttling limits and result caching. Option (D) is not a viable solution as it would move the Lambda function from its intended place in the stack.

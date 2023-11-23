@@ -1,0 +1,17 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+The correct answer is (A): Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances.
+Explanation:
+
+During office hours, the application experiences a spike in usage at the start of the day, which causes slow performance due to the limited instance capacity. To address this issue, configuring a Predictive scaling policy can help anticipate and adjust the number of instances according to historical usage patterns. This allows the Auto Scaling group to scale up before the demand spike, ensuring that the application has sufficient resources to handle the increased workload.
+Configuring a Dynamic scaling policy (B) or a Scheduled scaling policy (C) may not be as effective in addressing this issue, as they rely on real-time metrics and do not take historical usage patterns into account. Configuring a Dynamic scaling policy based on CPU utilization (D) may also not work well for the application, as it could cause instances to launch and terminate frequently throughout the day, leading to increased costs and complexity.
+Therefore, Option A is the most operationally efficient solution to ensure that the application works properly at the beginning of the day.

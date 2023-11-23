@@ -1,0 +1,15 @@
+An e-commerce company wants to migrate its on-premise infrastructure to Amazon Web Services. However, they are worried about ensuring their migration is secure and efficient.
+
+Which of the following AWS Cloud Adoption Framework perspective would be the most essential for the company’s migration?
+
+(A) Security Perspective
+(B) Governance Perspective
+(C) Operations Perspective
+(D) Platform Perspective
+
+Answer: 
+(D) Platform Perspective.
+
+Explanation:
+The Platform Perspective is concerned with ensuring that the e-commerce company's applications and workloads are optimized for the AWS Cloud. This includes identifying the appropriate AWS services to use, designing the architecture of the application and infrastructure on AWS, and implementing security controls and best practices.
+Since the company wants to ensure its migration is secure and efficient, the Platform Perspective will be essential in helping them optimize their applications and workloads for the AWS Cloud, identify the appropriate security controls and best practices, and design an architecture that is scalable and adaptable to changing business needs.

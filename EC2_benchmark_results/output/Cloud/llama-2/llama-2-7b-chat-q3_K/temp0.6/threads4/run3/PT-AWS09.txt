@@ -1,0 +1,16 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+For protecting the backend systems of the cryptocurrency trading platform from traffic spikes, option (B) Enable throttling limits and result caching in API Gateway is the best solution.
+Throttling limits can be used to control the rate at which requests are sent to the backend system, preventing it from becoming overwhelmed by an sudden influx of traffic. This can be achieved by configuring API Gateway to limit the number of requests that can be made within a certain time frame, thus preventing denial of service attacks.
+Result caching in API Gateway allows API calls to be cached for a specified amount of time, so that frequently requested data is stored and served from cache instead of re-requesting it from the backend system each time it is needed. This reduces the load on the backend system by reducing the number of requests it needs to handle, allowing it to handle spikes in traffic more efficiently.
+Option (A) switching to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling is not necessary for this scenario as AWS Lambda and API Gateway are built to handle high traffic loads and can scale automatically based on the incoming traffic.
+Option (C) Using CloudFront in front of the API Gateway to act as a cache would help distribute the load across multiple edge locations, but it would not provide throttling limits or caching for API calls.
+Option (D) Moving the Lambda function in a VPC is not relevant to this scenario as AWS Lambda functions are already deployed on AWS infrastructure and do not need to be moved to another VPC.

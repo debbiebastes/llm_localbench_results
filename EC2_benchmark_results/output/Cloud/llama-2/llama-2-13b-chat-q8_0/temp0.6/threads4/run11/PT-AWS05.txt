@@ -1,0 +1,21 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+
+Option C is the most ideal way to comply with the requirements because it allows for real-time replication of new changes made to items in DynamoDB without the need for manual intervention or additional infrastructure. By creating an Amazon EventBridge rule that tracks table-level events in DynamoDB, you can set a Lambda function as a target to process and save new changes to the other table. This approach is scalable, cost-effective, and easy to implement.
+
+Option A (Setting up DynamoDB Accelerator) would not be suitable for this use case as it only provides read-after-write consistency, which means that the replicated data may not reflect the most recent changes made to the items in the primary table.
+
+Option B (Enabling DynamoDB Point-in-Time Recovery) would require manual intervention to trigger the point-in-time recovery and would not provide real-time replication of new changes made to items in DynamoDB.
+
+Option D (Enabling DynamoDB Streams) would also require manual intervention to set up and maintain the streams, and would not provide a scalable and cost-effective solution for real-time replication of new changes made to items in DynamoDB.

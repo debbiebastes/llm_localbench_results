@@ -1,0 +1,18 @@
+Which AWS service enables you to build event-driven applications and decouple the components of your application architecture?
+
+(A) Amazon SQS
+(B) Amazon EventBridge (Amazon CloudWatch Events)
+(C) Amazon SNS
+(D) Amazon Kinesis
+
+Answer: 
+(B) Amazon EventBridge (Amazon CloudWatch Events)
+
+Explanation:
+Event-driven architectures are designed to decouple the components of an application architecture, allowing them to operate independently and asynchronously. AWS provides several services that enable you to build event-driven applications, including:
+
+1. Amazon EventBridge (Amazon CloudWatch Events): This service enables you to manage events and create event buses for your microservices architecture. You can configure event sources, event buses, and event listeners to create a fully decoupled application architecture.
+2. Amazon SQS (Simple Queue Service): This service provides a message queue that enables you to pass messages between components of your application without directly connecting them. You can use Amazon SQS to decouple the components of your application and handle high volumes of data processing tasks.
+3. Amazon SNS (Simple Notification Service): This service allows you to manage message fan-outs and create a scalable, highly available messaging infrastructure. You can use Amazon SNS to notify microservices in real time when certain events occur.
+4. Amazon Kinesis: This service enables you to process and analyze streaming data from various sources, including applications, IoT devices, and social media platforms. You can use Amazon Kinesis to build event-driven applications that react in real time to changing conditions in your application environment.
+While all of these services can help you build event-driven applications, Amazon EventBridge (Amazon CloudWatch Events) is the primary service for building and managing event-driven architectures on AWS. It provides a flexible and scalable infrastructure for creating event-driven pipelines that can handle high volumes of data processing tasks.

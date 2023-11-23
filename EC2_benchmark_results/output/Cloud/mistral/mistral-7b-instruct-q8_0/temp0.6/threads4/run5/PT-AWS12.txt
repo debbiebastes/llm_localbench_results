@@ -1,0 +1,22 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+
+The most cost-effective option would be (B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Here's the reasoning: 
+
+For the application to be hosted for more than 3 years, it is important to compare the costs of the On-Demand EC2 instance and the reserved instances over the entire period.
+
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term would require an upfront payment for the entire year. However, if the application's usage changes or it is shut down earlier than expected, this cost could become wasted. Additionally, the price of on-demand instances may change in the future, making this option less cost-effective over time.
+
+Option (C) All Upfront Standard Reserved Instance pricing for a 3-year term would require a significant upfront payment. While this may seem like a good deal initially, it may not be the most cost-effective option if the application's usage changes or if there are fluctuations in EC2 instance prices over time.
+
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year would require an upfront payment of one year, but it also allows for flexibility to adjust the reservation based on changing needs. However, this option may not provide cost savings in the long run compared to option (B).
+
+Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term does not require an upfront payment and provides the most flexibility to adjust the reservation based on changing needs. This option also allows for potential cost savings over time by avoiding significant upfront payments that may become wasted if the application's usage changes or EC2 instance prices fluctuate.

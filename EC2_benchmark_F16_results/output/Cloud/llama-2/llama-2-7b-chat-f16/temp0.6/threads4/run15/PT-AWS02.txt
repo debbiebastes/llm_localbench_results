@@ -1,0 +1,14 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The MOST suitable solution in this scenario is (A): Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+Reasoning:
+AWS Systems Manager Sessions Manager allows you to manage the patches of your EC2 instances in a highly automated way, without requiring any manual intervention. This ensures that all outdated instances are updated with the latest security patches as quickly as possible. Integrating Amazon QuickSight with Kibana provides an easy and efficient way to track and record any configuration changes, which is essential for audit purposes.
+While options (B) and (C) also mention AWS Systems Manager Patch Manager and AWS Config, respectively, they do not provide the same level of automation as option (A). Option (D) does not address the immediate need to mitigate the security risk and does not provide a record of configuration changes.

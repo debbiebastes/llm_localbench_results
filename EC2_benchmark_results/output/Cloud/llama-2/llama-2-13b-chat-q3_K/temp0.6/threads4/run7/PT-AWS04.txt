@@ -1,0 +1,37 @@
+Your application is processing one Kinesis data stream which has four shards, and each instance has one KCL worker. To scale up processing in your application, you reshard your stream to increase the number of open shards to six.
+
+What is the MAXIMUM number of EC2 instances that you should launch to achieve optimum performance?
+
+(A) 5
+(B) 12
+(C) 3
+(D) 6
+
+Answer: 
+(B) 12
+
+Explanation:
+
+When scaling up processing in your application, it's important to consider the optimal number of EC2 instances needed to handle the increased workload. In this case, you have resharded your stream to increase the number of open shards from four to six.
+
+To determine the maximum number of EC2 instances needed, we need to consider the following factors:
+
+1. KCL worker capacity: Each KCL worker can handle a certain amount of workload based on the instance type and the number of shards. In this case, each instance has one KCL worker, so we'll assume that each instance can handle 1/4 of the total workload (assuming four shards).
+2. Shard count: With six shards, the total workload will be distributed among more instances, which means each instance will need to handle less workload compared to when there were four shards.
+3. Instance type: The instance type you choose will affect the number of KCL workers you can run on each instance. For example, if you choose a c4 instance, you can run two KCL workers per instance, while an r5 instance allows for three KCL workers per instance.
+
+Based on these factors, let's do some rough calculations to determine the maximum number of EC2 instances needed:
+
+Assuming each instance can handle 1/4 of the total workload (with four shards):
+
+Total workload = 6 shards \* 1/4 workload per shard = 1.5 workload
+
+Since each KCL worker can handle 1/4 workload, we'll need:
+
+1.5 workload / 1/4 workload per instance = 6 instances
+
+Now, let's adjust for the increase in shards from four to six:
+
+6 instances \* (1.5 workload / 4 shards) = 12 instances
+
+Therefore, the maximum number of EC2 instances you should launch to achieve optimum performance is 12 (option B). This will allow you to handle the increased workload from resharding your stream while utilizing your resources efficiently.

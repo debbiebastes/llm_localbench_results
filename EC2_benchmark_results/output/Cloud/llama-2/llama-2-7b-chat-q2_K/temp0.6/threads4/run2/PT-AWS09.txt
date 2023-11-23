@@ -1,0 +1,18 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+(B) Enable throttling limits and result caching in API Gateway.
+
+Reason:
+API Gateway is the entry point for all incoming requests, and it's the best place to implement traffic management techniques like throttling limits and caching. By enabling these features, you can limit the number of requests that hit your backend systems during a sudden spike in traffic. This will help prevent overloading your backend infrastructure and ensure that your platform remains available and responsive even under heavy loads.
+API Gateway provides two main features for traffic management:
+(1) Throttling Limits: You can set up limits on the number of requests that can reach your backend systems within a certain time frame. For example, you can limit the number of requests to 50 per minute or 100 per hour. If more requests come in than the limit allows, API Gateway will either reject the excess requests or hold them until the limit is available again.
+(2) Result caching: You can cache the results of API calls so that repeat requests for the same data don't hit your backend systems every time. By caching results, you can reduce the load on your backend infrastructure and improve response times for repeat users.
+By enabling these features in API Gateway, you can better manage traffic spikes and ensure a smooth user experience even under high loads.

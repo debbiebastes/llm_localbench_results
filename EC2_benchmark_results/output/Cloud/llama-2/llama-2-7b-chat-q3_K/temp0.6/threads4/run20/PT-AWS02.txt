@@ -1,0 +1,16 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The MOST suitable solution in this scenario is option (B): Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+Here's why:
+AWS Systems Manager Patch Manager provides a centralized platform for managing patches across your AWS environment, including EC2 instances. You can use it to easily deploy patches to your outdated EC2 instances, ensuring that your applications are protected from security threats. Additionally, Amazon ES (Elasticsearch Service) is a fully managed search and analytics service that allows you to easily index and search log data from various sources, including AWS Systems Manager Patch Manager. This means that you can record and track any configuration changes associated with the patches, which is essential for auditing purposes.
+Option (A) is not the most suitable solution because it involves deploying the OS patches using AWS Systems Manager Sessions Manager, which may not provide the same level of centralized control and tracking as Patch Manager.
+Option (C) is also not the most suitable solution because while AWS Systems Manager Patch Manager can be used to easily deploy patches, it does not provide a centralized platform for managing and tracking configuration changes across your AWS environment.
+Option (D) is not a feasible solution because automatically installing patches on a weekly basis may not ensure that all outdated EC2 instances are patched in a timely manner, especially if there are many instances to manage.

@@ -1,0 +1,19 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key.
+
+Explanation:
+
+The best option for the hospital to comply with strict compliance and regulatory requirements is to implement an Amazon S3 client-side encryption with a KMS-managed customer master key (Option B).
+
+With this approach, the data remains encrypted even when it's stored in AWS, and only authorized users can access the decryption keys. The KMS-managed customer master key will be securely stored and managed by AWS, ensuring that the hospital does not have to handle or store sensitive encryption keys. This option also provides an additional layer of security as the data is encrypted on the client-side before being sent to AWS, making it more difficult for potential attackers to access the data even if it's intercepted during transit.
+
+Option A (client-side encryption with a client-side master key) is not suitable as it would require the hospital to manage and securely store the encryption keys, which could be a security risk. Option C (server-side encryption with a KMS managed key) would also require the hospital to provide the encryption keys to AWS, which could violate compliance requirements. Option D (server-side encryption with customer provided key) is not recommended as it would give the hospital full control over the encryption keys, which could increase the risk of security breaches.

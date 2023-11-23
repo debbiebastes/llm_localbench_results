@@ -1,0 +1,25 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+A, B, C, D
+
+Explanation: To protect the backend systems from traffic spikes, we can use the following solutions:
+
+1. Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+AWS Lambda and API Gateway are great for building serverless applications but they may not be the best solution for high-traffic websites that require high availability. By using EC2 instances, we can ensure that our backend systems are always available even during traffic spikes. Additionally, ELB and Auto Scaling can help us handle large amounts of traffic by automatically scaling our EC2 instances up or down based on demand.
+
+2. Enable throttling limits and result caching in API Gateway.
+API Gateway provides built-in support for throttling and caching, which can help us limit the amount of requests that are sent to our backend systems. By enabling these features, we can ensure that our backend systems are not overwhelmed by too many requests during traffic spikes.
+
+3. Use CloudFront in front of the API Gateway to act as a cache.
+CloudFront is AWS's content delivery network (CDN) service that can help us distribute content across multiple servers and regions. By using CloudFront in front of our API Gateway, we can cache frequently requested data and reduce the load on our backend systems. Additionally, CloudFront can help us handle high amounts of traffic by automatically distributing requests across multiple servers.
+
+4. Move the Lambda function in a VPC.
+Finally, if we are using AWS Lambda as part of our architecture, it is important to move the function into a virtual private cloud (VPC) to ensure that it is isolated from other resources on the network. This can help us prevent issues related to security or scalability and ensure that our backend systems are always available during traffic spikes.

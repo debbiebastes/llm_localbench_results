@@ -1,0 +1,20 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+The correct answer is (C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+
+Rationale: A scheduled scaling policy would allow the application to scale up before the start of the day, when the users are expected to log in and use the application. This would ensure that there are enough resources available to handle the increased traffic and prevent performance issues. The other options do not address the specific issue of needing more instances at the beginning of the day.
+
+Option (A) Configuring a predictive scaling policy would not be effective as it only adjusts the number of instances based on forecasted usage, and may not launch enough instances to handle the sudden increase in traffic at the start of the day.
+
+Option (B) Configuring a dynamic scaling policy based on memory utilization would not be effective as memory utilization may not be a good indicator of the application's performance during the start of the day when the number of users is increasing rapidly.
+
+Option (D) Configuring a dynamic scaling policy based on CPU utilization would also not be effective as the application may not be able to handle the sudden increase in traffic at the start of the day, resulting in high CPU utilization and slow performance.

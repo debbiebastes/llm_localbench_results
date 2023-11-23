@@ -1,0 +1,16 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The MOST suitable solution in this scenario is (B): Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+Explanation:
+AWS Systems Manager Patch Manager provides a centralized, automated way to manage patches across multiple EC2 instances. It can automatically deploy patches to instances with old operating systems, reducing the risk of security vulnerabilities. Additionally, AWS Systems Manager Patch Manager integrates with Amazon ES (Elasticsearch Service), which can be used to record and track any configuration changes made to the patched instances.
+Option (A) is partially correct, as AWS Systems Manager Sessions Manager can be used to manage OS patches for EC2 instances. However, it may not provide the same level of automation or centralized management as AWS Systems Manager Patch Manager.
+Option (C) is incorrect because AWS Config is a service that provides a comprehensive inventory and configuration management for AWS resources, but it does not have the capability to manage OS patches directly.
+Option (D) is incorrect because it involves configuring EC2 instances to automatically install patches on a weekly basis, which may not be feasible or practical in all cases, especially if the instances are running critical applications. Additionally, automating patch deployment without proper monitoring and management can lead to unintended consequences, such as patches being deployed to instances that are not ready for them, resulting in downtime or other issues.

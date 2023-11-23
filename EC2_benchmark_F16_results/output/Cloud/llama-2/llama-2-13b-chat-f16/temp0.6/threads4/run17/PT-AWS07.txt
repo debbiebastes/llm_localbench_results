@@ -1,0 +1,18 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+The best option would be (C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day. This approach allows you to scale up the number of instances ahead of time, so that they are available and ready to handle the increased traffic when office hours begin.
+
+With this solution, you can configure the scheduled scaling policy to launch new instances at a specific time before the start of the day (e.g., 30 minutes prior) and gradually increase the number of instances as needed based on demand. This ensures that there are enough resources available to handle the increased traffic without overloading the system.
+
+In contrast, options A and B may not be effective in addressing the issue. Predictive scaling policies (Option A) rely on historical data and algorithms to predict future usage patterns, which may not accurately forecast the increased demand at the start of the day. Dynamic scaling based on Memory utilization (Option B) may not be effective either, as memory utilization alone may not accurately reflect the changing demand patterns during office hours.
+
+Dynamic scaling based on CPU utilization (Option D) could also potentially overload the system if there are too many instances running, leading to increased CPU usage and slower performance. Therefore, option C is the most operationally efficient solution to ensure that the application works properly at the beginning of the day.

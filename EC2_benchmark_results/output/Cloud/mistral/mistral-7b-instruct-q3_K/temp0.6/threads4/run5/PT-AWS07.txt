@@ -1,0 +1,16 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+Option (A) is the MOST operationally efficient solution because Predictive scaling policies in Amazon EC2 Auto Scaling use machine learning algorithms to analyze historical data and forecast future demand, which can help in identifying and addressing performance bottlenecks early in the day. By predicting the application's demand, the Auto Scaling group can be scaled up or down proactively to ensure that it has enough capacity to handle peak usage during office hours.
+
+Option (C) is the next most efficient solution as it will help address performance issues at the beginning of the day, but it may not be able to predict and adjust to changes in demand throughout the day as effectively as a Predictive scaling policy. 
+
+Options (B) and (D) are less operationally efficient because they only react to current conditions rather than proactively anticipating future demand. Dynamic and Scheduled scaling policies can also have unpredictable performance when used in conjunction with other auto-scaling policies, making it difficult to maintain consistent application performance under varying loads.

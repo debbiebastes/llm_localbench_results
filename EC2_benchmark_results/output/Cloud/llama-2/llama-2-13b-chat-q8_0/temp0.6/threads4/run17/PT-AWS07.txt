@@ -1,0 +1,21 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on Memory utilization.
+
+Explanation:
+
+The issue of slow performance at the start of the day is likely due to the sudden increase in demand for resources as users log in and start using the application. This can lead to a shortage of available memory, causing performance issues. By configuring a Dynamic scaling policy based on Memory utilization, the Auto Scaling group will automatically launch new instances when the Memory utilization exceeds a certain threshold, ensuring that there are enough resources available to handle the increased demand and preventing slow performance.
+
+Option (A) is not the best solution because Predictive scaling is only effective for long-term forecasts and may not respond quickly enough to short-term changes in resource usage.
+
+Option (C) is not the best solution because Scheduled scaling is not designed to handle sudden changes in demand and may not be able to keep up with the increased usage at the start of the day.
+
+Option (D) is not the best solution because CPU utilization is not directly related to the issue of slow performance at the start of the day, which is primarily caused by memory usage.

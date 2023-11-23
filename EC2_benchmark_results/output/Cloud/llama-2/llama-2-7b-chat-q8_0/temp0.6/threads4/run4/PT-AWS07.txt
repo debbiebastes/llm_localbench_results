@@ -1,0 +1,13 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The most operationally efficient solution is (C): Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day. This will allow you to proactively add new instances in advance of the morning rush, ensuring that there are sufficient resources available to handle the increased demand.
+By implementing a scheduled scaling policy, you can automatically launch additional instances at a specific time each day, such as 30 minutes before the start of office hours. This will give the application time to warm up and be ready for use when users log in.
+Option (A) is incorrect because predictive scaling policies are not always accurate and may not take into account all the factors that can affect application performance. Option (B) is also incorrect because dynamic scaling policies are triggered by changes in CPU or memory utilization, which may not necessarily indicate a slowdown in the application. Option (D) is incorrect because it would only trigger new instances to be launched based on CPU utilization, and not take into account any other factors that may affect performance.

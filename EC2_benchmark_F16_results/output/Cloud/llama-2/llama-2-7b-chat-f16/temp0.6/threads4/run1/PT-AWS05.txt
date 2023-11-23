@@ -1,0 +1,19 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The MOST ideal way to comply with the requirements would be option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+This approach provides several benefits:
+
+1. **Event-driven architecture**: By leveraging Amazon EventBridge, you can create an event-driven architecture where DynamoDB events trigger Lambda functions. This allows for more flexibility in designing your application and separates the concerns of data processing from the data storage layer.
+2. **Decoupling**: By decoupling the data storage layer (DynamoDB) from the data processing layer (Lambda), you can make changes to either layer without affecting the other. This makes it easier to maintain and update your application over time.
+3. **Regional redundancy**: By storing the recorded changes in another DynamoDB table in a different region, you can achieve regional redundancy and improve the availability of your application.
+4. **Easier auditing**: With this approach, you can easily track and audit all changes made to the data, which is crucial for IT compliance. You can store the audit logs in a separate table or even in an external logging service like AWS CloudWatch Logs.
+
+In comparison, options (A) DynamoDB Accelerator and (B) Point-in-Time Recovery are not ideal for this scenario as they do not provide the same level of flexibility and decoupling as option (C). Option (D) Enable DynamoDB Streams and configure a Lambda function is also not recommended as it may not provide the same level of auditing and regional redundancy as option (C).

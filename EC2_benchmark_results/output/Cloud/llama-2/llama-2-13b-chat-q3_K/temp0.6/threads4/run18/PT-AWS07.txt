@@ -1,0 +1,23 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances.
+
+Rationale:
+
+Option A is the best solution because predictive scaling allows the system to forecast demand based on historical usage patterns and adjust the number of instances accordingly. This ensures that there are enough instances available to handle the increased traffic at the start of the day, without overprovisioning or underprovisioning resources.
+
+Option B is not a good choice because it would scale based on memory utilization, which may not accurately reflect the actual demand for instances during the start of the day.
+
+Option C is also not a good choice because scheduled scaling does not take into account real-time usage patterns and may not adjust the number of instances in response to changing demands.
+
+Option D is not a good choice because CPU utilization may not be the best indicator of demand for the application, especially if it is an I/O-intensive workload.
+
+By using predictive scaling, the system can proactively adjust the number of instances to handle the expected increase in traffic at the start of the day, ensuring optimal performance and user experience.

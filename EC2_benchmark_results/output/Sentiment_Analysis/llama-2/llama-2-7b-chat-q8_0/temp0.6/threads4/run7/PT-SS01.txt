@@ -1,0 +1,19 @@
+Here is a product review from a customer, which is delimited with triple backticks.
+
+Product Name: Bliss Rocking Chair
+Review text: 
+```
+I am absolutely in love with it! The chair is not only beautiful, but also incredibly comfortable. The rocking motion is smooth and soothing, making it perfect for relaxing after a long day. The craftsmanship is top-notch, with sturdy construction and high-quality materials. I also appreciate the attention to detail in the design, such as the curved armrests and the ergonomic backrest. Overall, I highly recommend it to anyone looking for a stylish and comfortable addition to their home. It truly brings joy and relaxation to my life!
+```
+
+Overall sentiment must be one of the following options:
+A) Positive
+B) Negative
+C) Neutral
+
+What is the overall sentiment of that product review? 
+
+Answer:
+The overall sentiment of that product review is (B) Negative.
+
+Explanation: The customer mentions that they are "absolutely in love with it" and highlights several positive aspects of the product, such as its beauty, comfort, craftsmanship, attention to detail, and relaxing rocking motion. However, the review also mentions that the chair brings joy and relaxation to their life, which suggests that the customer is generally satisfied with the product. Therefore, the overall sentiment of the review can be classified as negative, as the customer's positive comments are outweighed by the use of the word "love," which has a more intense connotation than other positive adjectives used in the review.

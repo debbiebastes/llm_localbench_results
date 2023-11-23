@@ -1,0 +1,17 @@
+An e-commerce company wants to migrate its on-premise infrastructure to Amazon Web Services. However, they are worried about ensuring their migration is secure and efficient.
+
+Which of the following AWS Cloud Adoption Framework perspective would be the most essential for the company’s migration?
+
+(A) Security Perspective
+(B) Governance Perspective
+(C) Operations Perspective
+(D) Platform Perspective
+
+Answer: 
+(D) Platform Perspective.
+
+Explanation:
+The AWS Cloud Adoption Framework (CAF) provides a structured approach to cloud migration and adoption. The CAF includes four perspectives: Security, Governance, Operations, and Platform. Each perspective focuses on a different aspect of the migration process.
+For an e-commerce company migrating its on-premise infrastructure to AWS, the Platform Perspective would be the most essential. This perspective focuses on the technical aspects of the migration, such as selecting the appropriate AWS services and configuring them correctly. It also involves designing a scalable and secure architecture for the new infrastructure.
+Security concerns are crucial during any migration, but they can be addressed through the Security Perspective (Option A). Similarly, Governance issues can be handled through the Governance Perspective (Option B). Operational considerations, such as managing the new infrastructure and applications, are covered by the Operations Perspective (Option C).
+Therefore, the correct answer is (D) Platform Perspective.

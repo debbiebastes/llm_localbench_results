@@ -1,0 +1,22 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+
+The most cost-effective option would be (B) No Upfront Convertible Reserved Instance pricing for a 3-year term. 
+
+Explanation: 
+
+To determine the cost-effectiveness of each option, we need to compare the total cost of using an On-Demand instance versus the total cost of using a reserved instance over a period of three years. 
+
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term requires paying for a full year upfront and then can convert to an on-demand instance at any time during that year, but you will not get a refund for the unused portion of the reserved instance. 
+
+Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term does not require any upfront payment, and you have the flexibility to convert to an on-demand instance at any time during those three years. This option is more cost-effective since it eliminates the need for upfront costs and allows you to pay only for the instances that you actually use. 
+
+Option (C) All Upfront Standard Reserved Instance pricing for a 3-year term requires paying for a full year upfront and then can convert to an on-demand instance at any time during those three years, but you will not get a refund for the unused portion of the reserved instance. This option is less cost-effective than option (B) as it still requires an upfront payment. 
+
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year is similar to option (A), but instead of being locked into a 3-year term, you are only locked into a one-year term. This option is less cost-effective than options (B) and (C) as it requires an upfront payment and does not provide the flexibility to convert to an on-demand instance at any time during the reserved instance period.

@@ -1,0 +1,14 @@
+Your application is processing one Kinesis data stream which has four shards, and each instance has one KCL worker. To scale up processing in your application, you reshard your stream to increase the number of open shards to six.
+
+What is the MAXIMUM number of EC2 instances that you should launch to achieve optimum performance?
+
+(A) 5
+(B) 12
+(C) 3
+(D) 6
+
+Answer: 
+The answer is (D) 6.
+
+After resharding the stream, each instance now has two KCL workers, resulting in a total of six EC2 instances. Launching more than six instances will not provide any additional performance benefits and may result in increased costs and complexity.
+Therefore, option (D) 6 is the correct answer.

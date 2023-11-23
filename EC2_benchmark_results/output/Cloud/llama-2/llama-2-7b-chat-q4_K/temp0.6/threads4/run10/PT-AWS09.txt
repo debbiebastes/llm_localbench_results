@@ -1,0 +1,17 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The correct answer is (B): Enable throttling limits and result caching in API Gateway.
+
+Explanation: AWS API Gateway provides features such as throttling limits and result caching to help protect backend systems from traffic spikes. Throttling limits can be set to limit the number of requests that a user can make within a certain time frame, preventing malicious or excessive usage of the platform. Result caching allows API Gateway to cache frequently requested resources, reducing the load on the backend systems and improving response times.
+Using AWS Lambda and API Gateway in combination with these features provides a highly scalable and resilient architecture for cryptocurrency trading platforms. By enabling throttling limits and result caching, you can protect your backend systems from traffic spikes and ensure that they are able to handle the increased load without compromising performance or security.
+Option (A) is incorrect because while EC2 instances, ELB, and Auto Scaling provide a more scalable architecture, they may not be necessary in this scenario as the platform already uses AWS Lambda and API Gateway.
+Option (C) is incorrect because CloudFront can act as a cache for static assets only, but it cannot help protect backend systems from traffic spikes.
+Option (D) is incorrect because moving the Lambda function to a VPC does not address the issue of traffic spikes on the backend systems.

@@ -1,0 +1,16 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+B - Implement an Amazon S3 client-side encryption with a KMS-managed customer master key is the appropriate option to satisfy the requirement of not sending sensitive PII data to AWS. This approach uses a KMS-managed customer master key that is securely stored outside of AWS, ensuring that the encrypted data remains in control of the organization even if the Amazon S3 bucket is compromised.
+Explanation:
+Client-side encryption involves encrypting data before it leaves the client's premises, and decrypting it when it reaches the server. In this case, the Security Engineer should use a KMS-managed customer master key to encrypt the sensitive PII data stored in Amazon S3. This ensures that the data is encrypted before it is transmitted to AWS, and the encryption keys are securely managed outside of AWS.
+Option (A) is incorrect because client-side encryption with a client-side master key does not provide adequate security for sensitive PII data. The master key should be securely stored outside of AWS to prevent unauthorized access.
+Option (C) is incorrect because server-side encryption involves encrypting data on the AWS server, which may not meet regulatory requirements. Additionally, the organization would have no control over the encryption keys used by AWS.
+Option (D) is incorrect because using a customer provided key can lead to security risks if the key is compromised or exposed.

@@ -1,0 +1,19 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+
+Option C is the most ideal way to comply with the requirements because it allows for real-time processing of new changes made to items in DynamoDB. By creating an Amazon EventBridge rule that tracks table-level events in DynamoDB, any new changes made to items in the primary table will trigger a Lambda function as a rule target. The Lambda function can then process and save the new changes to the other table in another region. This approach is more efficient and cost-effective compared to using DynamoDB Accelerator (Option A) or enabling Point-in-Time Recovery (Option B), which would require additional setup and infrastructure.
+
+Additionally, using an Amazon EventBridge rule allows for greater flexibility in terms of the types of events that can be captured and processed by the Lambda function. The rule can be configured to trigger based on specific events or conditions, such as when a new item is added to the primary table, when an item is updated, or when an item is deleted. This allows for more granular control over the data that needs to be synced to the other table.
+
+Overall, Option C is the most ideal way to comply with the requirements because it provides real-time processing of new changes made to items in DynamoDB, while also allowing for greater flexibility and control over the types of events that are captured and processed by the Lambda function.

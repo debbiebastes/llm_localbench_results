@@ -1,0 +1,16 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+Here's why:
+An EBS volume provides persistent block storage, which is ideal for mission-critical workloads. By attaching an EBS volume to your EC2 instance, you can ensure that your data is persistently stored and available even in the event of a failure or instance termination.
+Storing your backup data in Amazon S3 is also a good choice because it provides a highly durable and scalable storage solution. You can configure a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days, which will help reduce storage costs and improve data retention.
+Option (A) is not the best choice because instance store volumes are designed for temporary storage and do not provide persistent storage. Option (C) is also not a good choice because Amazon S3 One Zone-IA is a storage service that is optimized for low-latency access, rather than long-term archiving.
+Option (D) is incorrect because instance store volumes are designed for temporary storage and do not provide persistent storage.

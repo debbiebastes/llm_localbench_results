@@ -1,0 +1,15 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The correct answer is (B): Enable throttling limits and result caching in API Gateway.
+API Gateway's throttling feature allows you to limit the number of requests that can be made to your backend APIs within a certain time period, helping to prevent overloading and improving performance during traffic spikes. Additionally, API Gateway provides caching capabilities for frequently accessed data, which can help reduce the load on your backend systems by serving pre-cached responses instead of making new requests each time a user makes a request.
+Option (A) is incorrect because while EC2 instances, ELB, and Auto Scaling can provide more scalability and availability, they are not necessary for protecting the backend systems from traffic spikes in this scenario.
+Option (C) is also incorrect because while CloudFront can act as a cache in front of API Gateway, it will not help with throttling or result caching.
+Option (D) is incorrect because moving the Lambda function to a VPC does not address the issue of traffic spikes and can actually introduce additional complexity and security concerns.

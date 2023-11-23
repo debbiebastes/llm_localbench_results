@@ -1,0 +1,19 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The MOST ideal way to comply with the requirements would be option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+Explanation:
+In this scenario, creating an Amazon EventBridge rule is the best approach for tracking and capturing changes made to items in DynamoDB. Here's why:
+1. Scalability: With EventBridge, you can easily scale your data processing capabilities as needed. You only pay for the resources you use, making it a cost-effective solution.
+2. Flexibility: EventBridge supports a wide range of event sources, including DynamoDB, Amazon RDS, and more. This means you can collect events from multiple sources and process them in a single Lambda function.
+3. Automation: With EventBridge, you don't have to manually monitor or trigger your Lambda functions. It automatically tracks events from your chosen data sources and invokes your Lambda function when new data is available. This saves time and reduces the risk of manual errors.
+4. Data consistency: By using EventBridge to track changes in DynamoDB, you can ensure that your other table remains up-to-date with the latest changes. This ensures data consistency across both tables, which is essential for compliance purposes.
+5. Cost-effective: Using EventBridge instead of DynamoDB Accelerator or Point-in-Time Recovery can help reduce costs as you only pay for the resources you use.
+In summary, creating an Amazon EventBridge rule to track changes in DynamoDB and invoking a Lambda function to save new changes to another table is the most ideal way to comply with the requirements while providing scalability, flexibility, automation, data consistency, and cost-effectiveness.

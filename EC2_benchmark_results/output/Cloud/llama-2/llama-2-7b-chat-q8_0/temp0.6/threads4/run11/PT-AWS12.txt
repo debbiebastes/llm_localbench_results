@@ -1,0 +1,16 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The correct answer is (C): All Upfront, Standard Reserved Instance pricing for a 3-year term.
+Explanation:
+If the application being hosted would be used for more than 3 years, then it is cost-effective to choose a 3-year Reserved Instance (RI) term instead of a 1-year term with automatic renewal. The No Upfront Standard Reserved Instance pricing option (D) does not provide the best value for long-term usage.
+Here's why:
+* Option (A), All Upfront Convertible Reserved Instance pricing for a 1-year term, provides the lowest upfront cost but also has the highest total cost over the 3-year period due to higher hourly rates during non-peak hours.
+* Option (B), No Upfront Convertible Reserved Instance pricing for a 3-year term, has the highest upfront cost but also provides the lowest total cost over the 3-year period due to lower hourly rates during non-peak hours. However, this option may not be the most cost-effective choice if the application is used more frequently during peak hours.
+* Option (C), All Upfront, Standard Reserved Instance pricing for a 3-year term, provides a balance between upfront cost and total cost over the 3-year period. It has lower hourly rates than Option (A) during non-peak hours but higher upfront cost than Option (B).
+Therefore, the most cost-effective option for the company would be to choose Option (C), All Upfront, Standard Reserved Instance pricing for a 3-year term.

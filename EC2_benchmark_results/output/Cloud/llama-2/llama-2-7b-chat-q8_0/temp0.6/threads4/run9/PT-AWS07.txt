@@ -1,0 +1,18 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The most operationally efficient solution is (C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+
+Explanation:
+The issue experienced by the users is caused by the application not having enough instances available at the beginning of the day to meet the demand. By configuring a scheduled scaling policy, you can launch new instances before the start of the day, ensuring that there are enough instances available to handle the traffic when users log in. This will help prevent slow performance during the start of the day and ensure a smooth user experience.
+Option (A) Configure a Predictive scaling policy is not the best solution as predictive scaling policies rely on historical data to forecast future usage, which may not accurately reflect current conditions. Additionally, it can lead to over- or under-provisioning of instances, resulting in wasted resources.
+Option (B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization is also not the best solution as dynamic scaling policies rely on real-time metrics to adjust instance sizes, which can result in slower response times and increased costs due to unnecessary instance launches.
+Option (D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization is also not the best solution as dynamic scaling policies rely on real-time metrics to adjust instance sizes, which can result in slower response times and increased costs due to unnecessary instance launches.
+In summary, configuring a scheduled scaling policy before the start of the day is the most operationally efficient solution to ensure the application works properly at the beginning of the day while minimizing wasteful resource utilization.

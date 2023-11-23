@@ -1,0 +1,20 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The best solution is (B): Attach an EBS volume in your EC2 instance.
+Here's why:
+
+Reason 1: Persistent storage for mission-critical workloads - An EBS volume provides persistent storage for your EC2 instance, ensuring that data is available even in the event of a instance failure or reboot. This meets the requirement of providing a persistent block storage volume for mission-critical workloads.
+Reason 2: Object storage for backup data - Amazon S3 provides an object store that can be used to store your backup data. You can configure a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days, which meets the requirement of storing the backup data in an object storage service.
+Reason 3: Data archiving for long-term retention - Once the backup data is stored in Amazon S3, you can configure a lifecycle policy to transition it to Amazon S3 One Zone-IA for long-term data archiving. This provides a cost-effective solution for storing large amounts of data that don't require frequent access.
+While options (A) and (D) also meet the requirements, they are not the best choice for several reasons:
+Reason 1: Instance store volume is ephemeral - An instance store volume is attached to an EC2 instance and is deleted when the instance is terminated. This means that the data stored on an instance store volume is not persistent and may be lost during instance termination or failure.
+Reason 2: Amazon S3 Glacier does not support lifecycle policies - Amazon S3 Glacier is a storage service that provides long-term data archiving with low retrieval costs. However, it does not support lifecycle policies for automating data transfer between storage classes, which makes it less flexible than Amazon S3.
+Reason 3: One Zone-IA is not suitable for backup data - Amazon S3 One Zone-IA is a storage service that provides high availability and low latency for applications that require fast access to data from multiple Availability Zones. However, it is not the best choice for storing long-term backup data, as it does not provide the same level of cost savings or data durability as Amazon S3 Standard Storage.

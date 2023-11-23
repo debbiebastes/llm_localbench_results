@@ -1,0 +1,15 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (C): Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+Explanation:
+An EBS volume provides persistent block storage for mission-critical workloads, which is essential for organizations that require a reliable and durable storage solution. By attaching an EBS volume in the EC2 instance, you can ensure that your backup data is stored persistently and will not be lost due to instance termination or other reasons.
+Amazon S3 provides a scalable and durable storage solution for storing backup data, which can be configured with lifecycle policies to transition objects to Amazon S3 One Zone-IA after 30 days. This ensures that the backup data is stored in a highly available and durable storage service, while also reducing costs by moving less frequently accessed data to a lower-cost storage tier.
+Therefore, option (C) provides the best solution for meeting the requirements of persistent block storage volume for mission-critical workloads, storing backup data in Amazon S3 with lifecycle policies, and transitioning objects to Amazon S3 One Zone-IA after 30 days.

@@ -1,0 +1,19 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+
+* Option A is not ideal because it requires manual intervention to set up and maintain the accelerator, which can be time-consuming and error-prone.
+* Option B is not ideal because Point-in-Time Recovery is intended for disaster recovery and data restore purposes, not for synchronizing data between tables.
+* Option D is not ideal because DynamoDB Streams are intended for real-time streaming of data, which may not be necessary in this scenario.
+
+Option C is the most ideal solution because it allows for real-time processing of changes made to the items in DynamoDB without the need for manual intervention or complex setup. By creating an Amazon EventBridge rule that tracks table-level events in DynamoDB, any new changes made to the items will automatically trigger a Lambda function, which can then process and save the changes to the other table. This approach is scalable, reliable, and easy to set up, making it the best fit for the requirements of the scenario.

@@ -1,0 +1,12 @@
+A Security Engineer has found out that there are some developers who have been adding rules to security groups without any approval. The developers configured the security groups to allow RDS, SMTP, and SSH traffic from the 0.0.0.0/0 CIDR range in order to do their code testing. The company has an existing firewall hosted in an EC2 instance where all of the traffic should pass through.
+
+Which of the following is the MOST efficient way to automatically remediate this security risk?
+
+(A) Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+(B) Set up a Transit VPC to connect the corporate firewall and the EC2 instances.
+(C) Block the source IP addresses coming from the 0.0.0.0/0 CIDR range using Network ACL.
+(D) Use AWS Shield to automatically monitor and detect all the security groups that allow traffic directly from the 0.0.0.0/0 CIDR range.
+
+Answer: 
+
+Option (A) is the most efficient way to remediate this security risk as it uses AWS Config rules to automatically detect any changes made to security groups and then automatically updates the security group with the corporate firewall IP address using an AWS Lambda function. This approach provides a centralized and automated solution for managing security group configurations across multiple environments, making it more efficient than other options such as manually modifying the security groups or setting up a Transit VPC. Option (C) is another option that can be used to block the source IP addresses coming from the 0.0.0.0/0 CIDR range, but it requires manual configuration of the Network ACL rules and may not be as efficient if there are multiple security groups that need to be updated. Option (D) can also be used to monitor and detect all the security groups that allow traffic directly from the 0.0.0.0/0 CIDR range, but it may require additional setup and configuration to integrate with existing security tools and workflows.

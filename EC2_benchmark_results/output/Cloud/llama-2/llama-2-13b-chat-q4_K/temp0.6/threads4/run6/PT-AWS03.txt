@@ -1,0 +1,18 @@
+A Security Engineer has found out that there are some developers who have been adding rules to security groups without any approval. The developers configured the security groups to allow RDS, SMTP, and SSH traffic from the 0.0.0.0/0 CIDR range in order to do their code testing. The company has an existing firewall hosted in an EC2 instance where all of the traffic should pass through.
+
+Which of the following is the MOST efficient way to automatically remediate this security risk?
+
+(A) Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+(B) Set up a Transit VPC to connect the corporate firewall and the EC2 instances.
+(C) Block the source IP addresses coming from the 0.0.0.0/0 CIDR range using Network ACL.
+(D) Use AWS Shield to automatically monitor and detect all the security groups that allow traffic directly from the 0.0.0.0/0 CIDR range.
+
+Answer: 
+
+A) Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+
+Explanation:
+
+Option A is the most efficient way to automatically remediate this security risk because it allows for real-time detection of security groups that allow traffic from the 0.0.0.0/0 CIDR range, and provides an automated remediation process using Systems Manager Automation document associated with an AWS Lambda function in the AWS Config rule. This approach is more efficient than manually reviewing security groups one by one or setting up a Transit VPC (option B), blocking source IP addresses using Network ACLs (option C), or relying on AWS Shield for detection (option D).
+
+By using AWS Config rules, the solution can detect and remediate any security group that allows traffic from the 0.0.0.0/0 CIDR range in real-time, ensuring that all traffic is routed through the corporate firewall. Additionally, using Systems Manager Automation document associated with an AWS Lambda function enables the solution to automate the remediation process, reducing manual effort and increasing efficiency.

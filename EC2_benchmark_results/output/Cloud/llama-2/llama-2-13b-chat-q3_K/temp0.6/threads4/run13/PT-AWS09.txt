@@ -1,0 +1,20 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+Please note that this is just an example scenario, you may need to consult with AWS experts to determine the best solution for your specific use case. That being said, the correct answer is (C) Use CloudFront in front of the API Gateway to act as a cache.
+
+Here's why:
+
+When you have a sudden increase in traffic, the first thing that can help is caching. CloudFront can act as a cache for your API Gateway, which would help to reduce the load on the backend systems. This would be especially helpful if the majority of requests are for the same resources, such as frequently accessed data or images.
+
+By using CloudFront, you can cache the frequently accessed data in multiple edge locations around the world, which would help to reduce the latency and improve the performance of your application. Additionally, CloudFront can also help to distribute the traffic more evenly across the backend systems, which would help to prevent any single system from becoming overwhelmed.
+
+Option (A) is not a good choice here because it would require significant changes to the architecture and might introduce additional complexity. Option (B) might provide some benefits but would not be as effective as using CloudFront for caching. Option (D) does not address the issue of traffic spikes.

@@ -1,0 +1,18 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+
+The correct answer is option C, Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+
+Option C is the most suitable solution in this scenario because it allows for easy deployment of OS patches using AWS Systems Manager Patch Manager, which is specifically designed for managing patches and updates for EC2 instances. Additionally, setting up AWS Config can help ensure that all configuration changes are recorded and tracked for audit purposes.
+
+Option A is not the best solution because it relies on manual intervention to deploy patches using AWS Systems Manager Sessions Manager, which may not be practical or scalable for large numbers of instances. Option B is also not ideal because it uses a different tool (Amazon ES) for recording and tracking configuration changes, which may not integrate well with other tools in the AWS ecosystem. Finally, option D is not recommended as automating patch deployment on a weekly basis may not be sufficient to address immediate security risks.
+
+Therefore, option C is the most suitable solution for this scenario.

@@ -1,0 +1,16 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances.
+
+Explanation: Predictive scaling is the most operationally efficient solution as it uses historical data and machine learning algorithms to predict future usage patterns, allowing for proactive scaling to meet increased demand. This approach ensures that the application works properly at the beginning of the day by automatically adjusting the number of instances based on expected usage patterns.
+
+In contrast, dynamic scaling based on memory or CPU utilization may not be effective as it only responds to current conditions, which may not accurately reflect future demand. Scheduled scaling may also not be the best option as it does not take into account real-time usage patterns.

@@ -1,0 +1,16 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements would be option (C): Create an Amazon EventBridge rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+EventBridge is an event monitoring and routing service that allows you to collect, route, and act on events from various sources, including AWS services like DynamoDB. By setting up an EventBridge rule that tracks events in DynamoDB, you can automatically capture all changes made to items in the primary table, and then forward those changes to a secondary table in another region.
+This approach eliminates the need for manual data replication or synchronization, as well as reduces the risk of errors or failures during the transfer process. Additionally, by setting up a Lambda function as a rule target, you can execute custom code to process and save new changes to the other table, ensuring that they are properly recorded and stored in compliance with IT requirements.
+Option (D) is not the most ideal choice because it involves enabling DynamoDB Streams, which is a feature designed for real-time data streaming and event-driven architectures. While it could technically be used to replicate changes from one table to another, it may not provide the same level of visibility or control as EventBridge.
+Option (A) is also not the most ideal choice because it involves setting up a separate DynamoDB Accelerator instance, which is intended for improving query performance and reducing latency for fast-paced applications. While it could potentially be used to replicate changes between tables, it may not provide the same level of visibility or control as EventBridge.
+Option (B) is also not the most ideal choice because it involves enabling DynamoDB Point-in-Time Recovery, which is a feature designed for recovering data from a point in time, rather than replicating changes between tables. While it could potentially be used to replicate changes between tables, it may not provide the same level of visibility or control as EventBridge.

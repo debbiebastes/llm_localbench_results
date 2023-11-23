@@ -1,0 +1,14 @@
+A developer configured an Amazon API Gateway proxy integration named MyAPI to work with a Lambda function. However, when the API is being called, the developer receives a 502 Bad Gateway error. She tried invoking the underlying function, but it properly returned the result in XML format.
+
+What is the MOST likely root cause of this issue?
+
+(A) There is an incompatible output returned from a Lambda proxy integration backend.
+(B) The endpoint request timed-out.
+(C) There has been an occasional out-of-order invocation due to heavy loads.
+(D) The API name of the Amazon API Gateway proxy is invalid.
+
+Answer: 
+
+(A) There is an incompatible output returned from a Lambda proxy integration backend. 
+
+Explanation: A 502 Bad Gateway error occurs when the gateway cannot complete the request it received from the client. It could be due to several reasons such as issues with the Lambda function, network connectivity or configuration. In this case, since the developer was able to invoke the underlying function and receive a result in XML format, the issue is likely related to the output format of the Lambda function. The gateway expects a specific format (e.g., JSON) for the response from the backend, so if the function returns an incompatible format (in this case, XML), it will trigger a 502 error.

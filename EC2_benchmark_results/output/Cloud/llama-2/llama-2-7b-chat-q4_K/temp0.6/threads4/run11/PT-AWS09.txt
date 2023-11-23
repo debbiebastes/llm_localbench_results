@@ -1,0 +1,16 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+In this scenario, option (B) Enable throttling limits and result caching in API Gateway would be the best choice to protect the backend systems of the platform from traffic spikes.
+API Gateway has built-in support for throttling limits, which can help control the number of requests that are sent to the backend system during times of high traffic. By setting up throttling limits, you can prevent the backend system from becoming overwhelmed with too many requests and causing it to become unavailable or slow.
+In addition, API Gateway also supports result caching, which can help reduce the load on the backend system by storing frequently accessed data in memory. This means that instead of making multiple requests to the backend system for the same data, the frontend can retrieve the data from the cache, reducing the number of requests and improving performance.
+Option (A) switch to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling is not necessary in this scenario as API Gateway already provides a scalable and highly available architecture through its built-in support for autoscaling and load balancing.
+Option (C) Use CloudFront in front of the API Gateway to act as a cache is also not necessary as API Gateway already has built-in caching capabilities through its result caching feature.
+Option (D) Move the Lambda function in a VPC is not applicable in this scenario as AWS Lambda is a serverless compute service that does not require a VPC.

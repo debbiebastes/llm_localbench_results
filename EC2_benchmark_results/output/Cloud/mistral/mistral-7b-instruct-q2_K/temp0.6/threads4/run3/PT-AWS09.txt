@@ -1,0 +1,22 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+
+Explanation: 
+
+AWS Lambda is a serverless computing service that can be used to run code without managing servers. It is an ideal choice for building APIs and microservices but may not be the most scalable solution when dealing with large amounts of traffic. In such a scenario, using EC2 instances, ELB, and Auto Scaling can provide better scalability and availability.
+
+EC2 instances are virtual machines that can be used to run applications. They can be scaled up or down based on demand, providing more control over the resources being used. ELB (Elastic Load Balancer) is a highly available and scalable service that can distribute traffic across multiple EC2 instances. It can also handle SSL offloading, which is important for secure data transfer.
+
+Auto Scaling is a service that automatically scales your EC2 instances up or down based on CPU utilization, memory usage, or other custom metrics. This ensures that the platform has the right number of resources to handle traffic spikes without overprovisioning or underprovisioning.
+
+By using these services together, the trading platform can ensure that it can handle large amounts of traffic and provide a seamless user experience even during periods of high demand.

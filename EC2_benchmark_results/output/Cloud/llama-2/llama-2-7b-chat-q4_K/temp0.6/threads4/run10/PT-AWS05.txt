@@ -1,0 +1,16 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The MOST ideal way to comply with the requirements is option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+Explanation:
+DynamoDB Streams is not the best option for this scenario because it requires manual configuration of the stream and the target Lambda function, which can be time-consuming and error-prone. EventBridge (CloudWatch Events) provides a more flexible and automated solution for triggering Lambda functions based on events in DynamoDB tables.
+Option (A), DynamoDB Accelerator, is not relevant to this scenario because it only provides performance improvements for read-heavy workloads, not data tracking or compliance features.
+Option (B), Enable DynamoDB Point-in-Time Recovery, can be used for backup and recovery purposes but does not provide real-time event monitoring and processing capabilities.
+Therefore, option (C) is the most ideal way to comply with the requirements of tracking new changes made to items in DynamoDB and storing them in another DynamoDB table in another region.

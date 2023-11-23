@@ -1,0 +1,25 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+(B) Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+
+When expecting a significant increase in site visitors, it's essential to protect the backend systems from traffic spikes. In this scenario, option (B) is the best choice.
+
+Enabling throttling limits in API Gateway can help control the number of requests that are sent to the Lambda function, preventing overload and potential crashes. This feature allows you to set a limit on the number of requests that can be made to the backend within a specific time frame.
+
+Result caching in API Gateway can also help reduce the load on the backend by caching the results of previous requests, so they don't need to be generated again. This can significantly improve response times and reduce the amount of data that needs to be processed by the backend.
+
+Option (A) is not a good choice because switching from Lambda and API Gateway to EC2 instances, ELB, and Auto Scaling would require significant changes to the architecture and could take more time to implement.
+
+Option (C) using CloudFront in front of API Gateway as a cache is not necessary since API Gateway already has built-in caching capabilities.
+
+Option (D) moving the Lambda function in a VPC would not have a significant impact on protecting the backend systems from traffic spikes.

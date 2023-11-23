@@ -1,0 +1,21 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+B - Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation:
+
+Option A is incorrect because instance store volumes are not suitable for mission-critical workloads and cannot be used for long-term storage.
+
+Option C is incorrect because Amazon S3 One Zone-IA is a storage class that provides infrequent access to data, but it is not designed for long-term archiving.
+
+Option D is incorrect because instance store volumes are not suitable for mission-critical workloads and cannot be used for long-term storage.
+
+Therefore, the best option is B - Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier. This will provide a persistent block storage volume for your mission-critical workloads and allow you to use Amazon S3 for long-term storage of your backups. Additionally, by configuring a lifecycle policy, you can automate the process of moving your backup data to Amazon S3 Glacier after 30 days, which will help reduce storage costs.

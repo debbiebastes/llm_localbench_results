@@ -1,0 +1,14 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+Explanation:
+The issue with the application's performance during the start of the day can be attributed to the slow provisioning and warm-up time of the instances in the Auto Scaling group. To address this, a Scheduled scaling policy can be configured to launch new instances before the start of the day. This will ensure that the instances are ready for use at the beginning of the day, thereby improving the performance of the application during office hours.
+Option (A) is incorrect because Predictive scaling policies are not suitable for this use case as they rely on historical data to predict the future scaling needs of the application. Option (B) is also incorrect as Dynamic scaling policies launch instances based on the current state of the instance pool, which may lead to suboptimal resource allocation during peak usage hours. Option (D) is incorrect because CPU utilization alone cannot explain the slow performance during the start of the day, and therefore, cannot be the sole basis for a scaling policy.

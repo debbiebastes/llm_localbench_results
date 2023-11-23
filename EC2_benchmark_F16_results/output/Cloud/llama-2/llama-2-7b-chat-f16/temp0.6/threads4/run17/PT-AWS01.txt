@@ -1,0 +1,17 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+The correct answer is (B): Implement an Amazon S3 client-side encryption with a KMS-managed customer master key.
+Explanation:
+In this scenario, the Security Engineer needs to ensure that the sensitive PII of patients is not stored in plaintext or unencrypted form on AWS. Client-side encryption with a KMS-managed customer master key provides an appropriate solution for this requirement. Here's why:
+1. Client-side encryption: The application hosting the web application should use client-side encryption to encrypt the data before uploading it to S3. This ensures that even if an unauthorized party gains access to the encrypted data, they cannot read or decrypt it without the appropriate decryption key.
+2. KMS-managed customer master key: In a KMS-managed customer master key scenario, AWS manages the encryption keys on behalf of the customer. This means that the hospital does not need to manage and store its encryption keys on premises, reducing the risk of unauthorized access or data breaches.
+3. Key rotation and management: AWS provides automated key rotation and management features for KMS-managed customer master keys. This ensures that the encryption keys are regularly updated, providing an additional layer of security against potential threats.
+In summary, implementing client-side encryption with a KMS-managed customer master key is the most appropriate solution to ensure the sensitive PII of patients is stored securely on AWS.

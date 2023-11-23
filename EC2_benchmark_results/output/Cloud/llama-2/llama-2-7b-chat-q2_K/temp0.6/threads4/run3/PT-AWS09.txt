@@ -1,0 +1,17 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The correct answer is (B) Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+As the trading platform is expecting a significant increase in site visitors, it's essential to ensure that the backend systems can handle the traffic spike without failing or becoming overwhelmed. One way to achieve this is by enabling throttling limits and result caching in API Gateway.
+Throttling limits allow you to set up limits on the number of requests that can be made to an API within a certain time frame. This can help prevent the backend systems from being overwhelmed with too many requests at once. By setting up throttling limits, you can ensure that the platform can handle the increased traffic without compromising the stability and performance of the backend systems.
+Result caching is another feature in API Gateway that allows you to cache the results of an API call. When a user makes a request to an API, the response can be cached for a certain period of time or until a specific number of requests have been met. This can help reduce the load on the backend systems by reducing the number of requests they need to handle. Additionally, caching the results of an API call can improve the performance and speed of the platform by providing faster responses to repeated requests.
+Therefore, option (B) Enable throttling limits and result caching in API Gateway is the best answer for protecting the backend systems of a cryptocurrency trading platform from traffic spikes.

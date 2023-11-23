@@ -1,0 +1,15 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key.
+Explanation:
+The Security Engineer should implement Amazon S3 client-side encryption with a KMS-managed customer master key to ensure that sensitive patient data is encrypted at rest and in transit, even if the AWS infrastructure is compromised. This approach ensures that the company maintains control over its encryption keys, which are stored in a Hardware Security Module (HSM) within the hospital's premises.
+Client-side encryption means that the application encrypts the data before uploading it to S3, and only the authorized parties can decrypt it using their own master key. Using a KMS-managed customer master key further enhances security by ensuring that the key is securely generated, managed, and revoked through the KMS service, which is compliant with various regulatory requirements.
+Option (A) is incorrect because client-side encryption alone may not provide sufficient security for sensitive data. Option (C) is also incorrect because server-side encryption would require the hospital to provide AWS with access to their encryption keys, which violates the company's security policy. Option (D) is also incorrect because using a customer-provided key could result in unauthorized access to the encrypted data.

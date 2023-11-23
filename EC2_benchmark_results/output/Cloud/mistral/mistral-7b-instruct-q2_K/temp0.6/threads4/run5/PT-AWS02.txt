@@ -1,0 +1,23 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+
+The MOST suitable solution in this scenario is option (A): Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+
+Here are the reasons why:
+
+Option A offers a comprehensive solution that addresses both the security risk and compliance requirements:
+
+1. AWS Systems Manager Sessions Manager is a powerful automation tool that can be used to deploy patches to multiple EC2 instances simultaneously, which helps to mitigate the security risk.
+2. Integrating Amazon QuickSight with Kibana allows for centralized monitoring of all configuration changes made to the outdated EC2 instances. This provides visibility into any changes made, which is important for compliance purposes.
+3. By using AWS Systems Manager Sessions Manager and integrating it with QuickSight, you can automate the patching process while also recording any changes made during the patch deployment. This ensures that you have an auditable record of all changes made to the outdated EC2 instances, which is important for compliance purposes.
+4. Option A also provides a scalable solution that can be easily expanded to include additional EC2 instances as needed.
+
+In conclusion, option A is the most suitable solution in this scenario because it offers a comprehensive approach to patching and monitoring outdated EC2 instances while ensuring compliance requirements are met.

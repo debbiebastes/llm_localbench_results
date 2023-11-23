@@ -1,0 +1,18 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The correct answer is (B): Enable throttling limits and result caching in API Gateway.
+Explanation:
+As the traffic to the platform is expected to increase significantly, it's important to ensure that the backend systems can handle the increased load without failing or slowing down. One way to do this is by enabling throttling limits and result caching in AWS API Gateway.
+Throttling limits can be set up to limit the number of requests that a client can make within a certain time period, preventing any single client from overwhelming the system with too many requests. Result caching can store the results of previous requests, reducing the need for API calls and further increasing the performance of the platform.
+Using AWS Lambda and API Gateway, along with throttling limits and result caching, can help protect the backend systems of the platform from traffic spikes while ensuring that the platform can handle a large number of new users and increased traffic without failing or slowing down.
+Option (A) is incorrect because while EC2 instances, ELB, and Auto Scaling can provide more scalability and availability, they may not be necessary for this scenario as the backend systems are already built using AWS Lambda and API Gateway.
+Option (C) is incorrect because CloudFront can act as a cache in front of the API Gateway, but it cannot handle the increased load from new users or traffic spikes on its own.
+Option (D) is incorrect because moving the Lambda function to a VPC may not provide any additional benefits for protecting the backend systems from traffic spikes.

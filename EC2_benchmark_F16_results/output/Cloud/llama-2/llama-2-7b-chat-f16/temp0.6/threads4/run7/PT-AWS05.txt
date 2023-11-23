@@ -1,0 +1,15 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements would be option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+Explanation:
+
+Using EventBridge, you can set up event-driven automation that triggers a Lambda function when specific events occur in your DynamoDB tables. By configuring an EventBridge rule to monitor changes made to items in a particular DynamoDB table, you can automatically save new changes to another DynamoDB table in another region. This approach provides a flexible and scalable solution for recording and storing all of the new changes made to items in DynamoDB.
+In contrast, option (A) requires setting up an additional DynamoDB instance with Accelerator enabled, which may not be necessary or feasible depending on your use case. Option (B) is only useful in cases where you need to recover a table from a point-in-time snapshot, and it does not address the requirement of recording changes made to items in DynamoDB. Option (D) is similar to option (C), but it requires enabling DynamoDB Streams instead of using EventBridge.

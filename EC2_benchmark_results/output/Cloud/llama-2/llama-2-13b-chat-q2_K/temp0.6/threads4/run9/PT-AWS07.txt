@@ -1,0 +1,20 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+The most operationally efficient solution would be option A, "Configure a Predictive scaling policy for the Auto Scaling group." This approach allows the application to automatically adjust the number of instances based on predicted usage patterns.
+
+Option B, "Dynamic scaling based on Memory utilization," may not be as effective because memory utilization may fluctuate during the day, and the application may not need additional resources at all times.
+
+Option C, "Scheduled scaling," may not be suitable because it does not take into account current usage patterns or predictive analytics.
+
+Option D, "Dynamic scaling based on CPU utilization," is a good approach but may not be as effective as option A since the application's performance may not be solely dependent on CPU utilization.
+
+In summary, the best solution would be to configure a Predictive scaling policy for the Auto Scaling group to ensure that the application works properly at the beginning of the day based on predicted usage patterns.

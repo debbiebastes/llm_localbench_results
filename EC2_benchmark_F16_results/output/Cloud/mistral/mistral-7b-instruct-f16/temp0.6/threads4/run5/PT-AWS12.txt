@@ -1,0 +1,10 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+
+The most cost-effective option if the application would be used for more than 3 years is (B) No Upfront Convertible Reserved Instance pricing for a 3-year term. This option allows for the lowest initial cost as no upfront payment is required, and also offers flexibility in terms of being able to switch to an On-Demand instance at any time if needed. Additionally, since it is a 3-year term, the total cost of using this instance over the course of 3 years would be significantly lower than the other options which require upfront payments or have shorter terms.

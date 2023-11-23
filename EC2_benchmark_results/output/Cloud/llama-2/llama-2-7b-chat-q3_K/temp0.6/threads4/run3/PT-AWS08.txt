@@ -1,0 +1,16 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B): Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+Explanation:
+You need a persistent block storage volume for mission-critical workloads, so you should use an EBS volume instead of an instance store volume. An EBS volume is a block storage device that persists data even if the underlying EC2 instance is terminated or fails.
+Using Amazon S3 to store your backup data is a good choice because it provides low-cost archival storage and supports lifecycle policies for transitioning objects to Amazon S3 Glacier, which is a long-term archival storage service that can reduce costs by storing infrequently accessed data in a single location.
+Option (A) is not correct because instance store volumes are not suitable for mission-critical workloads and do not provide the same level of durability as EBS volumes. Option (C) is also not correct because Amazon S3 One Zone-IA is not available in all regions, so it may not be a viable option for you.
+Option (D) is incorrect because instance store volumes are not available in all regions, so they may not be a viable option for you.

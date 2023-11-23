@@ -1,0 +1,21 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+The best answer is (B) Enable throttling limits and result caching in API Gateway.
+
+API Gateway provides several features to help protect backend systems from traffic spikes, including throttling limits and result caching. Throttling limits allow you to set maximum request rates for specific users or IP addresses, which can help prevent overload on the backend systems during high traffic periods. Result caching allows API Gateway to cache frequently requested data, reducing the number of requests made to the backend systems and helping to distribute the load more evenly.
+Using AWS Lambda and API Gateway in combination with these features provides a highly scalable and resilient architecture for cryptocurrency trading platforms that can handle traffic spikes and unexpected increases in site visitors.
+
+Choices (A), (C), and (D) are not the best answers:
+
+(A) Switching from AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling is overkill for this scenario, as API Gateway provides sufficient scaling capabilities on its own. Additionally, using EC2 instances would require additional setup and maintenance.
+(C) Using CloudFront in front of the API Gateway to act as a cache is not the best approach, as it may introduce additional latency and would not provide throttling limits or result caching.
+(D) Moving the Lambda function to a VPC is not necessary for this scenario, as the Lambda function is already running in a VPC.

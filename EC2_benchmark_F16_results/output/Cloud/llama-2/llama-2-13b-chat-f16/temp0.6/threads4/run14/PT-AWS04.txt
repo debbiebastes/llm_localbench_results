@@ -1,0 +1,31 @@
+Your application is processing one Kinesis data stream which has four shards, and each instance has one KCL worker. To scale up processing in your application, you reshard your stream to increase the number of open shards to six.
+
+What is the MAXIMUM number of EC2 instances that you should launch to achieve optimum performance?
+
+(A) 5
+(B) 12
+(C) 3
+(D) 6
+
+Answer: 
+(B) 12
+
+Explanation:
+
+To determine the maximum number of EC2 instances that you should launch to achieve optimum performance, you need to consider the following factors:
+
+1. Number of KCL workers per instance: Each instance has one KCL worker, so the total number of KCL workers is 12 (6 shards x 2 workers per shard).
+2. Processing capacity of each instance: Each EC2 instance has a certain processing capacity, which is determined by the type and configuration of the instance. For example, a t2.micro instance has a processing capacity of 1024 CPU units, while a c3.xlarge instance has a processing capacity of 6800 CPU units.
+3. Workload distribution across instances: To achieve optimum performance, it's important to distribute the workload evenly across all instances. This means that each instance should be responsible for processing approximately the same amount of data.
+
+Based on these factors, you can determine the maximum number of EC2 instances that you should launch as follows:
+
+1. Calculate the total processing capacity of all instances: To do this, multiply the number of instances by the processing capacity of each instance. For example, if you have 12 instances (6 shards x 2 workers per shard), and each instance has a processing capacity of 6800 CPU units, the total processing capacity would be:
+
+12 instances x 6800 CPU units/instance = 81,000 CPU units
+
+2. Calculate the maximum number of KCL workers that can be supported by the total processing capacity: To do this, divide the total processing capacity by the processing capacity required for each KCL worker. For example, if each KCL worker requires 512 CPU units (assuming a conservative estimate of 256 CPU units per worker for overhead and other tasks), you can calculate the maximum number of KCL workers as follows:
+
+81,000 CPU units / 512 CPU units/worker = 157 workers
+
+3. Determine the minimum number of instances required to support the maximum number of KCL workers: To do this, divide the maximum number of KCL workers by the number of workers that can be supported by each instance. For example, if you have 12 instances and

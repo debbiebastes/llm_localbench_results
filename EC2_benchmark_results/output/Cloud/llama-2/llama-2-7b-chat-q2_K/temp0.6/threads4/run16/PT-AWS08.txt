@@ -1,0 +1,17 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B) Attach an EBS volume in your EC2 instance.
+Explanation:
+To meet the requirement of having a persistent block storage volume for mission-critical workloads, you should attach an Elastic Block Store (EBS) volume to your existing EC2 instance. An EBS volume provides persistent storage that is available and accessible even when the underlying VM is not running.
+You can store your backup data in Amazon S3 and configure a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days. Amazon S3 Glacier is a low-cost, high-capacity storage service that is ideal for archiving and long-term data preservation.
+Option (A) is not the best choice because instance store volumes are only available on EC2 instances that run Amazon Linux or Windows Server 2012 R2. They do not provide persistent storage, so they are not suitable for mission-critical workloads.
+Option (C) is also not the best choice because One Zone-IA is a relatively new service that provides low-latency access to data stored in a specific Availability Zone. While it may be useful for some applications, it is not necessary for this use case, which requires persistence and long-term storage.
+Option (D) is the best choice because EBS volumes are available on all EC2 instance types, including those that run Amazon Linux or Windows Server 2012 R2. They provide persistent storage that is accessible even when the underlying VM is not running, making them ideal for mission-critical workloads.

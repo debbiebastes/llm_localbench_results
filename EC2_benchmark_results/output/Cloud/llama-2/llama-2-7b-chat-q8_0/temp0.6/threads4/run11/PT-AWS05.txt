@@ -1,0 +1,19 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements is option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+EventBridge is a serverless event bus service provided by AWS, which allows you to connect your applications with AWS services like DynamoDB. By setting up an EventBridge rule that tracks table-level events in DynamoDB, you can automatically trigger a Lambda function when new changes are made to the items in DynamoDB. This way, you can ensure that the new changes are recorded and stored in another DynamoDB table in another region without any manual intervention.
+
+Option (A) sets up DynamoDB Accelerator, which is not necessary for this use case as it's only meant to improve the performance of read-heavy workloads.
+Option (B) enables DynamoDB Point-in-Time Recovery, which is a backup and recovery feature that can restore data from a specific point in time. While this may be useful for disaster recovery purposes, it's not necessary for this use case as we don't need to restore data from a previous state.
+Option (D) enables DynamoDB Streams, which streams events from DynamoDB tables to an AWS Lambda function. While this can be used to process changes in DynamoDB, it may not be the most efficient solution for this use case as it requires setting up and maintaining the DynamoDB Streams configuration.
+
+Therefore, option (C) is the most ideal way to comply with the requirements of recording all new changes made to items in DynamoDB and storing them in another table in another region.

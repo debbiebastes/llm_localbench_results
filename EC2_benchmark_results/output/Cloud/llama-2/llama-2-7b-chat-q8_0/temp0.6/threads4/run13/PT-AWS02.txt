@@ -1,0 +1,17 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The MOST suitable solution in this scenario is (A): Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+Explanation:
+The IT Security team needs to immediately mitigate the security risk by deploying patches to the old operating systems of several EC2 instances. AWS Systems Manager Sessions Manager is a powerful tool that can be used to quickly and easily deploy patches across multiple instances. It provides a centralized management console for managing patches, configuration changes, and other compliance requirements.
+To ensure audit trails and record any changes made, integrating Amazon QuickSight with Kibana will provide a comprehensive view of all configuration changes, allowing the team to track and monitor any updates.
+Option (A) is the most suitable solution as it provides a fast and efficient way to deploy patches across multiple instances while also providing an auditable record of all changes made.
+
+Option (B) sets up AWS Systems Manager Patch Manager, but does not provide an auditable record of changes made. Option (C) uses AWS Config, which is primarily designed for configuration management, rather than patch management. Option (D) configures instances to automatically install patches on a weekly basis, but does not provide real-time deployment or audit trails of changes made.

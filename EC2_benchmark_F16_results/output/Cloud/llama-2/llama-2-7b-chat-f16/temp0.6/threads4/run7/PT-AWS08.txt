@@ -1,0 +1,18 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+To meet the organization's requirement, you should choose (B): Attach an EBS volume in your EC2 instance.
+Here's why:
+* An EBS volume provides persistent block storage that is ideal for mission-critical workloads.
+* Storing backup data in Amazon S3 allows you to store large amounts of data and scale as needed. You can also configure a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days, which is an cost-effective archiving solution.
+* Using Amazon S3 for both the primary and backup storage ensures that your data is stored in the same location, which simplifies management and reduces complexity.
+* By storing the backup data in Amazon S3, you can easily retrieve it when needed, without having to worry about data loss or corruption.
+While (A) using instance store volumes may provide faster performance, it is not recommended for mission-critical workloads as they are ephemeral and can be lost upon instance termination.
+Similarly, while (C) storing backup data in Amazon S3 One Zone-IA provides lower latency, it may not be cost-effective for large amounts of data, and (D) using an instance store volume in a different Availability Zone does not provide the same level of redundancy and durability as EBS volumes.

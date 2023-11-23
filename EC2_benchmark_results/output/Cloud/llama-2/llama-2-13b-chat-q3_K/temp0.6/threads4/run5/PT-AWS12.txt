@@ -1,0 +1,24 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation:
+The cost of using an EC2 instance depends on the instance type, the amount of usage (measured in hours), and the region where the instance is located. The prices for On-Demand instances and Reserved Instances are determined by AWS based on supply and demand, so they can vary over time.
+
+If a company plans to use an EC2 instance for more than three years, it makes sense to purchase a Reserved Instance because this option offers the lowest prices.
+
+The No Upfront Convertible Reserved Instance pricing is the most cost-effective option for long-term usage because it allows you to pay for the instances over time instead of upfront. This option provides discounts of up to 75% compared to On-Demand pricing, and you can convert your reserved instance to a different type or size if your needs change.
+
+Therefore, option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term is the most cost-effective choice for the company because it offers the lowest prices for long-term usage.
+
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term is more expensive than option (B) and requires an upfront payment for the entire year, which may not be feasible or cost-effective for the company.
+
+Option (C) All Upfront, Standard Reserved Instance pricing for a 3-year term is also more expensive than option (B) because it requires an upfront payment for the entire three years, and it does not offer the flexibility of converting to a different type or size if needed.
+
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year may be more expensive than option (B) over time because it requires an annual upfront payment and does not offer the same discounts as the convertible reserved instance pricing.

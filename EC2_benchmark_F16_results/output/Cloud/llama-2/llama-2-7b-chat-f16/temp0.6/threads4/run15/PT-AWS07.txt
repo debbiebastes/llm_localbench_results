@@ -1,0 +1,17 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day is (C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+
+Explanation:
+Option (C) provides a more predictable and controlled way of adding instances during the start of the day, when the traffic is expected to be high. A scheduled scaling policy allows you to define a schedule for when new instances should be launched, ensuring that there are enough instances available to handle the increased load at the start of the day. This approach can help mitigate the slow performance issues during the morning hours and provide a more consistent user experience.
+Option (A) might seem like an attractive solution as it allows for automatic adjustments based on predicted traffic patterns. However, predictive scaling can be less accurate during times of unexpected changes in traffic or other factors that can affect application performance. By using scheduled scaling, you have more control over when instances are launched and can better manage the resources needed to handle the expected load.
+Option (B) is not the most operationally efficient solution as it relies on dynamic scaling based on memory utilization, which might not always be an accurate measure of application performance. Additionally, launching new instances based solely on memory utilization can lead to overprovisioning, resulting in wasted resources.
+Option (D) is also not the most operationally efficient solution as it relies on dynamic scaling based on CPU utilization, which might not always be an accurate measure of application performance. Similarly to option (B), launching new instances based solely on CPU utilization can lead to overprovisioning and wasted resources.

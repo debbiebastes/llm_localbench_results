@@ -1,0 +1,14 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option would be (C) All Upfront, Standard Reserved Instance pricing for a 3-year term. This is because the Reserved Instance model offers discounts for committing to a longer term, and using an all-upfront payment option can help you save even more money.
+Here's how the cost breakdown would look like:
+* Year 1: $X (all-upfront payment) + $Y (hourly usage) = Total Cost Year 1
+* Years 2-3: $Y (hourly usage) = Total Cost Years 2-3
+In this scenario, the total cost for using an all-upfront payment option for a 3-year term would be lower than using a No Upfront payment option for a longer term. Additionally, you'll get the benefit of predictable and stable pricing for your application hosting needs over the long term.
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term is not the most cost-effective option as it does not offer the same level of savings as using an all-upfront payment option for a longer term. Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term is also not the most cost-effective option as it does not provide any discounts for committing to a longer term. Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year may be more cost-effective than using an all-upfront payment option, but it still doesn't offer the same level of savings as using an all-upfront payment option for a longer term.

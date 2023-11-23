@@ -1,0 +1,40 @@
+Your application is processing one Kinesis data stream which has four shards, and each instance has one KCL worker. To scale up processing in your application, you reshard your stream to increase the number of open shards to six.
+
+What is the MAXIMUM number of EC2 instances that you should launch to achieve optimum performance?
+
+(A) 5
+(B) 12
+(C) 3
+(D) 6
+
+Answer: 
+
+(B) 12
+
+Explanation:
+
+To calculate the maximum number of EC2 instances, we need to determine how many workers are required to process all six shards. Since each instance has one KCL worker, we can simply divide the total number of shards by the number of workers per instance to find the minimum number of instances required. 
+
+In this case, we have six shards and one worker per instance, so we can calculate as follows:
+
+6 shards / 1 worker/instance = 6 instances
+
+However, since we want to achieve optimum performance, we should consider a few other factors such as the availability of resources (e.g., CPU, memory) and network bandwidth. Let's assume that each instance requires approximately 2000 MB of RAM and 1 vCPU, and that our application generates an average of 5000 records per second per shard.
+
+Using these values, we can calculate the maximum number of instances as follows:
+
+1. Calculate the total amount of RAM required:
+
+6 shards x 2000 MB/shard = 12,000 MB (12 GB)
+
+2. Determine the number of instances that can be run with this amount of RAM:
+
+Since each instance requires 2000 MB of RAM, we can run approximately 6 instances with 12 GB of RAM (12,000 MB / 2000 MB/instance = 6 instances)
+
+3. Calculate the number of workers that can be run per instance:
+
+Since each instance can run only one KCL worker, we can run a total of 6 workers across all instances (6 instances x 1 worker/instance = 6 workers)
+
+Therefore, the maximum number of EC2 instances that should be launched to achieve optimum performance is 12. This value is obtained by multiplying the number of shards (6) by the number of workers per instance (1), which gives us a total of 6 instances x 1 worker/instance = 6 workers.
+
+However, it's worth noting that increasing the number of instances beyond this point may not result in linear improvements in performance, as other factors such as network bandwidth and availability of resources may become bottlenecks. Therefore, it's

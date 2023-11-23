@@ -1,0 +1,16 @@
+Which AWS service enables you to build event-driven applications and decouple the components of your application architecture?
+
+(A) Amazon SQS
+(B) Amazon EventBridge (Amazon CloudWatch Events)
+(C) Amazon SNS
+(D) Amazon Kinesis
+
+Answer: 
+(B) Amazon EventBridge (Amazon CloudWatch Events).
+
+Event-driven architecture is a design pattern that enables you to decouple the components of your application by using events as a trigger. AWS provides several services that support event-driven architecture, including Amazon EventBridge, Amazon SNS, and Amazon Kinesis.
+Amazon EventBridge (also known as Amazon CloudWatch Events) is the service that enables you to build event-driven applications. It allows you to route events from various sources, such as AWS services or custom applications, to one or more target services or applications. With EventBridge, you can decouple the components of your application architecture by using events as a trigger for workflows or microservices.
+Option (A), Amazon SQS, is a message queuing service that allows you to send, receive, and manage messages between applications. While it can be used for event-driven architecture, it's not the primary focus of the service.
+Option (C), Amazon SNS, is a messaging service that enables you to fan out messages or events to multiple subscribers. It's primarily designed for real-time data streaming and messaging use cases. While it can be used for event-driven architecture, it's not as flexible as EventBridge when it comes to routing events to multiple targets.
+Option (D), Amazon Kinesis, is a fully managed data processing service that enables you to collect, process, and analyze streaming data from various sources. While it can be used for event-driven architecture, it's more focused on handling large amounts of streaming data than routing events to multiple targets.
+In summary, the best answer is (B) Amazon EventBridge (Amazon CloudWatch Events), as it's specifically designed for building event-driven applications and decoupling the components of your application architecture using events as a trigger.

@@ -1,0 +1,18 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term is the most cost-effective option if the application being hosted would be used for more than 3 years. 
+
+Explanation: 
+Converting an On-Demand EC2 instance to a Reserved Instance can significantly reduce costs, especially when hosting an application that will be running for an extended period. The main difference between Convertible and Standard Reserved Instances is the ability to convert them back into On-Demand instances if needed. However, this feature comes with additional fees. 
+
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term is only suitable if the application will be used for less than one year or if there are plans to switch to another cloud provider in the future. In this case, the upfront costs would not be recovered, and the cost savings would not be realized until after the conversion period has ended. 
+
+Option (C) All Upfront, Standard Reserved Instance pricing for a 3-year term is also not cost-effective if the application will be used for more than 3 years since it does not allow for flexibility to switch providers or adjust instance type. Additionally, the upfront costs would not be recovered until after the reserved period has ended. 
+
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year may seem like a good option if the application will be used for more than one year but less than three years. However, since AWS offers a discount for reserving instances for longer periods, it would be more cost-effective to reserve an instance for a 3-year period instead of renewing it annually.

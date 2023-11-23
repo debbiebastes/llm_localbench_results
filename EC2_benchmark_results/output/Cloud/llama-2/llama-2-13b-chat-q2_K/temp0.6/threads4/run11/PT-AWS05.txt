@@ -1,0 +1,20 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+Option C is the most ideal way to comply with the requirements because it allows for real-time processing of new changes made to the items in DynamoDB, without the need for manual intervention or scheduled synchronization. By using Amazon EventBridge (Amazon CloudWatch Events) and a Lambda function as a rule target, the new changes can be automatically captured and saved in the other table, ensuring that all changes are recorded and stored in another region.
+
+Option A, DynamoDB Accelerator, is not suitable for this use case because it only provides a small performance boost for read-heavy workloads, and does not support real-time data replication or synchronization.
+
+Option B, Enable DynamoDB Point-in-Time Recovery, would require manual intervention to initiate the recovery process, and would not provide real-time synchronization of new changes.
+
+Option D, Enable DynamoDB Streams, would also require manual intervention to initiate the stream processing, and would not provide real-time synchronization of new changes. Additionally, DynamoDB Streams can be expensive and may not be cost-effective for this use case.

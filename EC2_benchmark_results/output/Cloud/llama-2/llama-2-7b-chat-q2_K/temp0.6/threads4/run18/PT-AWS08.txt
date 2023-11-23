@@ -1,0 +1,17 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B) Attach an EBS volume in your EC2 instance.
+
+Explanation:
+
+An EBS (Elastic Block Store) volume provides persistent block storage that can be used for mission-critical workloads. By attaching an EBS volume to an EC2 instance, you can ensure that the data is stored in a persistent and durable manner, which is ideal for storing backup data that needs to be retained for 30 days or more.
+Using Amazon S3 to store your backup data is also a good idea because it provides a scalable, secure, and highly available storage service. You can configure a lifecycle policy in Amazon S3 to transition your objects to Amazon S3 Glacier after 30 days, which will help reduce storage costs by moving cold data to a lower-cost storage tier.
+Option (A) is incorrect because instance store volumes are not intended for mission-critical workloads and do not provide the same level of durability as EBS or SATA volumes. Option (C) is also incorrect because Amazon S3 One Zone-IA is not designed to store large amounts of backup data, and it may not provide the same level of security and availability as Amazon S3.

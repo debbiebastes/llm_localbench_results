@@ -1,0 +1,17 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The best approach to protect the backend systems of the platform from traffic spikes would be option (B): Enable throttling limits and result caching in API Gateway.
+API Gateway is designed to handle high traffic loads, and it comes with several built-in features that can help mitigate the impact of traffic spikes on backend systems:
+
+1. Throttling: API Gateway provides a built-in throttling mechanism that allows you to limit the number of requests that can be made to the backend within a certain time period. This can help prevent the backend systems from being overwhelmed with too many requests at once.
+2. Caching: API Gateway also provides caching functionality, which can help reduce the load on the backend systems by storing frequently accessed data in a cache that is closer to the users. This can significantly reduce the number of requests made to the backend systems, especially for static content such as images and APIs.
+3. Slowing down requests: API Gateway also provides the ability to slow down requests using the "Backoff" feature. This can help prevent the backend systems from being overwhelmed with too many requests at once, by pacing them out over time.
+By enabling throttling limits and result caching in API Gateway, you can significantly reduce the load on the backend systems during traffic spikes, ensuring that they remain available and responsive to user requests.

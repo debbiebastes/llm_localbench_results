@@ -1,0 +1,20 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C. Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+Option C is the most ideal way to comply with the requirements because it allows for real-time processing of changes made to items in DynamoDB, without the need for manual intervention or additional infrastructure like DynamoDB Accelerator or Point-in-Time Recovery.
+
+Using Amazon EventBridge (formerly known as CloudWatch Events), you can set up a rule that tracks table-level events in DynamoDB and triggers a Lambda function whenever a new item is added or updated. The Lambda function can then process the changes and write them to the other DynamoDB table in another region.
+
+Option B, Enable DynamoDB Point-in-Time Recovery, would not work because it only allows for restoring the entire table at a specific point in time, rather than capturing individual changes. Option D, Enable DynamoDB Streams, would also not work because it requires manual intervention to process the streams and write the changes to another table.
+
+Therefore, option C is the most ideal solution for complying with the requirements of recording and storing new changes made to items in DynamoDB in another region.

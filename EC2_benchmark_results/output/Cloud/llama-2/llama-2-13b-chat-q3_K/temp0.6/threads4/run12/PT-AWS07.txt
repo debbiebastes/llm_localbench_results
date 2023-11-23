@@ -1,0 +1,20 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+
+Rationale:
+The problem described is related to the performance of the application during the start of the day, which suggests that the issue may be related to memory usage. Launching new instances based on memory utilization using a Dynamic scaling policy would help ensure that there is sufficient memory available to handle the increased workload at the beginning of the day. This approach would also allow for more precise scaling based on actual memory usage, rather than relying on predictive scaling or scheduled scaling which may not be as effective in this scenario.
+
+Note: The other options are not optimal solutions because:
+
+(A) Predictive scaling is not a good fit for this problem since it is based on historical data and may not accurately forecast the workload at the beginning of the day.
+
+(C) Scheduled scaling would launch instances before the start of the day, but it may not be effective in addressing the issue if the workload is not consistent throughout the day.

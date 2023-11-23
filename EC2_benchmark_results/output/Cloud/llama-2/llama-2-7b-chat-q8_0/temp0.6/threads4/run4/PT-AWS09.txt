@@ -1,0 +1,19 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+(B) Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+
+API Gateway is built on top of AWS Lambda, which means that it can be easily integrated with other AWS services such as Auto Scaling, ELB, and CloudFront. In this scenario, you can enable throttling limits to control the number of requests that are allowed to hit the backend systems during a traffic spike. This would prevent the backend from getting overwhelmed and ensure that it can handle the increased traffic.
+Additionally, API Gateway provides caching capabilities through its result caching feature. By enabling this feature, you can cache frequently requested resources, which would reduce the load on the backend systems during the traffic spike.
+Option (A) is incorrect because while EC2 instances, ELB, and Auto Scaling are highly scalable and available architectures, they may not be necessary in this scenario since API Gateway already provides caching and throttling capabilities.
+Option (C) is incorrect because CloudFront can act as a cache in front of the API Gateway, but it would not provide throttling limits or result caching.
+Option (D) is incorrect because moving the Lambda function to a VPC would not help protect the backend systems from traffic spikes since the Lambda function would still be exposed to the internet and would not have access to the caching capabilities provided by API Gateway.

@@ -1,0 +1,20 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements would be (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table. This approach provides several benefits:
+
+1. Cost-effective: Using EventBridge reduces costs compared to using Point-in-Time Recovery or Streams, which require additional resources.
+2. Flexible: EventBridge allows you to configure a wide range of triggers and actions, enabling you to adapt the solution to your needs.
+3. Scalable: EventBridge scales with your application, ensuring that you can handle increased traffic and data volume without impacting performance.
+4. Robust: EventBridge provides robust monitoring and logging capabilities, allowing you to track and troubleshoot issues in real-time.
+5. Security: Using EventBridge enables you to maintain data consistency across regions while ensuring that sensitive data is encrypted at rest and in transit.
+6. Easy to implement: Creating an EventBridge rule is a straightforward process that requires minimal coding or technical expertise, making it ideal for developers who need to comply with IT security policies quickly.
+7. Reduced maintenance: Once configured, the EventBridge rule automatically monitors DynamoDB tables and triggers Lambda functions to save new changes to the other table, reducing the need for ongoing maintenance and ensuring that your solution remains up-to-date.
+8. Decoupling: By using EventBridge, you decouple the application's data storage from its underlying infrastructure, allowing you to easily modify or replace either component without affecting the other.

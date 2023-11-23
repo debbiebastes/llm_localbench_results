@@ -1,0 +1,16 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+Correct answer: B. Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+
+Explanation: The application's performance slowness at the start of the day is likely due to high memory utilization, as users are more active during this time. By configuring a dynamic scaling policy that launches new instances based on memory utilization, the system can automatically scale up to handle increased demand and ensure better performance at the beginning of the day.
+
+A predictive scaling policy (Option A) may not be effective in this scenario as it relies on forecasted usage patterns, which may not accurately reflect the actual usage during the start of the day. A scheduled scaling policy (Option C) would not address the immediate need for more resources at the beginning of the day. A dynamic scaling policy based on CPU utilization (Option D) may not be effective either as memory utilization is likely a better indicator of the application's performance needs during this time.

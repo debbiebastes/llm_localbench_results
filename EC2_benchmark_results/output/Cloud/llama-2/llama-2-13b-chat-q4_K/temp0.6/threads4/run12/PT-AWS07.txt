@@ -1,0 +1,17 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+
+Explanation:
+The application is experiencing slow performance during the start of the day, indicating that the available resources are not enough to handle the sudden increase in traffic. In such cases, dynamic scaling based on memory utilization can help provision additional instances before the system reaches its limits. As memory utilization increases with more users accessing the application, new instances will be launched automatically to handle the load.
+
+Option A is incorrect because predictive scaling policies are not suitable for sudden spikes in traffic. Option C is also incorrect since scheduled scaling policies are not flexible enough to handle changes in traffic patterns. Option D is incorrect since CPU utilization may not be the best indicator of the system's ability to handle traffic, as other factors such as network latency and database queries can impact performance more significantly during sudden spikes in traffic.

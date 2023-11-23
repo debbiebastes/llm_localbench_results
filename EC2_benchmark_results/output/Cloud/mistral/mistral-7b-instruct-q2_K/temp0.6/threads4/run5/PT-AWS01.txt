@@ -1,0 +1,20 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key.
+
+Explanation: 
+
+Option (A) is not recommended as it uses a client-side key that is managed and controlled by the application, which could potentially be compromised. The client-side key should never leave the device or application that manages it. Therefore, this option does not meet the requirements of storing sensitive PII in an encrypted format.
+
+Option (C) also has some limitations as it uses a KMS managed key that is owned by AWS, which means that AWS has access to the data and can potentially use it for their own purposes. Furthermore, there are legal implications of using AWS-managed keys. Option (D) is not recommended since it requires customers to provide their own keys, which could be easily compromised or stolen.
+
+Option (B) provides the best solution by using a KMS-managed customer master key. This option ensures that only authorized personnel can access the data stored in the S3 bucket, and the data remains encrypted even when accessed from different locations or devices. The customer has full control over the key management process, ensuring compliance with regulatory requirements. Therefore, this option is recommended for storing sensitive PII in an AWS S3 bucket.

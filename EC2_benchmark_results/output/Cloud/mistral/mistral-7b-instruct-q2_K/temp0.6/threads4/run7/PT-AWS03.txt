@@ -1,0 +1,16 @@
+A Security Engineer has found out that there are some developers who have been adding rules to security groups without any approval. The developers configured the security groups to allow RDS, SMTP, and SSH traffic from the 0.0.0.0/0 CIDR range in order to do their code testing. The company has an existing firewall hosted in an EC2 instance where all of the traffic should pass through.
+
+Which of the following is the MOST efficient way to automatically remediate this security risk?
+
+(A) Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+(B) Set up a Transit VPC to connect the corporate firewall and the EC2 instances.
+(C) Block the source IP addresses coming from the 0.0.0.0/0 CIDR range using Network ACL.
+(D) Use AWS Shield to automatically monitor and detect all the security groups that allow traffic directly from the 0.0.0.0/0 CIDR range.
+
+Answer: 
+
+A) Use AWS Config rules to automatically detect whether there is a security group that allows inbound TCP or UDP traffic from 0.0.0.0/0 CIDR range. Associate a Systems Manager Automation document with an AWS Lambda function in the AWS Config rule to remediate and update the security group with the corporate firewall IP address.
+
+This is the MOST efficient way as it will continuously monitor and detect any changes made to the security groups. AWS Config rules can be set up to automatically detect specific changes in your infrastructure that deviate from the desired configuration. This includes changes to security groups, IAM policies, and other resources. Once an undesired change is detected, you can use Systems Manager Automation to automatically remediate it. By using AWS Lambda functions as part of this process, you can create automated workflows that take action when changes are detected. This is more efficient than manually monitoring and updating security groups.
+
+Option B is not the most efficient as it requires setting up a whole new VPC which can be a complex task. Option C requires blocking the source IP addresses which may result in blocking legitimate traffic. Option D does not provide an automatic solution for remediation and requires manual intervention to update the security group rules.

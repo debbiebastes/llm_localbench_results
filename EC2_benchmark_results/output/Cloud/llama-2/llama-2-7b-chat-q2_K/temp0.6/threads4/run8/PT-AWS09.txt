@@ -1,0 +1,15 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+
+In this scenario, it is better to move away from using AWS Lambda and API Gateway and instead use a more scalable and highly available architecture such as EC2 instances, ELB, and Auto Scaling. This will allow the platform to handle increased traffic more effectively without any performance issues or errors. With this approach, the platform can scale its backend systems horizontally by adding more EC2 instances as needed to handle the increased traffic, and use ELB to distribute incoming traffic across multiple instances in a way that maximizes resource utilization and minimizes response times. Additionally, Auto Scaling can be used to automatically adjust the number of EC2 instances based on traffic demand, ensuring that the platform always has the necessary capacity to handle sudden spikes in traffic.
+
+Option (B) Enable throttling limits and result caching in API Gateway is not a suitable solution for protecting the backend systems from traffic spikes as it does not provide any additional scalability or reliability beyond what is already provided by AWS Lambda and API Gateway. Option (C) Use CloudFront in front of the API Gateway to act as a cache is also not a suitable solution as it would not provide any additional scalability or reliability, and would only serve to cache the responses from the backend systems, which may still be under pressure during traffic spikes. Option (D) Move the Lambda function in a VPC is not a feasible solution as it would require significant rearchitecting of the platform's infrastructure and would not provide any immediate benefits in terms of scalability or reliability.

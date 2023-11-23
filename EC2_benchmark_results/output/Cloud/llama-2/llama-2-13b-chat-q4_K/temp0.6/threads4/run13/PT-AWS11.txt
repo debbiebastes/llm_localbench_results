@@ -1,0 +1,29 @@
+Which AWS service enables you to build event-driven applications and decouple the components of your application architecture?
+
+(A) Amazon SQS
+(B) Amazon EventBridge (Amazon CloudWatch Events)
+(C) Amazon SNS
+(D) Amazon Kinesis
+
+Answer: 
+
+Correct Answer: (B) Amazon EventBridge (Amazon CloudWatch Events)
+
+Explanation:
+
+Amazon EventBridge (previously known as Amazon CloudWatch Events) is an AWS service that enables you to build event-driven applications and decouple the components of your application architecture. It provides a fully managed service for handling events, allowing you to focus on building your application without worrying about managing infrastructure.
+
+Amazon EventBridge provides a variety of features, including:
+
+* Event sources: You can create event sources in Amazon EventBridge, such as AWS services like EC2 or DynamoDB, or custom event sources that you create yourself.
+* Event handlers: You can specify one or more event handlers for each event source, which are the actions that should be taken when an event is received.
+* Event filtering: You can filter events based on specific criteria, such as the type of event or the source of the event.
+* Event batching: Amazon EventBridge can group multiple events into a single batch, reducing the number of API calls required to process events.
+
+Therefore, Amazon EventBridge (Amazon CloudWatch Events) is the correct answer.
+
+Amazon SQS (Simple Queue Service) is a messaging service that enables you to send and receive messages in a decoupled architecture. However, it does not provide event-driven functionality like Amazon EventBridge.
+
+Amazon SNS (Simple Notification Service) is a messaging service that sends notifications or messages to multiple subscribers or clients. It does not provide event-driven functionality like Amazon EventBridge either.
+
+Amazon Kinesis is a streaming service that enables you to collect, process, and analyze real-time data streams. While it can be used for event-driven applications, it is not the primary service for building such applications like Amazon EventBridge.

@@ -1,0 +1,20 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier. 
+
+Explanation: 
+To meet the requirement of persistent block storage for mission-critical workloads, it is recommended to attach an instance store volume to your existing EC2 instance. This will provide high-performance, low-latency access to the data that your workloads need. 
+
+To store backup data, you can use Amazon S3. Amazon S3 provides highly durable and scalable object storage, making it a good choice for storing backup data. To manage the lifecycle of your data in Amazon S3, you can configure a lifecycle policy. This policy will automatically transition objects from one storage class to another based on their age or other attributes. 
+
+In this case, since you want to store backup data for 30 days before moving it to long-term storage, you can configure your lifecycle policy to transition objects to Amazon S3 Glacier after 30 days. This will provide cost-effective, long-term storage for your backup data that you don't need to access frequently.
+
+Option (A) is the best choice as it provides persistent block storage for mission-critical workloads and uses Amazon S3 for backup data storage with a lifecycle policy to manage the transition of objects to Amazon S3 Glacier.

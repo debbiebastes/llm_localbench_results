@@ -1,0 +1,16 @@
+Which AWS service enables you to build event-driven applications and decouple the components of your application architecture?
+
+(A) Amazon SQS
+(B) Amazon EventBridge (Amazon CloudWatch Events)
+(C) Amazon SNS
+(D) Amazon Kinesis
+
+Answer: 
+(B) Amazon EventBridge (Amazon CloudWatch Events).
+
+Explanation:
+AWS provides a service called Amazon EventBridge (formerly known as AWS CloudWatch Events), which enables you to build event-driven applications and decouple the components of your application architecture. EventBridge is an event routing service that allows you to route events from multiple sources to multiple targets, such as Lambda functions, S3 buckets, DynamoDB tables, and more.
+EventBridge provides a flexible way to design event-driven applications, where different components of your application can communicate with each other through events. By using EventBridge, you can decouple the components of your application architecture, allowing them to operate independently and asynchronously. This enables you to build more scalable, resilient, and maintainable applications.
+Option (A), Amazon SQS, is a message queue service that provides a way to pass messages between distributed systems. While SQS can be used for event-driven architecture, it does not provide the same level of flexibility and routing capabilities as EventBridge.
+Option (C), Amazon SNS, is a messaging service that provides a way to send messages from one AWS account to another or to a distributed system. While SNS can be used for event-driven architecture, it is primarily designed for sending messages between multiple accounts or systems, rather than routing events from multiple sources to multiple targets.
+Option (D), Amazon Kinesis, is a fully managed streaming service that provides a way to collect, process, and analyze real-time, semi-structured data such as application logs, IoT telemetry, and streaming media. While Kinesis can be used for event-driven architecture, it is primarily designed for processing and analyzing streaming data, rather than routing events from multiple sources to multiple targets.

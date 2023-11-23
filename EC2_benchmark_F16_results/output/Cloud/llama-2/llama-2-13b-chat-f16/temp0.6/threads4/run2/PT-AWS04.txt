@@ -1,0 +1,32 @@
+Your application is processing one Kinesis data stream which has four shards, and each instance has one KCL worker. To scale up processing in your application, you reshard your stream to increase the number of open shards to six.
+
+What is the MAXIMUM number of EC2 instances that you should launch to achieve optimum performance?
+
+(A) 5
+(B) 12
+(C) 3
+(D) 6
+
+Answer: 
+
+To calculate the maximum number of EC2 instances, we need to determine the total throughput of each shard. As there are six shards now, the total throughput will be six times the throughput of one shard.
+
+The throughput of one shard is given as 100 MB/s in the problem statement. Therefore, the total throughput of six shards would be:
+
+Total Throughput = 6 x 100 MB/s = 600 MB/s
+
+Now, we need to calculate the maximum number of EC2 instances that can handle this total throughput. For this, we will use the following formula:
+
+Maximum Number of Instances = Total Throughput / Instance Throughput
+
+where Instance Throughput is the throughput of one EC2 instance.
+
+From the problem statement, we know that each KCL worker can handle 50 MB/s. Therefore, the instance throughput is:
+
+Instance Throughput = 50 MB/s
+
+Now we can calculate the maximum number of instances as follows:
+
+Maximum Number of Instances = 600 MB/s / 50 MB/s = 12
+
+Therefore, the maximum number of EC2 instances that should be launched to achieve optimum performance is (B) 12.

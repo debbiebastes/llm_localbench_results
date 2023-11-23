@@ -1,0 +1,20 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+The best way to protect the backend systems of the platform from traffic spikes would be to switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling. This solution provides elasticity, high availability, and can easily handle sudden spikes in traffic.
+
+Option (A) is the best solution as it will provide a more robust and reliable infrastructure that can handle sudden traffic spikes. Additionally, this solution will allow for easy scaling of resources to meet the increased demand. This solution would also provide greater control over the underlying infrastructure and would be easier to manage compared to using Lambda and API Gateway.
+
+Option (B) is a good option as it can help mitigate some of the traffic spikes, but it may not be enough to handle sudden spikes in traffic. Additionally, this solution does not provide the same level of control over the underlying infrastructure as using EC2 instances, ELB, and Auto Scaling.
+
+Option (C) is a good option for caching frequently accessed data and can help mitigate some of the traffic spikes, but it may not be enough to handle sudden spikes in traffic. Additionally, this solution does not provide the same level of control over the underlying infrastructure as using EC2 instances, ELB, and Auto Scaling.
+
+Option (D) is a good option if the Lambda function is already running in a VPC, but it may not be enough to handle sudden spikes in traffic. Additionally, this solution does not provide the same level of control over the underlying infrastructure as using EC2 instances, ELB, and Auto Scaling.

@@ -1,0 +1,17 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The MOST operationally efficient solution to implement would be (C): Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+
+Explanation:
+The issue at hand is that the application experiences slow performance during the early morning hours, which suggests that there may not be enough instances available to handle the sudden increase in user traffic. To address this, configuring a Scheduled scaling policy would allow you to launch new instances before office hours begin, ensuring that there are sufficient resources available when users start accessing the application.
+Option (A) Predictive scaling is not the best choice because it relies on historical data to predict future usage patterns, which may not always be accurate. Additionally, it can take time for the policy to adjust instance sizes based on predicted usage, potentially leading to performance issues during peak hours.
+Option (B) Dynamic scaling policies are useful when you want to scale instances based on real-time resource utilization, but they may not be suitable here as the issue seems to be related to the start of the day when user traffic is low. Launching new instances based solely on CPU or Memory utilization may lead to overprovisioning and increase costs.
+Option (D) is incorrect because it would only scale instances based on CPU utilization, which may not address the issue at hand as the slow performance may be related to other factors such as insufficient instance sizes or network congestion.

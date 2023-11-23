@@ -1,0 +1,12 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option would be (B) No Upfront Convertible Reserved Instance pricing for a 3-year term. According to AWS, the cost savings of using a Reserved Instance over an On-Demand instance can increase over time as the usage duration increases. By choosing the No Upfront option and paying upfront only the first year's reservation fee, you would be able to save on the upfront costs while still enjoying the cost savings of using a Reserved Instance for a longer period.
+Explanation:
+For long-term usage (more than 1 year), the No Upfront option offers the best value as it allows you to pay only the reservation fee for the first year, which is significantly lower than the full upfront cost of the instance. This approach can result in significant savings over time, especially if you commit to using the Reserved Instance for a longer duration (e.g., 3 years or more).
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term offers less cost savings compared to the No Upfront option and would result in higher upfront costs. Option (C) All Upfront, Standard Reserved Instance pricing for a 3-year term is not the most cost-effective option as it does not provide any savings compared to using an On-Demand instance and would result in higher upfront costs. Finally, option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year may not be the most cost-effective choice as it does not provide any savings compared to using an On-Demand instance and would result in higher ongoing costs.

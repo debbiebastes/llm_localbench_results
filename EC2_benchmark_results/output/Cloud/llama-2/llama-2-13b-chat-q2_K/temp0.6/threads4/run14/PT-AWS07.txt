@@ -1,0 +1,16 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+
+Explanation: As the application is used extensively during office hours and performance slows down at the start of the day, it is likely that the issue is related to insufficient memory resources. By configuring a Dynamic scaling policy to launch new instances based on the Memory utilization, you can ensure that there are enough resources available to handle the increased workload at the beginning of the day.
+
+Option (A) would not be effective in this scenario as it would only adjust the number of instances based on demand, which may not address the issue of insufficient memory resources. Option (C) would also not be effective as launching new instances before the start of the day would not necessarily address the issue of increased workload during the morning hours. Option (D) is incorrect as CPU utilization is not a reliable metric for scaling, and may lead to over-provisioning or under-provisioning of resources.

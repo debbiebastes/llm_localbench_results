@@ -1,0 +1,20 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key.
+
+Explanation:
+
+The correct answer is (B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. This approach will allow the Security Engineer to keep the master keys securely stored within the company's premises, while still leveraging the scalability and durability of AWS for storing sensitive PII data.
+
+Client-side encryption is recommended when the data is encrypted on the client-side before it is sent to AWS, which ensures that even if the data is intercepted or accessed by unauthorized users during transmission, it will remain protected. By using a KMS-managed customer master key, the Security Engineer can manage and rotate the encryption keys securely, without having to store them in plaintext on AWS. This approach also eliminates the risk of AWS accessing or storing the master keys, which helps to maintain compliance with the company's strict regulatory requirements.
+
+Option (A) is incorrect because it would require the Security Engineer to store the client-side master key on AWS, which is not recommended for sensitive data. Option (C) is also incorrect because it would require the Security Engineer to manage and rotate the encryption keys on the AWS side, which could be challenging and increase the risk of unauthorized access. Option (D) is incorrect because it would require the Security Engineer to provide the encryption key to AWS, which again is not recommended for sensitive data.

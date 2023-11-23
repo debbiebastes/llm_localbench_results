@@ -1,0 +1,17 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+The correct answer is (B): Implement an Amazon S3 client-side encryption with a KMS-managed customer master key.
+Explanation:
+Amazon S3 provides two types of encryption for storing data in the cloud: server-side encryption and client-side encryption. Server-side encryption is performed by AWS, whereas client-side encryption is performed by the application or user. In this case, the leading hospital requires that the sensitive PII data be encrypted before it is stored in S3, so client-side encryption is the best option.
+Using a KMS-managed customer master key ensures that the master key used for encryption is managed and secured by AWS Key Management Service (KMS), rather than being stored unsecured on the application server or within the AWS account. This meets the requirement of never sending the master key to AWS, which is a critical requirement for compliance and regulatory reasons.
+Option (A) is not the best choice because client-side encryption with a client-side master key does not meet the compliance requirements as the master key would be stored on the application server or within the AWS account, rather than being managed by KMS.
+Option (C) is also not the best choice because server-side encryption requires that AWS perform the encryption and decryption operations, which may not meet the hospital's compliance and regulatory requirements. Additionally, server-side encryption does not provide the same level of control over key management as client-side encryption.
+Option (D) is not a valid option as it violates the constraint of never sending the master key to AWS.

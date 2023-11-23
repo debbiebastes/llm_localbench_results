@@ -1,0 +1,13 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The correct answer is (C): Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+By configuring a scheduled scaling policy, you can specify a schedule for when new instances should be launched. This allows you to ensure that enough instances are available at the beginning of the day to handle the increased traffic and performance requirements. This approach is operationally efficient because it automates the process of launching new instances, eliminating the need for manual intervention or complex scripting.
+Option (A) would not be the most operationally efficient solution because predictive scaling policies rely on historical data to make predictions about future usage, which may not accurately reflect the actual usage during the start of the day. Option (B) would also not be the most operationally efficient solution because dynamic scaling policies launch new instances based on real-time metrics, which may cause unnecessary instance launches or failures to meet performance requirements. Option (D) is not a viable solution because it does not address the issue of slow performance at the beginning of the day.

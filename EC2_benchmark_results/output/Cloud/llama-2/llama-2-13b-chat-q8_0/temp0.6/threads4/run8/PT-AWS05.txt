@@ -1,0 +1,21 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C. Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+
+Option C is the most ideal way to comply with the requirements because it allows for real-time tracking of changes made to items in DynamoDB, without the need to set up an additional database or synchronization mechanism. By creating an Amazon EventBridge rule that tracks table-level events in DynamoDB, any new changes made to items in the primary table will trigger a Lambda function, which can then process and save the changes to the secondary table. This approach is efficient, scalable, and eliminates the need for manual intervention or custom coding.
+
+Option A (Set up DynamoDB Accelerator) is not relevant to this scenario as it only improves performance for certain types of read-heavy workloads.
+
+Option B (Enable DynamoDB Point-in-Time Recovery) would allow for the creation of a backup of the primary table, but it would not automatically sync the changes to the secondary table. Additionally, enabling point-in-time recovery would require manual intervention to restore the backup.
+
+Option D (Enable DynamoDB Streams) would require additional setup and configuration to process the stream events, whereas option C provides a simpler solution with less overhead.

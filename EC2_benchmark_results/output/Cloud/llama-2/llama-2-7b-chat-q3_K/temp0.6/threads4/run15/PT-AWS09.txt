@@ -1,0 +1,18 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The best answer is (B) Enable throttling limits and result caching in API Gateway.
+
+API Gateway provides features such as throttling, which can help limit traffic to the backend systems during unexpected spikes in usage. By enabling throttling limits, you can set a maximum number of requests that the API is allowed to handle within a certain time frame, helping prevent overload and ensuring that the backend systems remain available and responsive.
+Additionally, result caching in API Gateway allows you to cache frequently accessed data and reduce the load on the backend systems, further improving performance and reducing the risk of traffic spikes causing outages or slowdowns.
+The other options do not address the issue of protecting the backend systems from traffic spikes:
+(A) Switching from AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling is not necessary in this scenario as the platform is already built using these technologies.
+(C) Using CloudFront in front of the API Gateway does not provide protection against traffic spikes on the backend systems.
+(D) Moving the Lambda function to a VPC may help improve performance and security, but it does not directly address the issue of protecting the backend systems from traffic spikes.

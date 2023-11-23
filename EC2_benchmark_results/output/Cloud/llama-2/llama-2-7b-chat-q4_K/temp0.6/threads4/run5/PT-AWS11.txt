@@ -1,0 +1,9 @@
+Which AWS service enables you to build event-driven applications and decouple the components of your application architecture?
+
+(A) Amazon SQS
+(B) Amazon EventBridge (Amazon CloudWatch Events)
+(C) Amazon SNS
+(D) Amazon Kinesis
+
+Answer: 
+The answer is (B) Amazon EventBridge (Amazon CloudWatch Events). AWS EventBrite is a service that enables you to build event-driven applications and decouple the components of your application architecture. It allows you to create events, attach them to resources, and subscribe to these events from other AWS services or external sources. This helps in building scalable, reliable, and secure applications.

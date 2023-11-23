@@ -1,0 +1,16 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances.
+
+Explanation:
+The issue with the application's performance during the start of the day can be attributed to the instance types and sizes of the On-Demand EC2 instances in the Auto Scaling group. During peak hours, the instances may not have enough resources (CPU or Memory) to handle the increased load, resulting in slow performance.
+Configuring a Predictive scaling policy for the Auto Scaling group will allow you to automatically adjust the number of instances based on historical data and forecasted usage. This will ensure that there are sufficient instances available during peak hours to handle the increased load and provide better performance.
+Option (A) is the most operationally efficient solution as it will help in proactively scaling up the instances before the start of the day, ensuring that the application performs optimally. While options (B), (C), and (D) are also valid solutions, they may not be as effective in addressing the issue during peak hours.

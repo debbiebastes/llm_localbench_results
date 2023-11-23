@@ -1,0 +1,19 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+
+Explanation:
+To ensure that the trading platform can handle an influx of traffic during a surge in user activity, it's important to have a highly scalable and highly available architecture in place. While Lambda functions are useful for serverless computing, they may not be the best option for handling high levels of traffic and load balancing. Instead, using EC2 instances, ELB, and Auto Scaling will provide more control over the infrastructure, allowing for better load balancing, scalability, and availability.
+
+Using a highly available architecture also means that there are multiple points of failure, providing a more robust system overall. Additionally, having a distributed architecture with multiple instances can help ensure that the platform remains available even if one instance goes down or experiences issues.
+
+While caching and throttling limits can help mitigate traffic spikes in API Gateway, these measures alone may not be enough to handle an influx of traffic. By moving the Lambda function into a VPC, it becomes possible to create more control over network traffic and ensure that resources are being used effectively. Additionally, using ELB to distribute traffic across multiple instances can help improve scalability and availability, even if individual instances go down or experience issues.

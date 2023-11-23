@@ -1,0 +1,14 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B): Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+Explanation:
+An EBS volume provides persistent block storage for EC2 instances, which meets the requirement of a mission-critical workload. Storing the backup data in Amazon S3 provides a scalable and durable storage solution, while configuring a lifecycle policy to transition objects to Amazon S3 Glacier will ensure that the data is stored in a cost-effective and long-term archival storage service after 30 days.
+Attaching an instance store volume (option A) may not provide the same level of durability as EBS, and may not be suitable for mission-critical workloads. Attaching an EBS volume in an EC2 instance (option C) will provide persistent block storage, but it may not be cost-effective for long-term archival storage. Using Amazon S3 One Zone-IA (option D) is not necessary for this requirement as it is designed for high-traffic web applications and may not provide the same level of durability as Amazon S3 Glacier for archival storage.

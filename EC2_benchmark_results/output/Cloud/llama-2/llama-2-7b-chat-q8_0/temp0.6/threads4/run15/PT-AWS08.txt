@@ -1,0 +1,15 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The best answer is (B): Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+Explanation:
+An EBS volume provides persistent block storage that can be used for mission-critical workloads, as needed by the organization. It is ideal for storing backup data since it offers high availability, durability, and performance.
+By using Amazon S3 to store the backup data, you can easily transfer the data between different storage services based on their lifecycle policies. The S3 lifecycle policy allows you to transition objects to Amazon S3 Glacier after 30 days, which is ideal for long-term archiving of backup data.
+Option (A) is incorrect because instance store volumes are ephemeral and not suitable for mission-critical workloads or long-term storage. Option (C) is also incorrect because Amazon S3 One Zone-IA is a storage service designed for active workloads that require high throughput and low latency, rather than archiving backup data. Option (D) is incorrect because instance store volumes are not suitable for long-term storage or archiving of backup data.

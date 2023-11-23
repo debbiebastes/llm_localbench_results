@@ -1,0 +1,16 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The MOST operationally efficient solution to implement is (C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+Explanation:
+As the application is extensively used during office hours, it's common to experience performance issues during the start of the day due to increased traffic and load on the system. To mitigate this issue, a scheduled scaling policy can be configured to launch new instances before the start of the day, ensuring that the application has enough resources to handle the expected workload.
+Option (C) is the most operationally efficient solution because it allows you to proactively address the performance issues during the start of the day by launching new instances in advance. This approach can help ensure a smoother user experience and prevent any potential bottlenecks or slowdowns.
+In contrast, options (A) and (B) may not be as effective in addressing the issue at hand. Option (A) relies on predictive scaling, which can lead to over- or underprovisioning of instances based on historical data alone. Option (B) focuses on launching new instances based on memory utilization, which may not necessarily address the performance issues during the start of the day.
+Option (D) is not a feasible solution as it would rely on CPU utilization as the scaling criteria, which may not accurately reflect the application's workload and performance requirements.

@@ -1,0 +1,14 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+In this scenario, option (B) Enable throttling limits and result caching in API Gateway is the best solution to protect the backend systems of the platform from traffic spikes.
+API Gateway provides features such as throttling limits and result caching that can help handle sudden increases in traffic. By enabling these features, you can prevent the backend systems from being overwhelmed by excessive requests and ensure that only a certain number of requests are processed within a given time frame. Additionally, result caching allows API Gateway to store frequently accessed data in memory, reducing the amount of requests sent to the backend systems.
+Option (A) switching to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling is not the best solution for this scenario as it involves setting up and managing additional infrastructure, which may not be necessary in this case. Option (C) Using CloudFront in front of the API Gateway to act as a cache is also not the best solution as it does not provide throttling limits or result caching, which are crucial for protecting the backend systems from traffic spikes. Option (D) Moving the Lambda function in a VPC is not relevant to this scenario as it involves moving the Lambda function to a different AWS service rather than configuring API Gateway to handle traffic spikes.
+Therefore, option (B) Enable throttling limits and result caching in API Gateway is the best solution for protecting the backend systems of the platform from traffic spikes.

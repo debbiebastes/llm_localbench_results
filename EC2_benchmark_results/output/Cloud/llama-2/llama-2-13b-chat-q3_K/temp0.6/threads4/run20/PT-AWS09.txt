@@ -1,0 +1,22 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+(B) Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+
+When the platform is expected to experience significant traffic increases, it's essential to ensure that the backend systems can handle the load without failing or becoming overwhelmed. In this scenario, enabling throttling limits and result caching in API Gateway can help protect the backend systems from traffic spikes.
+
+Throttling limits can be set in API Gateway to limit the number of requests that a single client can make within a certain time frame, preventing overloading the system with too many requests at once. This feature is particularly useful when dealing with high-traffic sites or applications that may experience sudden surges in usage.
+
+Result caching can also be enabled in API Gateway to store frequently requested data in memory, reducing the number of requests made to the backend and improving response times. By caching results, API Gateway can quickly return data to clients without needing to call the Lambda function for every request.
+
+Option A is not a good solution because it would require a significant change to the existing architecture, which may be difficult to implement on short notice. Option C is also not a good choice because CloudFront does not provide throttling or result caching features. Option D is irrelevant to this scenario.

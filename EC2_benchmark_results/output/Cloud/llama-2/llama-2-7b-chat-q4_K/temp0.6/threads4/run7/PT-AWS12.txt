@@ -1,0 +1,13 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option for a company that plans to use an EC2 instance for more than 3 years would be option (C): All Upfront, Standard Reserved Instance pricing for a 3-year term.
+Standard Reserved Instances offer the best long-term cost savings compared to other reserved instances options. They provide a fixed hourly rate that is lower than On-Demand pricing and also guarantee a certain number of hours per month. By committing to a 3-year term, the company can save even more money over the long term.
+Option (A) is not the most cost-effective option because it offers All Upfront Convertible Reserved Instance pricing for a 1-year term, which means that the company would need to pay the full upfront cost of the instance in order to take advantage of the reserved instance pricing. This can be a significant upfront cost, especially if the application being hosted is not expected to generate enough revenue to cover it.
+Option (B) is also not the most cost-effective option because it offers No Upfront Convertible Reserved Instance pricing for a 3-year term. While this may seem attractive at first glance, it means that the company would need to pay the full list price of the instance for the entire 3-year term without any upfront discount or commitment. This can be very expensive and may not provide enough cost savings over the long term.
+Option (D) is also not the most cost-effective option because it offers No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year. While this may offer some flexibility in terms of payment and commitment, it does not provide enough long-term cost savings to justify the additional complexity and risk involved in managing multiple short-term reserved instances.

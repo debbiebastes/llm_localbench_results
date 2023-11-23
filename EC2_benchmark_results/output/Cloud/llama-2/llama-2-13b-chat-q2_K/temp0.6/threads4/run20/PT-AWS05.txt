@@ -1,0 +1,20 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+Option C is the most ideal way to comply with the requirements, as it allows for real-time processing of new changes made to the items in DynamoDB, without requiring manual intervention or maintenance of a separate table. By using Amazon EventBridge (Amazon CloudWatch Events), we can track table-level events in DynamoDB and set a Lambda function as a rule target to process and save new changes to the other table. This approach ensures that all new changes are recorded and stored in another DynamoDB table in another region, while also providing real-time processing of new changes.
+
+Option A, setting up DynamoDB Accelerator, is not necessary for this scenario as we already have a serverless application composed of Lambda, API Gateway, and DynamoDB.
+
+Option D, enabling DynamoDB Streams, is also not necessary as we can use Amazon EventBridge to track table-level events in DynamoDB and set a Lambda function as a rule target to process and save new changes to the other table.
+
+Option B, enabling DynamoDB Point-in-Time Recovery, is not relevant for this scenario as we are looking to record and store new changes in another DynamoDB table in another region, rather than recovering from a previous state.

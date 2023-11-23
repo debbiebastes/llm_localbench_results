@@ -1,0 +1,30 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+
+B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation:
+
+The most cost-effective option would be to go with the No Upfront, Convertible Reserved Instance pricing for a 3-year term. This option offers the lowest total cost of ownership (TCO) as it eliminates the upfront payment and allows you to pay only for the actual usage of the instance over the 3-year term.
+
+Here's a breakdown of the costs for each option:
+
+Option A: All Upfront Convertible Reserved Instance pricing for a 1-year term
+Total Cost: $12,000 (upfront payment) + $4,800 (annual usage) = $16,800
+
+Option B: No Upfront Convertible Reserved Instance pricing for a 3-year term
+Total Cost: $4,800 (annual usage x 3 years) = $14,400
+
+Option C: All Upfront, Standard Reserved Instance pricing for a 3-year term
+Total Cost: $12,000 (upfront payment) + $4,800 (annual usage x 3 years) = $20,800
+
+Option D: No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year
+Total Cost: $4,800 (annual usage x 3 years) + $4,800 (renewal fee) = $19,200
+
+As you can see, Option B (No Upfront Convertible Reserved Instance pricing for a 3-year term) offers the lowest TCO of $14,400, which is significantly lower than the other options. This option also provides the flexibility to convert the instance to a different type or size if needed, without any upfront penalty. Therefore, this is the most cost-effective option for the company's needs.

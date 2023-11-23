@@ -1,0 +1,16 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The best option to protect the backend systems of the platform from traffic spikes is (B): Enable throttling limits and result caching in API Gateway.
+API Gateway provides several features that can help in mitigating the effects of sudden traffic spikes, including:
+* Throttling Limits: API Gateway allows you to set rate limits for incoming requests, which can help prevent the backend system from being overwhelmed with too many requests at once. This feature ensures that no single user can send more than a certain number of requests within a specified time frame.
+* Result caching: API Gateway also provides result caching, which allows you to cache the results of previous API calls. This feature speeds up responses for repeated calls by returning cached results instead of querying the backend system every time.
+By enabling throttling limits and result caching in API Gateway, the platform can handle a sudden increase in site visitors without compromising the performance of its backend systems.
+Option (A) is not the best solution as it would involve moving away from AWS Lambda and API Gateway architecture entirely, which may result in increased costs, complexity, and reduced scalability compared to using these services. Option (C) is also not the best solution as CloudFront is designed primarily for caching static content at the edge of the network and does not provide the same level of traffic management and throttling features as API Gateway. Option (D) may be a possible solution, but it would require additional configuration and setup compared to options (B) and (C).

@@ -1,0 +1,13 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+To meet the requirement of having a persistent block storage volume for mission-critical workloads, you should choose option (B) Attach an EBS volume in your EC2 instance. An EBS volume provides block-level storage that is persistently stored and can be attached to multiple instances, making it ideal for storing data that needs to be preserved for a long time.
+Option (A) does not provide persistence as instance store volumes are ephemeral and do not provide durable storage. Option (C) also does not provide persistence as Amazon S3 One Zone-IA is a distributed storage service that does not provide the same level of data durability as EBS.
+Option (D) is incorrect because instance store volumes are not available in all regions, so it may not be feasible to use them for all instances.

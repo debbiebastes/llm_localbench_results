@@ -1,0 +1,14 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+Option (C) is the most operationally efficient solution to implement to ensure that the application works properly at the beginning of the day. This is because, during peak hours when users are accessing the application the most, the Auto Scaling group can launch new instances in advance to handle the increased traffic. As a result, the performance of the application remains steady and consistent throughout the day, without any noticeable slowdowns or errors.
+Option (A) is also a good choice as it allows the application to automatically adjust its capacity based on the predicted usage patterns. However, predictive scaling can sometimes lead to over-provisioning of instances during non-peak hours when actual usage is lower than anticipated, leading to wasted resources.
+Option (B) may not be the best choice as it relies heavily on accurate memory utilization predictions, which can be difficult to achieve in practice. Moreover, if the predictions are off by even a small margin, it could result in suboptimal scaling decisions that affect application performance.
+Option (D) is not the most operationally efficient solution as it relies too much on CPU usage as the sole determinant of scaling needs, which may not accurately reflect the actual load on the instances during peak hours when users are accessing the application. As a result, it may lead to under-provisioning of capacity during peak hours and poor application performance.

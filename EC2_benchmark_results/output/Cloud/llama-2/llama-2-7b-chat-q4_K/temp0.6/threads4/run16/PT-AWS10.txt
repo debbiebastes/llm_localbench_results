@@ -1,0 +1,21 @@
+An e-commerce company wants to migrate its on-premise infrastructure to Amazon Web Services. However, they are worried about ensuring their migration is secure and efficient.
+
+Which of the following AWS Cloud Adoption Framework perspective would be the most essential for the company’s migration?
+
+(A) Security Perspective
+(B) Governance Perspective
+(C) Operations Perspective
+(D) Platform Perspective
+
+Answer: 
+(B) Governance Perspective.
+
+Explanation: The Governance Perspective of the AWS Cloud Adoption Framework provides guidance on how to establish governance and compliance policies for a secure and efficient migration to AWS. It helps companies ensure that their migration is in line with their organization's security and compliance requirements, including data privacy and protection policies, access controls, and risk management strategies.
+By focusing on the Governance Perspective, the e-commerce company can ensure that their migration is secure and efficient by:
+1. Developing a clear governance framework for managing cloud resources and data.
+2. Establishing compliance policies to meet regulatory requirements and industry standards.
+3. Implementing access controls and identity management practices to secure sensitive data and applications.
+4. Defining disaster recovery and business continuity strategies to minimize downtime and data loss.
+5. Developing a comprehensive risk management plan to identify, assess, and mitigate potential threats and vulnerabilities.
+
+In summary, the Governance Perspective is essential for ensuring a secure and efficient migration to AWS by providing guidance on how to establish governance and compliance policies. It helps companies ensure that their migration aligns with their organization's security and compliance requirements, reducing risk and minimizing downtime.

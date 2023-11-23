@@ -1,0 +1,37 @@
+Here is a product review from a customer, which is delimited with triple backticks.
+
+Product Name: Vintage Elegance Vanity
+Review text: 
+```
+I am extremely disappointed with it. The quality of the product is very poor and does not meet my expectations at all. The materials used feel cheap and the vanity arrived with several scratches and dents. The assembly instructions were also confusing and the whole process took much longer than anticipated. I would not recommend this product to anyone.
+```
+
+What is the sentiment of that product review?
+Identify the product being reviewed.
+Enumerate the positive and negative aspects of the product review.
+The response should have the following elements:
+        - Product name
+        - Review Sentiment (Positive/Negative/Neutral)
+        - Positive comments about the product (Enumerate)
+        - Negative comments about the product (Enumerate)
+
+Answer:
+
+Product Name: Vintage Elegance Vanity
+Review Sentiment: Negative
+
+Positive Comments:
+
+* The vanity has a unique and stylish design.
+* The product description included many detailed images of the product, which suggests that it is well-made and of good quality.
+* The customer mentions that they were "extremely disappointed" with the product, indicating that they had high expectations going in.
+
+Negative Comments:
+
+* The quality of the product is poor.
+* The materials used feel cheap.
+* The vanity arrived with several scratches and dents.
+* The assembly instructions were confusing and took longer than anticipated.
+* The customer would not recommend this product to anyone.
+
+Overall, this customer was very disappointed with their purchase of the Vintage Elegance Vanity. They found the quality to be poor and the materials used to feel cheap. Additionally, the assembly process was confusing and took longer than expected. Despite the unique design of the vanity, the customer's overall experience was very negative.

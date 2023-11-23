@@ -1,0 +1,11 @@
+Which AWS service enables you to build event-driven applications and decouple the components of your application architecture?
+
+(A) Amazon SQS
+(B) Amazon EventBridge (Amazon CloudWatch Events)
+(C) Amazon SNS
+(D) Amazon Kinesis
+
+Answer: 
+The answer is (B) Amazon EventBridge (Amazon CloudWatch Events).
+
+AWS EventBridge is a serverless event bus that enables you to build event-driven applications and decouple the components of your application architecture. With EventBridge, you can route events from various sources to multiple targets, such as AWS Lambda functions, Amazon SNS topics, Amazon SQS queues, and other AWS services. This allows you to create a flexible and scalable event-driven architecture for your applications.

@@ -1,0 +1,14 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The correct answer is (C): Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+Explanation:
+The issue of slow performance at the beginning of the day can be caused by several factors, including increased load on the existing instances, insufficient instance capacity, and network latency. To address this issue, you can configure a Scheduled scaling policy that launches new instances before the start of the day to help absorb the initial workload. This will ensure that there are sufficient instances available to handle the increased traffic during the peak hours.
+Option (C) provides the operational efficiency as it allows you to schedule the instance launch in advance, ensuring that the application has enough resources to handle the expected load at the start of the day. Option (A) is not the best solution as predictive scaling relies on historical data to make decisions, which may not accurately reflect the current workload conditions. Option (B) is also not the best solution as dynamic scaling relies on real-time monitoring of resource utilization, which may not be accurate during the initial hours of the day when the application is being used extensively for the first time. Option (D) is also not the best solution as CPU utilization may not be a good indicator of load during the early hours of the day when there are more users accessing the application simultaneously.

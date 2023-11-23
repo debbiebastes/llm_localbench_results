@@ -1,0 +1,19 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B): Attach an EBS volume in your EC2 instance. Here's why:
+An EBS (Elastic Block Store) volume provides persistent block storage that can be used for mission-critical workloads, as you mentioned in the requirement. By attaching an EBS volume to your EC2 instance, you can ensure that your data is stored persistently and can be easily accessed and managed through the Amazon Elastic Compute Cloud (EC2) service.
+Storing backup data in S3 (Amazon Simple Storage Service):
+You can store your backup data in Amazon S3, which provides a highly durable, scalable, and secure object storage service. You can configure a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days, which is a cost-effective archival storage service that offers low-cost storage for data that is less frequently accessed.
+Amazon S3 provides a range of features that make it an ideal choice for storing backup data, including:
+• Durability: Amazon S3 stores data in multiple locations around the world to provide high availability and durability.
+• Security: Amazon S3 provides secure storage of data through encryption and access controls.
+• Scalability: Amazon S3 can handle large amounts of data and scale as your needs grow.
+By using EBS volumes for mission-critical workloads and storing backup data in Amazon S3, you can ensure that your organization's data is well-managed, secure, and easily accessible.

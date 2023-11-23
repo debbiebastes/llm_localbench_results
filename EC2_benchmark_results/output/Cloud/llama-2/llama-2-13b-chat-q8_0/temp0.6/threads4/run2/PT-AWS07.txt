@@ -1,0 +1,18 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+The MOST operationally efficient solution to ensure the application works properly at the beginning of the day is to configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+
+Rationale:
+
+Scheduled scaling allows you to specify when you want the Auto Scaling group to scale, based on a schedule that you define. By launching new instances before the start of the day, the application will have sufficient capacity to handle the increased traffic at the beginning of the day. This solution ensures that the application is always available and responsive during office hours.
+
+Predictive scaling is not the best option because it relies on forecasting the future usage based on past data, which may not be accurate. Dynamic scaling based on CPU utilization or Memory utilization may not be effective in this scenario as it will only scale based on current usage and not anticipate the increased traffic at the beginning of the day.

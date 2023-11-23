@@ -1,0 +1,16 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+The correct answer is (B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key.
+Explanation:
+In this scenario, the security engineer needs to ensure that the sensitive PII data stored in the Amazon S3 bucket remains encrypted even if the AWS infrastructure is compromised or accessed by unauthorized parties. Using a client-side encryption with a KMS-managed customer master key provides an additional layer of security as the encryption key is managed and controlled by the customer, rather than being stored on AWS servers. This approach ensures that the encryption key never leaves the customer's premises or is accessible to AWS staff, thereby meeting the compliance requirements of the company.
+Option (A) is incorrect because client-side encryption with a client-side master key does not provide sufficient security as the encryption key is stored on the client machine and can be compromised in case of a security breach.
+Option (C) is also incorrect because server-side encryption uses a key managed by AWS, which may not meet compliance requirements for certain industries such as healthcare.
+Option (D) is incorrect because using a customer provided key does not provide sufficient security as the key could be compromised or accessed by unauthorized parties.

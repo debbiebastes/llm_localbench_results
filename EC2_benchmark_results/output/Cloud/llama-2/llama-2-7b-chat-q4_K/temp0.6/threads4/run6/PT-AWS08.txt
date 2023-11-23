@@ -1,0 +1,14 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B): Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+Explanation:
+An EBS volume provides persistent block storage that can be used for mission-critical workloads, such as storing backups. Since the backup data will be stored for 30 days before being archived, it makes sense to use an EBS volume for this purpose. Additionally, Amazon S3 is a highly durable and scalable object store service, making it a good choice for long-term data archiving. By configuring a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days, you can ensure that the data is stored in a cost-effective and durable manner.
+Option (A) is not correct because instance store volumes are ephemeral and do not provide persistence for block storage. Option (C) is also not correct because Amazon S3 One Zone-IA is not a suitable choice for long-term data archiving.

@@ -1,0 +1,13 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The correct answer is (B): Enable throttling limits and result caching in API Gateway.
+API Gateway provides several features that can help protect the backend systems from traffic spikes, including throttling limits and result caching. Throttling limits allow you to control the number of requests that can be made to an API within a certain time period, which can help prevent overloading the backend systems. Result caching allows you to cache the responses from APIs, so that repeat requests for the same data do not need to hit the backend systems, further reducing the load on the system.
+Using EC2 instances, ELB, and Auto Scaling (option A) would require more infrastructure setup and management, and may not be as easy or flexible to implement as throttling limits and result caching in API Gateway. Using CloudFront in front of the API Gateway (option C) can help distribute traffic and reduce the load on the backend systems, but it does not provide throttling limits or caching features out of the box. Moving the Lambda function to a VPC (option D) may be necessary for certain use cases, such as isolating the function from the public internet or providing additional security controls, but it is not directly related to protecting the backend systems from traffic spikes.

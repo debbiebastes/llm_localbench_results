@@ -1,0 +1,16 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation:
+Convertible Reserved Instances (CRIs) are the most cost-effective option if an application will be used for more than three years. CRIs offer a discount of up to 80% over On-Demand instances, but they can also be converted into Standard Reserved Instances (SRIs) or Spot Instances at any time during the term without incurring early cancellation fees.
+
+Option A is only for a 1-year term and does not offer the same cost savings as CRIs. Option C offers a discount of up to 72% over On-Demand instances, but it requires a three-year commitment and cannot be converted into SRIs or Spot Instances during the term without incurring early cancellation fees.
+
+Option D is for a 1-year term and does not offer the same cost savings as CRIs, and it requires renewing every year which will add to the overall cost. Therefore, option B is the most cost-effective option for an application that will be used for more than three years.

@@ -1,0 +1,14 @@
+Which AWS service enables you to build event-driven applications and decouple the components of your application architecture?
+
+(A) Amazon SQS
+(B) Amazon EventBridge (Amazon CloudWatch Events)
+(C) Amazon SNS
+(D) Amazon Kinesis
+
+Answer: 
+(B) Amazon EventBridge (Amazon CloudWatch Events).
+
+Event-driven applications are built by decoupling components of an application architecture, allowing each component to focus on its core functionality without worrying about the internal workings of other components. AWS offers several services that can help you build event-driven applications and decouple your application's components. However, among these services, Amazon EventBridge (also known as Amazon CloudWatch Events) stands out as the primary service for building event-driven architectures on AWS.
+Amazon EventBridge is a serverless event bus that allows you to connect different AWS services and applications, enabling them to communicate with each other through events. With EventBridge, you can set up triggers that automatically invoke actions in response to specific events, such as changes in S3 buckets or database tables. This approach helps to remove tight coupling between components and enables your application to respond more quickly and efficiently to changing requirements and user interactions.
+Amazon Simple Queue Service (SQS), Amazon Simple Notification Service (SNS), and Amazon Kinesis are also available on AWS, but they have different use cases and functionalities than EventBridge. SQS is a message queue service that can help you decouple components of your application by providing a shared message buffer for sending messages between components. SNS is another messaging service that allows you to send messages or publish them to multiple subscription endpoints, such as webhooks, Lambda functions, or mobile devices. Kinesis is a streaming data service that can handle large amounts of real-time, distributed data and provide a highly scalable and low-latency stream processing solution.
+In summary, Amazon EventBridge (Amazon CloudWatch Events) is the primary AWS service for building event-driven applications and decoupling application components on AWS.

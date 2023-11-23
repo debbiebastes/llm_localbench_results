@@ -1,0 +1,14 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option would be (C) All Upfront, Standard Reserved Instance pricing for a 3-year term. This is because the cost of the Reserved Instance will be lower over a longer period of time, making it more cost-effective in the long run. Additionally, the Reserved Instance pricing model offers a discount compared to On-Demand pricing, which can help to save on costs even more.
+Explanation:
+When selecting the most cost-effective option for a Reserved EC2 Instance, it's important to consider the duration of use for the application. In this case, the company plans to use the application for more than 3 years, which means that they should opt for the longest Reserved Instance term available to maximize their cost savings.
+Option (A) All Upfront Convertible Reserved Instance pricing for a 1-year term is not the most cost-effective option as it does not provide the same level of discounts as the Standard Reserved Instance pricing model over a longer period of time. Option (B) No Upfront Convertible Reserved Instance pricing for a 3-year term is also not the best choice as there is no discount offered for committing to a longer term, which means that the company will be paying the higher On-Demand pricing for the entire 3 years.
+Option (D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year is also not the best choice as it does not provide any cost savings compared to the On-Demand pricing model, and the company will have to pay the higher On-Demand price every year.
+Therefore, the most cost-effective option for the company would be to opt for (C) All Upfront, Standard Reserved Instance pricing for a 3-year term, which provides the highest level of discounts and savings over the long run.

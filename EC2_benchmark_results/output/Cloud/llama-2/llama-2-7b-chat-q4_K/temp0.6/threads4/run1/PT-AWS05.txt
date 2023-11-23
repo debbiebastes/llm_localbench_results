@@ -1,0 +1,23 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements would be option (C): Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table. This approach provides the following benefits:
+
+* It allows you to monitor and record all changes made to items in DynamoDB, which is essential for compliance purposes.
+* It enables you to automate the process of saving new changes to another DynamoDB table in another region, ensuring that there is no manual intervention required.
+* It provides a flexible and scalable solution, as you can add more Lambda functions as targets to handle different types of events or other tables.
+
+In contrast, options (A), (B), and (D) may not be ideal for various reasons:
+
+(A) DynamoDB Accelerator is a feature that helps accelerate the performance of read-heavy workloads in DynamoDB. While it can improve the performance of your application, it may not provide the necessary recording and storing functionality for compliance purposes.
+
+(B) Enabling Point-in-Time Recovery (PITR) automatically syncs the two tables, but it does not provide real-time tracking of changes made to items in DynamoDB. This means that you may miss some changes, which could result in non-compliance.
+
+(D) DynamoDB Streams is a feature that captures and processes all changes made to items in DynamoDB. However, it requires additional configuration and maintenance to ensure that the changes are saved to another table. This can be more complex and error-prone than using an Amazon EventBridge rule with a Lambda function target.

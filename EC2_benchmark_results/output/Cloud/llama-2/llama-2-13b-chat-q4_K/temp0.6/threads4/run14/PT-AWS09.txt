@@ -1,0 +1,22 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+B) Enable throttling limits and result caching in API Gateway.
+
+Explanation: When traffic spikes, it can overwhelm the backend systems and cause performance issues or even downtime. To protect the backend systems from such spikes, it is essential to control the incoming traffic and distribute it evenly across the backend systems.
+
+API Gateway provides throttling limits that can be used to limit the number of requests that a client can make within a certain time frame. This helps prevent overloading the backend systems with too many requests at once. Additionally, API Gateway provides result caching, which can be used to cache frequently requested results and reduce the load on the backend systems.
+
+Option A is not the best choice as it suggests moving from a serverless architecture (AWS Lambda) to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling. While this may be a good long-term solution, it is not the immediate answer to protecting the backend systems from traffic spikes.
+
+Option C is also not the best choice as CloudFront can only cache static content and does not provide the same level of control over incoming traffic as API Gateway's throttling limits and result caching.
+
+Option D is not relevant to the scenario as moving the Lambda function into a VPC will not directly help protect the backend systems from traffic spikes.

@@ -1,0 +1,18 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B) Attach an EBS volume in your EC2 instance.
+
+Explanation:
+
+You need a persistent block storage volume for mission-critical workloads, and you want to store the backup data in object storage. An Amazon Elastic Block Store (EBS) volume provides block-level storage volumes that are attached to an EC2 instance. You can use S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days, which meets the requirement of storing backup data in object storage.
+Option (A) is incorrect because instance store volumes are not recommended for mission-critical workloads as they are ephemeral and do not provide persistent storage.
+Option (C) is also incorrect because Amazon S3 One Zone-IA is a storage service that provides low-latency access to data in a single Availability Zone, but it does not provide the necessary persistence for mission-critical workloads.
+Option (D) is incorrect because instance store volumes are not supported in EC2 instances.

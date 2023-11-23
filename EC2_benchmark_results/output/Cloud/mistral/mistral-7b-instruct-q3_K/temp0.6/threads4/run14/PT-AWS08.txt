@@ -1,0 +1,18 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+The correct answer is (A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier. 
+
+Explanation: 
+
+For mission-critical workloads, it's recommended to use a persistent block storage volume such as an EBS volume or an instance store volume that can provide high availability, durability and low latency. An instance store volume is suitable in this scenario since it provides fast and reliable access to block storage data within the same EC2 instance.
+
+Amazon S3 is used for storing backup data and transitioning objects to Amazon S3 Glacier after 30 days. The lifecycle policy is useful because it automates the process of transitioning objects from one storage class to another, which saves time and resources. Amazon S3 Glacier provides a cost-effective solution for long-term data storage by charging significantly less than the other storage classes in Amazon S3.

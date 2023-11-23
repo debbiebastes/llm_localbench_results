@@ -1,0 +1,19 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+
+B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation: If the application is expected to be used for more than 3 years, it makes sense to opt for the No Upfront Convertible Reserved Instance pricing option. This option provides the lowest total cost of ownership (TCO) as it eliminates upfront costs and instead charges based on usage. Since the application will be used for more than 3 years, the TCO will be lower with this option compared to the All Upfront options.
+
+Here's a breakdown of the costs for each option:
+
+* All Upfront Convertible Reserved Instance pricing for a 1-year term (Option A): This option has the highest upfront cost, but it provides the lowest hourly rate. If the application is only used for 1 year, this option will be the most expensive.
+* No Upfront Convertible Reserved Instance pricing for a 3-year term (Option B): This option has no upfront cost and provides a lower hourly rate compared to Option A. Since the application will be used for more than 3 years, this option provides the lowest TCO.
+* All Upfront Standard Reserved Instance pricing for a 3-year term (Option C): This option also has no upfront cost, but it provides a higher hourly rate compared to Option B. Since the application will be used for more than 3 years, this option is not the most cost-effective option.
+* No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year (Option D): This option has no upfront cost and provides a lower hourly rate compared to Option C. However, since the application will be used for more than 3 years, this option will result in higher TCO due to the annual renewals.

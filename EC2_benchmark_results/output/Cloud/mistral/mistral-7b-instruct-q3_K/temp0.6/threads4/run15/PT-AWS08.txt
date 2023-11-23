@@ -1,0 +1,22 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation:
+
+To meet the requirement of a persistent block storage volume that will be used for mission-critical workloads, an instance store volume is the best option as it provides high IOPS performance and low latency, which is essential for mission-critical workloads. 
+
+For backup data storage, Amazon S3 is an excellent choice as it provides scalable, durable, and highly available object storage that can be accessed from anywhere on the web. 
+
+To store the backup data in a different storage service after 30 days, you can use Amazon S3's lifecycle policies. The Glacier storage class is ideal for long-term data storage as it provides low-cost storage with retrieval times of several hours. However, since data retrieval from Glacier is not suitable for mission-critical workloads, One Zone-IA storage class is a better option for backup data that needs to be accessed occasionally. 
+
+Therefore, attaching an instance store volume in your existing EC2 instance and using Amazon S3 to store your backup data with the appropriate lifecycle policy is the best solution to meet the above requirement.

@@ -1,0 +1,14 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The most operationally efficient solution to ensure that the application works properly at the beginning of the day is (C): Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+This option allows you to pre-provision instances in advance, so they are available and ready for use when users log in at 9 am. This can help mitigate any performance issues that may occur during the initial rush of users.
+Option (A) does not take into account the specific needs of the application and could result in over-provisioning or under-provisioning of instances, leading to unnecessary costs or performance issues. Option (B) can be effective, but it may not provide a consistent enough scaling solution, as memory utilization can fluctuate throughout the day. Option (D) does not address the issue of pre-provisioning instances for the start of the day.
+In conclusion, configuring a scheduled scaling policy is the most operationally efficient way to ensure that the application works properly at the beginning of the day.

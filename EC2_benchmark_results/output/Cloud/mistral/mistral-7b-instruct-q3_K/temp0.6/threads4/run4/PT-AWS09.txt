@@ -1,0 +1,20 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+
+All of the options (A, B, C, D) would be effective methods to protect the backend systems of the platform from traffic spikes. However, the most appropriate method would depend on the specific requirements and constraints of the platform. Here are some considerations for each option:
+
+(A) Using EC2 instances, ELB, and Auto Scaling would provide a highly available and scalable architecture that can handle sudden increases in traffic. This approach is suitable if the platform needs to be able to handle large volumes of users and transactions, and if it requires low latency and high availability. However, this option may require more management effort and higher costs compared to other options.
+
+(B) Enabling throttling limits and result caching in API Gateway can help reduce the load on the backend systems by limiting the number of requests and responses that are sent to them. This approach is suitable if the platform has relatively simple and predictable workloads, and if it needs to be able to handle sudden spikes in traffic without affecting performance. However, this option may not provide sufficient protection against more complex or unpredictable workloads, and it may require careful configuration to avoid performance issues.
+
+(C) Using CloudFront in front of the API Gateway can help improve site performance and reduce latency by caching content and serving it directly to users. This approach is suitable if the platform has a high volume of static assets or other resources that can be cached, and if it needs to be able to handle sudden spikes in traffic without affecting response times. However, this option may not provide sufficient protection against more complex or unpredictable workloads, and it may require careful configuration to avoid performance issues.
+
+(D) Moving the Lambda function in a VPC can help improve security and performance by isolating it from other systems and providing better control over network traffic. This approach is suitable if the platform has sensitive data or requires strict access controls, and if it needs to be able to handle sudden spikes in traffic without affecting performance. However, this option may require more management effort and higher costs compared to other options.

@@ -1,0 +1,20 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+The correct option is (A). 
+
+Explanation:
+
+Amazon Elastic Block Store (EBS) provides block-level storage for Amazon Elastic Compute Cloud (EC2) instances. An instance store volume is a type of EBS volume that is temporarily attached to an EC2 instance and persists across instance terminations. EBS instance store volumes are suitable for workloads that require high IOPS performance, but do not need to be available after the instance terminates.
+
+In this scenario, if you attach an instance store volume, it will provide a persistent block storage for mission-critical workloads. You can use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days.
+
+Option (B) is incorrect because EBS volumes are used for persistent block storage and do not provide temporary storage like instance store volumes. Option (C) and (D) are also incorrect because they suggest using Amazon S3 One Zone-IA, which is a storage class with lower durability and availability than Amazon S3 Glacier.

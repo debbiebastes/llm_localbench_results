@@ -1,0 +1,18 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The MOST ideal way to comply with the requirements is option (C): Create an Amazon EventBridge rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table. This approach provides the following benefits:
+
+1. **Decoupling**: By using EventBridge, you decouple the development of the original application from the new requirement for logging and storage in another region. This makes it easier to modify and maintain the original application without affecting the new requirement.
+2. **Automation**: With EventBridge, you automate the process of capturing changes in DynamoDB and transferring them to the other table. This eliminates the need for manual intervention and reduces the risk of errors or omissions.
+3. **Scalability**: EventBridge can handle a large volume of events from multiple sources, making it a scalable solution for logging and storage.
+4. **Monitoring**: EventBridge provides detailed monitoring capabilities, allowing you to track and analyze events in real-time. This helps ensure that the new requirement is met without disrupting the original application or compromising its performance.
+5. **Cost-effective**: Using EventBridge reduces the cost of implementing a separate logging system, as it leverages the existing DynamoDB infrastructure and minimizes the need for additional resources.
+In summary, option (C) is the most ideal way to comply with the requirements because it provides automation, scalability, monitoring, and cost-effectiveness while decoupling the development of the original application from the new requirement.

@@ -1,0 +1,16 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The best answer is (B) Enable throttling limits and result caching in API Gateway.
+API Gateway is designed to handle high traffic loads, and it provides several features that help you control and manage traffic to your APIs. You can use throttling limits to limit the number of requests that can be made to an API within a given time period, which can help prevent overload and ensure that your backend systems remain available.
+Additionally, result caching allows you to cache the results of API calls, reducing the load on your backend systems and improving response times for repeat requests.
+Option (A) is not the best choice because while EC2 instances, ELB, and Auto Scaling can provide high availability and scalability, they may not be necessary for a small to medium-sized trading platform with an existing API built on AWS Lambda and API Gateway.
+Option (C) is also not the best choice as CloudFront acts primarily as a content delivery network (CDN), which can reduce latency and improve performance by caching static assets like images, videos, and other non-API content. It may not be able to handle the load of API requests.
+Option (D) is not a valid option because moving a Lambda function into a VPC does not provide any protection against traffic spikes or overload.

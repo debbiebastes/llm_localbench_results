@@ -1,0 +1,15 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+The answer is (C): Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+
+Reasoning:
+The performance issue during the early morning hours can be attributed to the application's heavy usage and the scaling policies set on the Auto Scaling group. By configuring a scheduled scaling policy, you can specify a schedule for the Auto Scaling group to launch new instances before office hours, ensuring that there are enough instances available to handle the increased workload during peak hours. This will help prevent slow performance issues during the early morning hours.
+Option (A) is not the most operationally efficient solution as predictive scaling policies rely on historical data and can take time to adjust the instance count based on future predictions, which may result in slower response times during the early morning hours. Option (B) is also not the best choice as dynamic scaling policies are triggered by changes in utilization metrics, which may not be representative of the application's actual usage patterns. Finally, option (D) is not relevant to the problem statement as CPU utilization is not the primary factor affecting performance during the early morning hours.

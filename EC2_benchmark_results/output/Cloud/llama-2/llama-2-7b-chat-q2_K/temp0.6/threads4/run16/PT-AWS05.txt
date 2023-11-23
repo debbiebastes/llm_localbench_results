@@ -1,0 +1,15 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+The most ideal way to comply with the requirements is (C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+Explanation:
+In this scenario, it's important to ensure that any changes made to the items in DynamoDB are recorded and saved in another DynamoDB table in another region. One of the most efficient ways to achieve this is by using Amazon EventBridge (formerly known as CloudWatch Events).
+EventBridge can be configured to track events at the table level, including creation, update, and deletion of items. By setting up an EventBridge rule, you can specify a Lambda function as a target for the rule. Whenever an event occurs in DynamoDB, the event will be sent to the Lambda function, which can then process and save the new changes to another table in another region.
+Option (A) Set up DynamoDB Accelerator is not relevant to this scenario as it's a tool for improving the performance of DynamoDB tables, rather than for recording changes made to those tables. Option (B) Enable DynamoDB Point-in-Time Recovery is not ideal because it only provides point-in-time recovery of data at the table level, rather than tracking and recording changes made to items within that table. Option (D) Enable DynamoDB Streams is also not relevant as it's a feature for real-time data streaming, rather than recording changes made to items in a table.

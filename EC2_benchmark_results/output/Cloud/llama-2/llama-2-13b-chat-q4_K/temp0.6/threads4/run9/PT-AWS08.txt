@@ -1,0 +1,24 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+B is the correct answer.
+
+Explanation:
+
+To meet the requirement for a persistent block storage volume that will be used for mission-critical workloads, you should choose an EBS (Elastic Block Store) volume instead of an instance store volume. EBS volumes provide a more durable and reliable storage option compared to instance stores, which are only available in certain Amazon EC2 instances.
+
+Option B is the correct choice because it proposes to attach an EBS volume to the existing EC2 instance. This will provide a persistent block storage volume that can be used for storing backup data. Additionally, using Amazon S3 to store the backup data and configuring a lifecycle policy to transition objects to Amazon S3 Glacier after 30 days will meet the requirement for long-term data storage at a lower cost.
+
+Option A is incorrect because it proposes to attach an instance store volume instead of an EBS volume. Instance stores are not designed for mission-critical workloads and may not provide the required level of durability and reliability.
+
+Option C is incorrect because it proposes to attach an EBS volume in a different availability zone, which may not meet the requirement for a persistent block storage volume that can be used across multiple zones.
+
+Option D is incorrect because it proposes to attach an instance store volume instead of an EBS volume. As mentioned earlier, instance stores are not designed for mission-critical workloads and may not provide the required level of durability and reliability.

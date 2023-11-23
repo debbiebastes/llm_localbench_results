@@ -1,0 +1,20 @@
+A developer configured an Amazon API Gateway proxy integration named MyAPI to work with a Lambda function. However, when the API is being called, the developer receives a 502 Bad Gateway error. She tried invoking the underlying function, but it properly returned the result in XML format.
+
+What is the MOST likely root cause of this issue?
+
+(A) There is an incompatible output returned from a Lambda proxy integration backend.
+(B) The endpoint request timed-out.
+(C) There has been an occasional out-of-order invocation due to heavy loads.
+(D) The API name of the Amazon API Gateway proxy is invalid.
+
+Answer: 
+The most likely root cause of this issue is (B): The endpoint request timed-out.
+
+When a developer configures an Amazon API Gateway proxy integration named MyAPI to work with a Lambda function, they may encounter issues if the underlying function takes too long to execute or times out during execution. In such cases, the client may receive a 502 Bad Gateway error when invoking the API.
+The error can occur due to several reasons, including:
+
+1. Long execution time: If the Lambda function takes an abnormally long time to execute, the client may encounter a timeout, resulting in a 502 Bad Gateway error.
+2. Internal server errors: Sometimes, even after fixing all the code issues, internal server errors can occur due to heavy loads or other reasons. These errors can cause the API to return a 502 Bad Gateway status code.
+3. Third-party dependencies failure: If there are any third-party dependencies required for the Lambda function, their failures can also cause timeouts and subsequent bad gateway responses.
+4. IAM role limitations: If the IAM role associated with the Lambda function has limited capabilities or permissions, it may result in timeouts when executing certain tasks.
+To troubleshoot this issue, developers can check the Lambda function logs for any errors or timeouts during execution and optimize their code to reduce the execution time. They can also try invoking the function directly from the AWS Management Console to identify if there are any issues with the API Gateway configuration.

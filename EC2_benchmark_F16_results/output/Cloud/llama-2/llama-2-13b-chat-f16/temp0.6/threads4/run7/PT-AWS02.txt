@@ -1,0 +1,16 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+
+Explanation: 
+Option C is the best solution as it allows the IT security team to easily deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Patch Manager. Additionally, setting up AWS Config will enable the recording and tracking of any configuration changes, providing a comprehensive audit trail for compliance purposes. This solution provides the most efficient and effective way to mitigate the security risk and ensure compliance with regulatory requirements.
+
+Option A is not suitable as it does not provide a centralized solution for patch deployment and would require manual intervention for each EC2 instance. Option B is also not suitable as it only provides a limited view of configuration changes. Option D is not a comprehensive solution as it does not address the security risk associated with outdated operating systems.

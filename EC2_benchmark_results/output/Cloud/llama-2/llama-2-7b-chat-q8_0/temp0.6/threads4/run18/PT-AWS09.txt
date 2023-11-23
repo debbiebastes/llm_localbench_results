@@ -1,0 +1,18 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The correct answer is (B): Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+API Gateway is designed to handle high traffic spikes, and it has several features built-in to help with this. One such feature is throttling limits, which allow you to set quotas and limits on the number of requests that can be made to an API over a given period of time. This helps prevent the backend systems from becoming overwhelmed during traffic spikes.
+Another feature of API Gateway is result caching, which allows you to cache the results of API calls so that subsequent requests with the same parameters return the cached response instead of re-executing the underlying Lambda function. This can help reduce the load on the backend systems and improve the overall performance of the application.
+Option (A) is incorrect because while EC2 instances, ELB, and Auto Scaling can provide additional scalability for a backend system, they are not directly related to protecting the backend from traffic spikes.
+Option (C) is also incorrect because CloudFront is primarily designed as a content delivery network (CDN) for static assets such as images, videos, and documents, and it may not be suitable for handling API requests and caching results.
+Option (D) is incorrect because moving the Lambda function to a VPC would not provide any direct protection from traffic spikes. While VPCs can provide isolation and security benefits, they are not designed to handle high traffic volumes or spikes in the same way that API Gateway is.

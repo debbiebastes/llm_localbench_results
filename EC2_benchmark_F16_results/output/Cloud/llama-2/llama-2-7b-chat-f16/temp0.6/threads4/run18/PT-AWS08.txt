@@ -1,0 +1,18 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+B is the correct answer.
+
+Explanation:
+To meet the requirement of having a persistent block storage volume for mission-critical workloads, you should use an EBS volume in your EC2 instance. EBS volumes provide block-level storage that can be used to store data that needs to be persisted across instances and availability zones.
+Using Amazon S3 to store the backup data is also a good choice as it provides a highly durable and scalable storage solution. You can configure a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days, which will provide long-term archiving and cost savings.
+Option (A) is incorrect because instance store volumes are ephemeral and do not provide persistent storage. They are only available within the instance and are lost when the instance is terminated.
+Option (C) is also incorrect because Amazon S3 One Zone-IA is a data storage service that provides high availability and low latency for applications that require fast access to data, but it is not designed for long-term archiving of backup data.
+Option (D) is incorrect because instance store volumes are only available in the EC2 instance and cannot be used for mission-critical workloads that require persistent storage.

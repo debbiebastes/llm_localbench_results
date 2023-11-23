@@ -1,0 +1,24 @@
+A tech company has a CRM application hosted on an Auto Scaling group of On-Demand EC2 instances with different instance types and sizes. The application is extensively used during office hours from 9 in the morning to 5 in the afternoon. Their users are complaining that the performance of the application is slow during the start of the day but then works normally after a couple of hours.
+
+Which of the following is the MOST operationally efficient solution to implement to ensure the application works properly at the beginning of the day?
+
+(A) Configure a Predictive scaling policy for the Auto Scaling group to automatically adjust the number of Amazon EC2 instances
+(B) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the Memory utilization.
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+(D) Configure a Dynamic scaling policy for the Auto Scaling group to launch new instances based on the CPU utilization.
+
+Answer: 
+
+(C) Configure a Scheduled scaling policy for the Auto Scaling group to launch new instances before the start of the day.
+
+Explanation:
+
+In this scenario, the performance issues during the start of the day are likely due to the increased demand for resources as users log in and access the application simultaneously. To address this issue, a Scheduled scaling policy can be used to launch additional instances before the start of the day, when demand is low, to proactively scale for expected usage.
+
+Option (A) Predictive scaling policy would not be effective in this scenario as it relies on historical data to predict future usage, which may not accurately reflect the sudden increase in demand during the start of the day.
+
+Option (B) Dynamic scaling policy based on Memory utilization would not be effective either, as memory usage may not be a good indicator of expected usage during the start of the day.
+
+Option (D) Dynamic scaling policy based on CPU utilization could potentially work, but it may lead to over-provisioning if the application does not require significant CPU resources during the start of the day.
+
+Therefore, option (C) Scheduled scaling policy is the most operationally efficient solution to ensure the application works properly at the beginning of the day.

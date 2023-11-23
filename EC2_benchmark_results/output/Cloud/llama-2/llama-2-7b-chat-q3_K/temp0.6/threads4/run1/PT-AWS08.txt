@@ -1,0 +1,18 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+Option (B) is the correct answer.
+
+Explanation:
+To meet the requirement of having a persistent block storage volume for mission-critical workloads, you should use an Elastic Block Store (EBS) volume in your EC2 instance. EBS volumes are designed to be highly available and durable, making them ideal for storing data that needs to be persisted across instances and availability zones.
+Once you have attached the EBS volume to your EC2 instance, you can use Amazon S3 to store your backup data. You can configure a lifecycle policy in Amazon S3 to transition your objects to Amazon S3 Glacier after 30 days, which will help reduce storage costs and improve data durability.
+Option (A) is incorrect because instance store volumes are not suitable for mission-critical workloads. Instance store volumes are designed for temporary use and do not provide the same level of durability as EBS volumes.
+Option (C) is also incorrect because Amazon S3 One Zone-IA is not a storage service that provides persistent block storage. It is a storage service that provides single-digit millisecond latency for data access and is designed for applications that require low latency and high throughput.
+Option (D) is incorrect because instance store volumes are not compatible with Amazon S3 One Zone-IA. Instance store volumes are only available in EC2 instances running on premium instances, while Amazon S3 One Zone-IA is a storage service that provides single-digit millisecond latency for data access and is designed for applications that require low latency and high throughput.

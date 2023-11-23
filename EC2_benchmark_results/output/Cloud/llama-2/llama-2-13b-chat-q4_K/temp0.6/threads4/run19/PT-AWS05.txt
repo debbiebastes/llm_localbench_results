@@ -1,0 +1,26 @@
+A serverless application composed of Lambda, API Gateway, and DynamoDB has been running without issues for quite some time. As part of the IT compliance of the company, a developer was instructed to ensure that all of the new changes made to the items in DynamoDB are recorded and stored in another DynamoDB table in another region.
+
+In this scenario, which of the following is the MOST ideal way to comply with the requirements?
+
+(A) Set up DynamoDB Accelerator
+(B) Enable DynamoDB Point-in-Time Recovery to automatically sync the two tables.
+(C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+(D) Enable DynamoDB Streams and configure a Lambda function to process and save new changes to the other table.
+
+Answer: 
+C) Create an Amazon EventBridge (Amazon CloudWatch Events) rule that tracks table-level events in DynamoDB. Set a Lambda function as a rule target to process and save new changes to the other table.
+
+Explanation:
+
+Option C is the most ideal way to comply with the requirements because it leverages Amazon EventBridge (formerly known as CloudWatch Events) to track table-level events in DynamoDB and trigger a Lambda function to process and save new changes to the other table. This approach has several advantages:
+
+1. Scalability: EventBridge can handle large volumes of events, ensuring that the processing of new changes is scalable and reliable.
+2. Ease of setup: With EventBridge, you don't need to create a separate Lambda function or set up complex triggers; instead, you can simply define the event patterns and rule targets.
+3. Flexibility: You can configure multiple rule targets, allowing you to process changes in multiple tables or perform different actions based on the same events.
+4. Cost-effective: Since EventBridge is a pay-per-request service, you only pay for the events that are processed, making it a cost-effective solution compared to other options.
+
+While Option D (Enable DynamoDB Streams and configure a Lambda function) could also work, it requires more setup and maintenance, as you would need to create a separate Lambda function and set up stream processing. Additionally, DynamoDB Streams can generate a lot of events, which can lead to increased costs and complexity.
+
+Option A (Set up DynamoDB Accelerator) is not relevant in this scenario, as it only provides performance optimizations for certain types of read operations.
+
+Option B (Enable DynamoDB Point-in-Time Recovery) is not the best choice, as it only allows you to restore the entire table to a specific point in time, which may not be necessary or efficient for this use case.

@@ -1,0 +1,17 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The correct answer is (B): Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+API Gateway is designed to handle high traffic and can automatically scale to meet the demand. However, even with automatic scaling, it may still be necessary to limit the amount of traffic that reaches the backend systems during a price surge. One way to do this is by enabling throttling limits in API Gateway.
+Throttling limits allow you to set a maximum rate at which requests can be processed. This can help prevent the backend systems from being overwhelmed with too many requests, even if the number of users on the platform increases significantly. By setting throttling limits, you can control the amount of traffic that reaches the backend systems, ensuring they remain stable and available even during periods of high demand.
+Another approach is to enable result caching in API Gateway. This allows you to cache frequently accessed data, such as prices or trading data, in a proxy server located close to the users. By caching this data closer to the users, the backend systems can be less busy and more stable, even during periods of high traffic.
+Other options for handling high traffic on a cryptocurrency trading platform include using EC2 instances, ELB, and Auto Scaling as described in option (A), or using CloudFront in front of the API Gateway to act as a cache as described in option (C). However, throttling limits and result caching are generally considered more effective solutions for managing high traffic on a platform like this.

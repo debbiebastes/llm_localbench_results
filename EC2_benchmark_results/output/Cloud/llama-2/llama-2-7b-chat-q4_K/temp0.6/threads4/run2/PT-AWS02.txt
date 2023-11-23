@@ -1,0 +1,18 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The MOST suitable solution in this scenario is (A): Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+
+Rationale:
+AWS Systems Manager Sessions Manager provides a secure, automated, and efficient way to manage and monitor EC2 instances running on old operating systems. It can quickly patch these instances without any manual intervention, ensuring that the company's applications are safeguarded from various cyber security attacks.
+Additionally, integrating Amazon QuickSight with Kibana provides a comprehensive view of all configuration changes made to EC2 instances, making it easier to audit and track compliance statuses. This integration also enables real-time monitoring of the patching process, allowing the IT Security team to quickly identify and address any issues that may arise.
+Option (B) sets up AWS Systems Manager Patch Manager to deploy patches for EC2 instances with old operating systems. However, this option does not provide a comprehensive view of configuration changes or real-time monitoring capabilities, which are essential in a security-focused scenario like this one.
+Option (C) uses AWS Systems Manager Patch Manager to easily deploy OS patches for outdated EC2 instances, but it does not provide any additional benefits beyond what is already offered by Option (A).
+Option (D) configures Amazon EC2 instances to automatically install OS patches on a weekly basis. While this may provide some level of automation, it does not offer real-time monitoring or comprehensive tracking of configuration changes, which are crucial for security and compliance purposes.

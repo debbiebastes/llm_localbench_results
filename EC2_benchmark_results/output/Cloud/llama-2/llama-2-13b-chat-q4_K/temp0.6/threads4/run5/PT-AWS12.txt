@@ -1,0 +1,33 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+
+B. No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation: 
+
+The No Upfront, Convertible Reserved Instance option provides the lowest total cost over a 3-year period. With this option, you pay nothing upfront and have the flexibility to convert your Reserved Instances to On-Demand instances as needed. The hourly usage charges for the Reserved Instances are lower than the On-Demand instance pricing, which will result in significant cost savings over the 3-year period.
+
+Here's a breakdown of the costs:
+
+Year 1:
+
+* No Upfront Convertible Reserved Instance: $0 upfront, $12,000 per year (hourly usage charges) = $12,000
+* All Upfront Convertible Reserved Instance: $3,000 upfront, $12,000 per year (hourly usage charges) = $15,000
+
+Year 2 and Year 3:
+
+* No Upfront Convertible Reserved Instance: $0 upfront, $12,000 per year (hourly usage charges) = $12,000
+* All Upfront Convertible Reserved Instance: $3,000 upfront, $12,000 per year (hourly usage charges) = $15,000
+
+Total cost over 3 years:
+
+* No Upfront Convertible Reserved Instance: $12,000 + $12,000 + $12,000 = $36,000
+* All Upfront Convertible Reserved Instance: $15,000 + $15,000 + $15,000 = $45,000
+
+As you can see, the No Upfront, Convertible Reserved Instance option provides a total cost savings of $9,000 over the 3-year period compared to the All Upfront, Convertible Reserved Instance option. Therefore, Option B is the most cost-effective choice if the application being hosted will be used for more than 3 years.

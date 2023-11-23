@@ -1,0 +1,28 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+
+B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Cost Explanation:
+
+The cost of an On-Demand EC2 instance is $0.10 per minute, which translates to approximately $60 per hour or $43,200 per year.
+
+Option (A) - All Upfront Convertible Reserved Instance pricing for a 1-year term:
+The cost of this option would be $43,200 / 12 months = $3,600 per month or $43,200 per year. This is the same as the On-Demand cost.
+
+Option (B) - No Upfront Convertible Reserved Instance pricing for a 3-year term:
+The cost of this option would be approximately $13,760 per year (($43,200 / 3 years) x 12 months). This is significantly lower than Option (A) and Option (C) below.
+
+Option (C) - All Upfront, Standard Reserved Instance pricing for a 3-year term:
+The cost of this option would be approximately $43,200 x 3 years = $130,400. This is higher than Option (B) and Option (D) below.
+
+Option (D) - No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year:
+The cost of this option would be approximately $43,200 per year (($43,200 x 12 months) x 3 years). This is higher than Option (B) above.
+
+Therefore, the most cost-effective option for a company that plans to use an EC2 instance for more than 3 years would be Option (B) - No Upfront Convertible Reserved Instance pricing for a 3-year term, which would save them approximately $90,000 over 3 years compared to the On-Demand cost.

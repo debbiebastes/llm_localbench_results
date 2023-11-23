@@ -1,0 +1,12 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+The most cost-effective option would be (B): No Upfront Convertible Reserved Instance pricing for a 3-year term.
+Explanation: When using the Reserved EC2 Instance type, customers can choose between Upfront Convertible Reserved Instance pricing or Standard Reserved Instance pricing. The main difference between these two options is that Convertible Reserved Instances allow for the instance to be upgraded to a higher instance size at no additional cost after the initial term has expired, while Standard Reserved Instances do not offer this flexibility.
+If the application being hosted will be used for more than 3 years, then option (B) offers the most cost savings as it eliminates the need for upfront payments for the entire 3-year term. With Standard Reserved Instance pricing, customers only pay for the instances they use, rather than committing to a fixed amount of capacity upfront. This can result in significant cost savings over the long term, especially if the application usage remains consistent or grows slowly over time.
+In contrast, option (A) offers higher upfront discounts but requires a 1-year term commitment, which may not be suitable for applications with unpredictable usage patterns. Option (C) provides a fixed capacity commitment at a higher upfront price than option (B), but this may not be cost-effective if the application usage grows significantly over time. Finally, option (D) requires annual renewals of the Reserved Instance term, which can result in additional administrative overhead and potential changes in pricing over time.

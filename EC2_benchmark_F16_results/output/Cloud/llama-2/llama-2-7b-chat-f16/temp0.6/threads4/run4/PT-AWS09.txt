@@ -1,0 +1,18 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+The correct answer is (B): Enable throttling limits and result caching in API Gateway.
+
+Explanation:
+API Gateway provides several features that can help protect the backend systems from traffic spikes, including throttling limits and result caching.
+Throttling limits allow you to set maximum request rates for each user or IP address, which can help prevent the platform from becoming overwhelmed with requests during a sudden surge in popularity. You can configure throttling limits in the API Gateway console or using the AWS CLI or SDKs.
+Result caching allows you to cache the results of API calls, so that frequently requested data doesn't need to be retrieved from the backend every time it is needed. This can help reduce the load on the backend systems and improve response times during periods of high traffic. You can configure result caching in the API Gateway console or using the AWS CLI or SDKs.
+AWS Lambda and API Gateway are designed to handle large volumes of traffic, but they may still be overwhelmed during a sudden surge in popularity. Switching to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling would require significant changes to the platform's infrastructure and operations, and may not be necessary in this scenario.
+CloudFront can be used as a cache in front of API Gateway, but it is not necessary in this scenario since the traffic spike is expected to be short-term and API Gateway already has caching capabilities.

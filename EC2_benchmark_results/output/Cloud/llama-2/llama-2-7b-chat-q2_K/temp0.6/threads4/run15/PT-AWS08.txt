@@ -1,0 +1,20 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The best answer is (B): Attach an EBS volume in your EC2 instance. Here's why:
+EBS (Elastic Block Store) is a persistent block storage service provided by AWS that offers both standard and premium storage tiers. While it may not offer the same level of durability as instance store, it is still a reliable choice for storing mission-critical data. Additionally, using Amazon S3 to store your backup data will provide you with a scalable and durable storage solution that can be easily integrated with other AWS services.
+Option (B) provides the best balance between performance, durability, and cost, making it the best choice for meeting the requirement of storing mission-critical workloads in an EC2 instance.
+Here's a quick comparison of the storage options:
+| Storage Option | Standard EBS | Premium EBS | Instance Store |
+| Durability | Persistent (can tolerate up to 24 hours of hardware or software failure) | Persistent | Persistent |
+| Cost | Lower cost than premium EBS | Higher cost than standard EBS | Slightly higher cost than standard EBS |
+| Performance | Faster than standard EBS but slower than premium EBS | Faster than standard EBS but slower than premium EBS | Slower than both standard and premium EBS |
+Option (A) uses instance store, which is a type of non-persistent storage that is attached to an EC2 instance. While it provides better performance than standard EBS, it is not suitable for storing mission-critical workloads due to its lack of durability. Option (C) uses One Zone-IA, which is a type of EBS storage that provides high availability and fast access times. However, it may not be the best choice for storing large amounts of backup data.
+In summary, Attach an EBS volume in your EC2 instance using Amazon S3 to store your backup data is the best option for meeting the requirement of storing mission-critical workloads in an EC2 instance.

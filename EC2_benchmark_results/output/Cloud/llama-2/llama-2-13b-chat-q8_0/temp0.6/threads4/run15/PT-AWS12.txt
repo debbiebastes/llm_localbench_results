@@ -1,0 +1,22 @@
+A company is currently using an On-Demand EC2 instance for their application which they plan to migrate to a Reserved EC2 Instance to save on cost. Which of the following is the most cost-effective option if the application being hosted would be used for more than 3 years?	
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term.
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term.
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year.
+
+Answer: 
+(B) No Upfront Convertible Reserved Instance pricing for a 3-year term.
+
+Explanation:
+The correct answer is (B) No Upfront Convertible Reserved Instance pricing for a 3-year term, as it offers the most cost-effective option if the application being hosted will be used for more than 3 years. This pricing model allows you to pay for the reserved instance over the course of 3 years without any upfront costs, which can help reduce the total cost of ownership compared to other pricing models.
+
+Here's a breakdown of the cost-effectiveness of each pricing model:
+
+(A) All Upfront Convertible Reserved Instance pricing for a 1-year term: This pricing model requires an upfront payment for the entire year, which can be a significant expense. If the application is only used for 3 years, this pricing model may not be the most cost-effective option.
+
+(C) All Upfront, Standard Reserved Instance pricing for a 3-year term: This pricing model also requires an upfront payment for the entire 3-year period, which can be expensive. Additionally, this pricing model does not offer the same flexibility as the convertible reserved instance pricing model.
+
+(D) No Upfront Standard Reserved Instance pricing for a 1-year term that is renewed every year: This pricing model may seem more cost-effective at first because there is no upfront payment required. However, the total cost of ownership over 3 years can be higher compared to the convertible reserved instance pricing model, as you will be paying for the reserved instance on a monthly basis for 3 years.
+
+Therefore, if the application being hosted will be used for more than 3 years, the most cost-effective option is (B) No Upfront Convertible Reserved Instance pricing for a 3-year term, as it offers the flexibility of paying over time while still providing cost savings compared to other pricing models.

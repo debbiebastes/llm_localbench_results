@@ -1,0 +1,16 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+The Security Engineer should implement (B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key to ensure that the sensitive PII of patients is encrypted at rest and in transit, without exposing the master keys or unencrypted data to AWS.
+AWS provides two types of S3 encryption: server-side encryption (SSE) and client-side encryption (S3 Client-Side Encryption). While SSE encrypts data at rest in Amazon S3 using AWS managed keys, S3 Client-Side Encryption uses customer master keys to encrypt data at rest.
+In this case, the Security Engineer should use S3 Client-Side Encryption with a KMS-managed customer master key. This approach ensures that the master key is securely stored outside of AWS and never exposed to Amazon's infrastructure. By using a KMS-managed customer master key, the Security Engineer can manage their own encryption keys, without relying on AWS to manage them.
+Option (A) is incorrect because client-side master keys are not recommended for sensitive data storage as they introduce additional security risks due to the need to securely store and manage the master key outside of Amazon S3.
+Option (C) is also incorrect because server-side encryption with a customer provided key is not available in AWS.
+Option (D) is incorrect because it does not provide an adequate level of security for sensitive data storage, as the master key would still be exposed to AWS infrastructure.

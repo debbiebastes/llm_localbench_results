@@ -1,0 +1,24 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+Correct answer is (B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation:
+
+To meet the requirement of persistent block storage for mission-critical workloads, option (B) is the correct choice. EBS (Elastic Block Store) volumes provide persistent block storage for EC2 instances and are suitable for mission-critical workloads.
+
+Option (A) suggests using an instance store volume, which is not appropriate for storing backup data. Instance store volumes are temporary storage volumes that are deleted when the instance is terminated or stopped. They are not designed for long-term data storage.
+
+Option (C) suggests using Amazon S3 One Zone-IA, which is a low-cost storage class that is optimized for infrequently accessed data. While this may be suitable for data archiving, it is not ideal for backup data that needs to be stored for 30 days before being archived.
+
+Option (D) is incorrect because instance store volumes are temporary storage volumes and cannot be used for long-term data storage.
+
+Therefore, option (B) is the best choice for meeting the requirement of persistent block storage for mission-critical workloads, as it provides a reliable and durable storage solution that can handle large amounts of backup data.

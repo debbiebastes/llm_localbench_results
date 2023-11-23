@@ -1,0 +1,20 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+
+Explanation:
+
+The requirement is for a persistent block storage volume that will be used for mission-critical workloads, so option B, which attaches an EBS volume to the EC2 instance, is the best choice. EBS volumes provide persistent storage that will remain even if the EC2 instance is terminated or replaced.
+
+Option A, which uses instance store volumes, does not meet the requirement for persistent block storage, as instance store volumes are lost when the EC2 instance is terminated. Option C and D do not provide persistent storage and are therefore not suitable for mission-critical workloads.
+
+Using Amazon S3 to store backup data is a good option, as it provides a highly durable and scalable storage solution. Configuring a lifecycle policy to transition objects to Amazon S3 Glacier after 30 days will help reduce storage costs by moving infrequently accessed data to a more cost-effective storage class.

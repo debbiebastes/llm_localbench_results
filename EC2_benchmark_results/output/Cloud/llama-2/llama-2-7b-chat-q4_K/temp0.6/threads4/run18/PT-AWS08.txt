@@ -1,0 +1,15 @@
+An organization needs a persistent block storage volume that will be used for mission-critical workloads. The backup data will be stored in an object storage service and after 30 days, the data will be stored in a data archiving storage service.
+
+What should you do to meet the above requirement?
+
+(A) Attach an instance store volume in your existing EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(B) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+(C) Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA.
+(D) Attach an instance store volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 One Zone-IA
+
+Answer: 
+The correct answer is (B): Attach an EBS volume in your EC2 instance. Use Amazon S3 to store your backup data and configure a lifecycle policy to transition your objects to Amazon S3 Glacier.
+Explanation:
+An EBS volume provides persistent block storage that can be used for mission-critical workloads, as required by the organization. By attaching an EBS volume to an EC2 instance, you ensure that the data is stored persistently and can be accessed quickly.
+To store the backup data in Amazon S3, you can configure a lifecycle policy to transition your objects to Amazon S3 Glacier after 30 days. This will provide long-term archiving for the backup data at a lower cost than storing it in Amazon S3 Standard or Amazon S3 One Zone-IA.
+Option (A) is incorrect because instance store volumes are not meant for mission-critical workloads and do not provide persistence. Option (C) is also incorrect because Amazon S3 One Zone-IA does not provide the required archiving functionality. Option (D) is incorrect because Amazon S3 One Zone-IA is a storage class that provides high availability and low latency for data accessed from within a single AWS region, but it does not provide long-term archiving capabilities.

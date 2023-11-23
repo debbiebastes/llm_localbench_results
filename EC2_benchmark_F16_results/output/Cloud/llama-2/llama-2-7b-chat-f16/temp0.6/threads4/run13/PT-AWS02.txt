@@ -1,0 +1,17 @@
+The IT Security team recently discovered a vulnerability in the old operating systems of several EC2 instances. The team needs to immediately mitigate the security risk to safeguard the company’s applications from various cyber security attacks. For audit purposes, there is also a need to record all of the changes to patch and associated compliance statuses.
+
+Which of the following is the MOST suitable solution in this scenario?
+
+(A) Deploy the OS patches for the outdated EC2 instances using AWS Systems Manager Sessions Manager. Integrate Amazon QuickSight with Kibana to record and track any configuration changes.
+(B) Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+(C) Use AWS Systems Manager Patch Manager to easily deploy the OS patches for the outdated EC2 instances. Set up AWS Config to record and track any configuration changes.
+(D) Configure the Amazon EC2 instances to automatically install the OS patches on a weekly basis.
+
+Answer: 
+The MOST suitable solution in this scenario is (B): Set up AWS Systems Manager Patch Manager to deploy the patches for the EC2 instances with old operating systems. Use Amazon ES to record and track any configuration changes.
+
+Explanation:
+In this scenario, the IT Security team needs to immediately mitigate the security risk by deploying patches to the outdated EC2 instances. The most straightforward solution is to use AWS Systems Manager Patch Manager to automate the patch deployment process. This tool allows you to schedule patch deployments and easily manage patch compliance across your AWS environment.
+By using Patch Manager, the IT Security team can quickly deploy the necessary patches to all affected EC2 instances, thereby reducing the risk of security breaches. Additionally, by integrating Amazon ES with Patch Manager, the team can easily track and monitor any configuration changes related to patch management.
+Option (A) is not the best choice because it involves using AWS Systems Manager Sessions Manager, which is primarily designed for managing AWS instances at scale, rather than patch management. Option (C) is also not the best choice because while AWS Config can be used to track configuration changes, it is not specifically designed for patch management.
+Option (D) is not a suitable solution as it does not provide a way to automate the patch deployment process or track configuration changes.

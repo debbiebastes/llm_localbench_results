@@ -1,0 +1,21 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+To protect the backend systems of the cryptocurrency trading platform from traffic spikes, you can take the following measures:
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling. This option is not recommended as it would require significant changes to the existing architecture and may not provide any additional benefits in terms of traffic handling capabilities.
+
+(B) Enable throttling limits and result caching in API Gateway. This is a good option as it allows you to limit the number of requests that can be made to the backend systems within a certain time frame, preventing overload. Additionally, caching the results of API calls can reduce the load on the backend systems by serving pre-cached responses instead of having to retrieve them each time.
+
+(C) Use CloudFront in front of the API Gateway to act as a cache. This option is also good as it can help distribute traffic and reduce the load on the backend systems by caching frequently accessed content closer to the end-users.
+
+(D) Move the Lambda function in a VPC. This option is not relevant to protecting the backend systems from traffic spikes, as it would only change the location of the Lambda function without affecting its scalability or traffic handling capabilities.
+
+Therefore, the best answer is (B) Enable throttling limits and result caching in API Gateway.

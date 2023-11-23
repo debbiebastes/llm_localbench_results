@@ -1,0 +1,18 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+To protect the backend systems of the trading platform from traffic spikes, you can consider the following options:
+
+Option (B): Enable throttling limits and result caching in API Gateway.
+API Gateway provides built-in features for rate limiting and caching results. By enabling these features, you can control the amount of traffic to your backend systems and cache frequently accessed data, reducing the load on your servers during traffic spikes. This will help prevent overloading and improve the performance and scalability of your system.
+Option (C): Use CloudFront in front of the API Gateway to act as a cache.
+CloudFront is a highly available and scalable content delivery network that can act as a cache in front of your API Gateway. By using CloudFront, you can distribute content across multiple edge locations worldwide and reduce the load on your backend systems during traffic spikes. This will help improve the performance and scalability of your system, and ensure that it can handle increased traffic without downtime or overloading.
+Option (A) is not a viable solution as it would involve using EC2 instances, ELB, and Auto Scaling, which are more complex and resource-intensive than API Gateway and CloudFront.
+Option (D) is also not a viable solution as it would involve moving the Lambda function to a VPC, which can be complex and may impact performance.

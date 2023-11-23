@@ -1,0 +1,20 @@
+An e-commerce company wants to migrate its on-premise infrastructure to Amazon Web Services. However, they are worried about ensuring their migration is secure and efficient.
+
+Which of the following AWS Cloud Adoption Framework perspective would be the most essential for the company’s migration?
+
+(A) Security Perspective
+(B) Governance Perspective
+(C) Operations Perspective
+(D) Platform Perspective
+
+Answer: 
+
+All of the perspectives mentioned are important for a successful AWS migration, but the most essential perspective would depend on the specific needs and concerns of the e-commerce company. 
+
+If security is a top priority for the company, then the Security Perspective would be the most crucial. This perspective focuses on identifying and mitigating security risks associated with migrating to AWS. It includes best practices for securing data at rest and in transit, managing access controls, and ensuring compliance with industry standards and regulations.
+
+If governance is a top priority for the company, then the Governance Perspective would be the most crucial. This perspective focuses on establishing policies and procedures for managing and governing AWS resources. It includes best practices for managing identity and access management, monitoring and auditing, and ensuring compliance with regulatory requirements.
+
+If efficiency is a top priority for the company, then the Operations Perspective would be the most crucial. This perspective focuses on automating and optimizing operations in the cloud. It includes best practices for managing infrastructure as code, scaling resources, and monitoring performance.
+
+If platform compatibility is a top priority for the company, then the Platform Perspective would be the most crucial. This perspective focuses on selecting and implementing the right AWS services and tools to meet the needs of the business. It includes best practices for selecting and integrating with third-party services, managing data migration, and ensuring interoperability with existing systems.

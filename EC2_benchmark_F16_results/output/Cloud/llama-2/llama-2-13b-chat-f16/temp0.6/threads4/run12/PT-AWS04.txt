@@ -1,0 +1,44 @@
+Your application is processing one Kinesis data stream which has four shards, and each instance has one KCL worker. To scale up processing in your application, you reshard your stream to increase the number of open shards to six.
+
+What is the MAXIMUM number of EC2 instances that you should launch to achieve optimum performance?
+
+(A) 5
+(B) 12
+(C) 3
+(D) 6
+
+Answer: 
+
+B) 12
+
+Explanation:
+
+To determine the maximum number of EC2 instances required for optimum performance, we need to consider several factors such as instance type, KCL worker capacity, shard count, and network bandwidth. In this case, we have one Kinesis data stream with four shards and each instance has one KCL worker.
+
+Assuming that each EC2 instance is of the same type (e.g., m5.xlarge), and each KCL worker can handle one shard, we need to calculate the maximum number of instances required to process all six shards.
+
+Let's assume the total throughput of each shard is 100 MB/s. With four shards, the total throughput of the stream is 400 MB/s. Since we want to scale up processing to handle six shards, we need to double the throughput to 800 MB/s.
+
+Now, let's calculate the number of EC2 instances required to achieve this throughput:
+
+1. Calculate the instance type required to handle 800 MB/s throughput:
+
+Assuming an instance type of m5.xlarge, we can estimate the network bandwidth as follows:
+
+Network Bandwidth (in MB/s) = (Instance Type: m5.xlarge).
+
+Based on AWS documentation, the network bandwidth of m5.xlarge is approximately 10 Gbps.
+
+Now, let's calculate the number of instances required to handle 800 MB/s throughput:
+
+Number of Instances = (Total Throughput / Network Bandwidth)
+
+Number of Instances = (800 MB/s / 10 Gbps)
+
+Number of Instances = 80
+
+Since we cannot launch a fractional instance, we round up to the next whole number:
+
+Maximum Number of Instances = 90
+
+Therefore, the maximum number of EC2 instances that you should launch to achieve optimum performance is (B) 12.

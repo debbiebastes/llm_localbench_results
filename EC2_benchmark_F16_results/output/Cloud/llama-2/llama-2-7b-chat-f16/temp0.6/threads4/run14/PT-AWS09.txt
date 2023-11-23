@@ -1,0 +1,17 @@
+A cryptocurrency trading platform is using an API built in AWS Lambda and API Gateway. Due to the recent news and rumors about the upcoming price surge of Bitcoin, Ethereum and other cryptocurrencies, it is expected that the trading platform would have a significant increase in site visitors and new users in the coming days ahead.
+
+In this scenario, how can you protect the backend systems of the platform from traffic spikes?
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling.
+(B) Enable throttling limits and result caching in API Gateway.
+(C) Use CloudFront in front of the API Gateway to act as a cache.
+(D) Move the Lambda function in a VPC.
+
+Answer: 
+To protect the backend systems of the cryptocurrency trading platform from traffic spikes, you can use a combination of the following measures:
+
+(A) Switch from using AWS Lambda and API Gateway to a more scalable and highly available architecture using EC2 instances, ELB, and Auto Scaling: This would provide a more traditional and tried-and-true way of scaling your backend systems to handle increased traffic. By using EC2 instances, you can scale the number of instances up or down based on demand, and use ELB to distribute incoming traffic across multiple instances. Auto Scaling can also be used to automatically add or remove instances based on CPU usage and other metrics.
+(B) Enable throttling limits and result caching in API Gateway: You can configure throttling limits in API Gateway to limit the number of requests that can be made within a certain time period. This can help prevent the platform from becoming overwhelmed with too many requests at once. Result caching can also be used to store frequently requested data in memory, reducing the load on the backend systems.
+(C) Use CloudFront in front of the API Gateway to act as a cache: CloudFront is a content delivery network (CDN) that can cache frequently accessed data closer to the end-users, reducing the need for requests to go all the way back to the backend systems. This can help reduce traffic and improve performance during high-traffic periods.
+(D) Move the Lambda function in a VPC: By moving the Lambda function to a virtual private cloud (VPC), you can create a separate network isolation for the function, which can help protect it from external threats and improve security. Additionally, you can use VPC peering to connect the Lambda function to other VPCs or on-premises networks, providing additional flexibility and scalability.
+Of these options, the best solution would depend on the specific requirements of your platform and the resources available to you. However, a combination of measures such as those listed above can help protect your backend systems from traffic spikes and ensure that your platform remains available and responsive during periods of high demand.

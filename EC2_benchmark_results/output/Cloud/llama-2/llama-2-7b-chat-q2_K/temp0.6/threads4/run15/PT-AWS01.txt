@@ -1,0 +1,16 @@
+A leading hospital has a web application hosted in AWS that will store sensitive Personally Identifiable Information (PII) of its patients in an Amazon S3 bucket. Both the master keys and the unencrypted data should never be sent to AWS to comply with the strict compliance and regulatory requirements of the company. 
+
+Which S3 encryption technique should the Security Engineer implement?
+
+(A) Implement an Amazon S3 client-side encryption with a client-side master key.
+(B) Implement an Amazon S3 client-side encryption with a KMS-managed customer master key. 
+(C) Implement an Amazon S3 server-side encryption with a KMS managed key.
+(D) Implement an Amazon S3 server-side encryption with customer provided key.
+
+Answer: 
+The correct answer is (B): Implement an Amazon S3 client-side encryption with a KMS-managed customer master key.
+Explanation:
+In this scenario, the sensitive PII data of patients is stored in an AWS S3 bucket, and the hospital needs to comply with strict regulatory requirements to protect the privacy of its patients. To meet these requirements, the Security Engineer should implement client-side encryption using a KMS (Key Management Service) managed customer master key.
+Client-side encryption involves encrypting data on the client's (in this case, the hospital's) end before uploading it to S3. This means that only the hospital has access to the decryption keys, ensuring that the data remains secure even if the bucket is breached. Using a KMS managed customer master key adds an extra layer of security, as the hospital does not have direct access to the encryption keys. Instead, the KMS manages the keys on behalf of the hospital, providing an additional level of protection against unauthorized access.
+In contrast, option (A) would involve using a client-side master key, which could lead to data breaches if the decryption keys are compromised. Option (C) would also require managing encryption keys internally, which could be challenging for large organizations like hospitals. Option (D) is not a feasible option as it involves providing a customer-provided key, which may not meet regulatory requirements or provide adequate security.
+Therefore, the most secure approach would be to use client-side encryption with a KMS managed customer master key, ensuring that sensitive data remains protected and compliant with regulatory requirements.

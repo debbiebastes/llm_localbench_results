@@ -1,0 +1,373 @@
+*******************
+Experiment Settings:
+Models: ['mistral/mistral-7b-instruct', 'llama-2/llama-2-7b-chat', 'llama-2/llama-2-13b-chat']
+Quants: ['q8_0']
+Temps: ['0.6']
+Threads: ['4']
+Max Input Tokens: 2000
+Max Output Tokens: 300
+Prompt Domains: ['Business_Technical_Creative_Writing']
+Prompt Types: ['TAGS']
+Prompt Range: 2
+Prompt Runs: 20
+-------------------
+*******************
+2023-11-15 10:22:54
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 1
+Done!
+-------------------
+*******************
+2023-11-15 10:23:23
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 2
+Done!
+-------------------
+*******************
+2023-11-15 10:23:29
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 3
+Done!
+-------------------
+*******************
+2023-11-15 10:23:33
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 4
+Done!
+-------------------
+*******************
+2023-11-15 10:23:36
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 5
+Done!
+-------------------
+*******************
+2023-11-15 10:23:41
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 6
+Done!
+-------------------
+*******************
+2023-11-15 10:23:45
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 7
+Done!
+-------------------
+*******************
+2023-11-15 10:23:50
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 8
+Done!
+-------------------
+*******************
+2023-11-15 10:23:55
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 9
+Done!
+-------------------
+*******************
+2023-11-15 10:24:00
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 10
+Done!
+-------------------
+*******************
+2023-11-15 10:24:03
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 11
+Done!
+-------------------
+*******************
+2023-11-15 10:24:08
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 12
+Done!
+-------------------
+*******************
+2023-11-15 10:24:12
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 13
+Done!
+-------------------
+*******************
+2023-11-15 10:24:17
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 14
+Done!
+-------------------
+*******************
+2023-11-15 10:24:21
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 15
+Done!
+-------------------
+*******************
+2023-11-15 10:24:26
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 16
+Done!
+-------------------
+*******************
+2023-11-15 10:24:30
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 17
+Done!
+-------------------
+*******************
+2023-11-15 10:24:34
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 18
+Done!
+-------------------
+*******************
+2023-11-15 10:24:39
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 19
+Done!
+-------------------
+*******************
+2023-11-15 10:24:43
+Now running: /data/LLMs/mistral/mistral-7b-instruct-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 20
+Done!
+-------------------
+*******************
+2023-11-15 10:24:46
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 1
+Done!
+-------------------
+*******************
+2023-11-15 10:24:52
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 2
+Done!
+-------------------
+*******************
+2023-11-15 10:24:55
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 3
+Done!
+-------------------
+*******************
+2023-11-15 10:25:00
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 4
+Done!
+-------------------
+*******************
+2023-11-15 10:25:07
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 5
+Done!
+-------------------
+*******************
+2023-11-15 10:25:14
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 6
+Done!
+-------------------
+*******************
+2023-11-15 10:25:21
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 7
+Done!
+-------------------
+*******************
+2023-11-15 10:25:27
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 8
+Done!
+-------------------
+*******************
+2023-11-15 10:25:33
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 9
+Done!
+-------------------
+*******************
+2023-11-15 10:25:39
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 10
+Done!
+-------------------
+*******************
+2023-11-15 10:25:45
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 11
+Done!
+-------------------
+*******************
+2023-11-15 10:25:53
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 12
+Done!
+-------------------
+*******************
+2023-11-15 10:25:59
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 13
+Done!
+-------------------
+*******************
+2023-11-15 10:26:03
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 14
+Done!
+-------------------
+*******************
+2023-11-15 10:26:10
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 15
+Done!
+-------------------
+*******************
+2023-11-15 10:26:15
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 16
+Done!
+-------------------
+*******************
+2023-11-15 10:26:20
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 17
+Done!
+-------------------
+*******************
+2023-11-15 10:26:23
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 18
+Done!
+-------------------
+*******************
+2023-11-15 10:26:29
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 19
+Done!
+-------------------
+*******************
+2023-11-15 10:26:36
+Now running: /data/LLMs/llama-2/llama-2-7b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 20
+Done!
+-------------------
+*******************
+2023-11-15 10:26:42
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 1
+Done!
+-------------------
+*******************
+2023-11-15 10:26:50
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 2
+Done!
+-------------------
+*******************
+2023-11-15 10:27:00
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 3
+Done!
+-------------------
+*******************
+2023-11-15 10:27:09
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 4
+Done!
+-------------------
+*******************
+2023-11-15 10:27:20
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 5
+Done!
+-------------------
+*******************
+2023-11-15 10:27:30
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 6
+Done!
+-------------------
+*******************
+2023-11-15 10:27:38
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 7
+Done!
+-------------------
+*******************
+2023-11-15 10:27:50
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 8
+Done!
+-------------------
+*******************
+2023-11-15 10:27:57
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 9
+Done!
+-------------------
+*******************
+2023-11-15 10:28:06
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 10
+Done!
+-------------------
+*******************
+2023-11-15 10:28:16
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 11
+Done!
+-------------------
+*******************
+2023-11-15 10:28:25
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 12
+Done!
+-------------------
+*******************
+2023-11-15 10:28:34
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 13
+Done!
+-------------------
+*******************
+2023-11-15 10:28:42
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 14
+Done!
+-------------------
+*******************
+2023-11-15 10:28:51
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 15
+Done!
+-------------------
+*******************
+2023-11-15 10:29:00
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 16
+Done!
+-------------------
+*******************
+2023-11-15 10:29:10
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 17
+Done!
+-------------------
+*******************
+2023-11-15 10:29:19
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 18
+Done!
+-------------------
+*******************
+2023-11-15 10:29:30
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 19
+Done!
+-------------------
+*******************
+2023-11-15 10:29:39
+Now running: /data/LLMs/llama-2/llama-2-13b-chat-q8_0.gguf Temperature: 0.6 Threads: 4
+Prompt Domain: Business_Technical_Creative_Writing Prompt file: PT-TAGS02.txt Run: 20
+Done!
+-------------------
